@@ -1,0 +1,47 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="DMZ001">DMZ </td>
+		</tr>
+		<tr>
+			<td colspan="4" id="DMZ002">A Demilitarized Zone is used to provide Internet services without sacrificing unauthorized access to its local private network. Typically, the DMZ host contains devices accessible to Internet traffic, such as Web (HTTP ) servers, FTP servers, SMTP (e-mail) servers and DNS servers.</td>
+		</tr>
+		<tr>
+            <td style="height:10px"></td>
+        </tr>
+		<tr>
+			<td class="background" style="width:25%; " id="DMZ003">DMZ setting for : </td>
+			<td>
+				<select id="SELECT_WanConnection" onchange="setDmzValue();"> 
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="DMZ004">DMZ : </td>
+			<td>
+				<input type="radio" id="RAD_enable" value="1" name="RAD_DmzEnable" onclick="onClkDmz()"><label for="RAD_enable" id="DMZ005" >Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_disable" value="0" name="RAD_DmzEnable" onclick="onClkDmz()"><label for="RAD_disable" id="DMZ006"  >Disable</label>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="DMZ007">DMZ Host IP Address : </td>
+			<td>
+				<input type="text" id="TE_DmzHostTpAddr" value="0.0.0.0" maxlength="15" size="15" disabled="">
+			</td>
+		</tr>
+	</table>
+	
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="DMZ008" value="Apply" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="DMZ009" value="Cancel" onClick="uiPageRefresh()">
+				
+			</td>
+		</tr>
+	</table>
+</div>

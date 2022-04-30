@@ -1,0 +1,126 @@
+﻿
+<div class="blockquote" id=IPMACFilter>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="URL001">URL Filter</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="URL002">This page allows you to block websites. If enabled, the websites listed here will be denied access to clients trying to browse that website.</td>
+		</tr>
+		<tr></tr>
+	</table>
+
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="URL003">Block Website </td>
+		</tr>
+	 </table> 
+	 <table class="table2" width="900px" border="0" cellspacing="2" id="TA_UrlList">
+		<tr>
+			<th id="URL004" width="5%" align="center">#</th>
+			<th id="URL005" width="15%" align="center">URL</th>
+			<th id="URL006" width="15%" align="center">Schedule</th>
+			<th id="URL007" width="5%" align="center">Edit</th>
+			<th id="URL008" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="URL009" value="Add" onClick="uiAddEntry()">
+			</td>
+		</tr>
+	</table>
+	
+	<div id="DIV_AddEntry" style="display:none">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize"  id="URL010">Add Schedule Rule</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL011">URL : </td>
+				<td>
+					<input type="text" id="lang_http" size="6" value="http://" readonly>&nbsp;&nbsp;
+					<input type="text" id="TE_url" name="TE_url" maxlength="256" size="16">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL012">Schedule : </td>
+				<td>
+					<input type="radio" id="RAD_SelectSchedule" name="RAD_schedule" value="Select" onClick="changeScheduleMode(1)" checked>
+					<label for="RAD_SelectSchedule" id="URL013">Select </label>&nbsp;&nbsp;
+					<select id="SEL_schedule" name="SEL_schedule" size="1"></select>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL014">Manual Schedule : </td>
+				<td>
+					<input type="radio" id="RAD_ManualSchedule" name="RAD_schedule" value="Manual" onClick="changeScheduleMode(0)">
+				</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="TA_ManualSche">
+			<tr>
+				<td class="background" style="width:25%; " id="URL015" rowspan="3">Day(s) : </td>
+				<td>
+					<input type="radio" name="RAD_SelectDay" id="RAD_AllWeek" value="1" onClick="changeDaysSelect(1)">
+					<label for="RAD_AllWeek" id="URL016">All Week</label>
+					<input type="radio" name="RAD_SelectDay" id="RAD_SelectDay" value="0" onClick="changeDaysSelect(0)" checked>
+					<label for="RAD_SelectDay" id="URL017">Select Day(s)</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="CHE_sunday" name="CHE_sunday"><label for="CHE_sunday" id="URL018">Sun</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_monday" name="CHE_monday"><label for="CHE_monday" id="URL019">Mon</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_tuesday" name="CHE_tuesday"><label for="CHE_tuesday" id="URL020">Tue</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_wednesday" name="CHE_wednesday"><label for="CHE_wednesday" id="URL021">Wed</label>&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="CHE_thursday" name="CHE_thursday"><label for="CHE_thursday" id="URL022">Thu</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_friday" name="CHE_friday"><label for="CHE_friday" id="URL023">Fri</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_saturday" name="CHE_saturday"><label for="CHE_saturday" id="URL024">Sat</label>&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL025">All Day - 24 hrs : </td>
+				<td>
+					<input type="checkbox" id="CHE_wholeday" name="CHE_wholeday" onClick="setWholeDay()">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL026">Start Time : </td>
+				<td>
+					<input type="text" id="TE_StartTime_H" maxlength="2" size="8" style="WIDTH: 40px">
+					:
+					<input type="text" id="TE_StartTime_M" maxlength="2" size="8" style="WIDTH: 40px">
+					<span id="URL027">(hour:minute, 24 hour time)</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="URL028">End Time : </td>
+				<td>
+					<input type="text" id="TE_EndTime_H" maxlength="2" size="8" style="WIDTH: 40px">
+					:
+					<input type="text" id="TE_EndTime_M" maxlength="2" size="8" style="WIDTH: 40px">
+					<span id="URL029">(hour:minute, 24 hour time)</span>
+				</td>
+			</tr>
+			<tr></tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="TA_apply">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="URL030" value="Apply" onClick="uiSubmit()">&nbsp;
+					<input type="button" id="URL031" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+

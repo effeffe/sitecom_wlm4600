@@ -1,0 +1,83 @@
+﻿<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+        <tr>
+			<td class="emphasize" colspan="3" id="POMAP001">Bridge Bind</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="POMAP002">Bridge Bind supports multiple port to PVC and bridging groups. Each group will perform as an independent network.</td>
+		</tr>
+    </table>
+    <table width="900px" border="0" class="table2" id="td_BridgeList" cellspacing="2">
+		<tr>
+            <th></th>
+			<th id = "POMAP003">Group Name</th>
+			<th id = "POMAP004">Interfaces</th>
+		</tr>
+	</table>
+    <table width="900px" id="action_Button" border="0" cellspacing="2" >
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="POMAP005"  name="addEntry" onClick="AddEntry()" value="Add">
+                <input type="button" id="POMAP006"  name="editEntry"  onClick="EditEntry()" value=" Edit ">
+                <input type="submit" id="POMAP007"  name="removeEntry" onClick="RemoveEntry()" value=" Delete ">
+			</td>
+		</tr>
+	</table>
+    <table width="900px" border="0" id="EntryInfo" >
+		<tr>
+            <td id = "POMAP008">To create a new bridge bind group: </td>
+        </tr>
+        <tr> 
+            <td id = "POMAP009">1. Enter the Group name and select interfaces from the available interface list and add it to the grouped interface list using the arrow buttons
+		to create the required mapping of the ports. The group name must be unique. </td>
+        </tr>
+        <tr>
+            <td id = "POMAP010">2. Click "Apply" button to make the changes effective immediately. </td>
+        </tr>
+    </table>
+    <table width="900px" border="0" cellspacing="2" id="editTable1">
+        <tr>
+            <td class="background" style="width:25%; " id="POMAP011">Group Name: </td>
+			<td>
+				<input type="text" id="GroupName" maxlength="15">
+			</td>
+        </tr>
+	</table>
+    <table border="0" cellspacing="0" id="editTable2">
+        <tr>
+            <td class="background" text-align="center" id = "POMAP014">Grouped Interfaces</td>
+            <td></td>
+            <td class="background" text-align="center" id = "POMAP015">Available Interfaces</td>
+        </tr>
+        <tr></tr>
+		<tr>
+            <td class="Grouped_Interfaces">
+                <select multiple id="Grouped_Interfaces" style="width: 170px;height:170px;"></select>
+            </td>
+			<td style="vertical-align:middle;">
+				<table>
+					<tr>
+						<td>
+							<input type="button" value="->" id='portRemoveItem' onClick="RemoveInterface()" style="width: 30px; height: 30px;">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" value="<-" id='portAddItem' onClick="AddInterface()" style="width: 30px; height: 30px; ">
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td class="Available_Interfaces">
+                <select multiple id="AvailableInterface" style="width: 170px; height:170px;"></select>
+            </td>
+        </tr>
+        <tr>
+			<td colspan="2" align="right">
+                <input type="button" id="POMAP012" value="Apply" onClick="uiSubmit()">
+				<input type='button' id="POMAP013" value="Cancel" onClick='uiPageRefresh()'>
+            </td>
+        </tr>
+	</table>
+    
+</div>

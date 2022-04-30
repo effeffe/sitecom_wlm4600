@@ -1,0 +1,91 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="2ADV001">Wireless Advanced Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="2ADV002">These settings are only for more technically advanced users who have a sufficient knowledge about wireless LAN. These settings should not be changed unless you know what effect the changes will have on your Access Point.</td>
+		</tr>
+		<tr>
+			<td style="height:10px"></td>
+		</tr>
+	    <tr>
+			<td class="background" style="width:25%; " id="2ADV003">Transmit Power : </td>
+			<td>
+				<select id="SEL_Power"> 
+				    <option value="100">100%</option>
+                    <option value="80">80%</option>
+                    <option value="60">60%</option>
+                    <option value="40">40%</option>
+                    <option value="20">20%</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2ADV004">Beacon Interval : </td>
+			<td>
+				<input type="text" id="TE_beacon" maxlength="4" size="7">
+				<span id="2ADV005">(range: 20~1023)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2ADV006">RTS/CTS Threshold : </td>
+			<td>
+				<input type="text" id="TE_rts" maxlength="5" size="7">
+				<span id="2ADV007">(range: 1~2347)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2ADV008">Fragment Threshold : </td>
+			<td>
+				<input type="text" id="TE_frag" maxlength="5" size="7">
+				<span id="2ADV009">(range: 256~2346, only even numbers) </span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2ADV010">DTIM : </td>
+			<td>
+				<input type="text" id="TE_dtim" maxlength="4" size="7">
+				<span id="2ADV011">(range: 1~255) </span>
+			</td>
+		</tr>
+		 <tr>
+			<td class="background" style="width:25%; " id="2ADV012">Preamble Type : </td>
+			<td>
+		        <select id="SEL_PreType" title="1">
+                    <option value="0">long</option>
+                    <option value="1">short</option>
+                </select>
+			</td>
+        </tr>
+<!--yll del,20120806
+		<tr>
+			<td class="background" style="width:25%; " id="lang_BroadSSID">Broadcast SSID : </td>
+			<td>
+				<input type="radio" id="RAD_EnBroadSSID" name="RAD_BroadSSID" onclick="doBroadSSID()">
+				<label for="RAD_EnBroadSSID" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisBroadSSID" name="RAD_BroadSSID" onclick="doBroadSSID()">
+				<label for="RAD_DisBroadSSID" id="lang_disable">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_wps">WMM : </td>
+			<td>
+				<input type="radio" id="RAD_EnWMM" name="RAD_WMM" onclick="doEnWMM()">
+				<label for="RAD_EnWMM" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisWMM" name="RAD_WMM" onclick="doEnWMM()">
+				<label for="RAD_DisWMM" id="lang_disable">Disable</label>
+			</td>
+		</tr>
+	-->
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="2ADV013" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="2ADV014" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

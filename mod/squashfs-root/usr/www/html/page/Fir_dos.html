@@ -1,0 +1,117 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="DOS001">Anti-Attrck</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="DOS002">The firewall can block common hacker attacks.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="DOS003">Enable Anti-Attack : </td>
+			<td><input type="checkbox" id="CHB_Enable" onClick="onClkEnable()"></td>
+		</tr>		
+		<tr>
+			<td class="background" style="width:25%; " id="DOS004">Enable Attack Log : </td>
+			<td><input type="checkbox" id="CHB_EnableLog"></td>
+		</tr>
+	</table>
+	<div id="DIV_Enable">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="DOS005">Individual Portection Switch</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" class="table2">
+		<tr>
+			<th colspan="1" style="width:25% " id="DOS006">Enable</th>
+			<th colspan="2" style="width:75% " id="DOS007">Select</th>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Inde1" onClick="onClkMaxSYN()"></td>
+			<td colspan="2" style="width:75%; text-align:left;"><span id="DOS008">Enable SYN Attack Protection, Max SYN Connections Per Second : </span>
+				<input type="text" size="8" id="INPUT_MaxSYN">&nbsp;<span id="DOS009">(Per/Second)</span>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Inde2"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS010">Enable Attack Protection Function of Fragglen</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Inde3"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS011">Enable Attack Protection Function of Echo Chargen</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Inde4"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS012">Enable Attack Protection Function of IP Land</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Inde5"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS013">Enable Protection of Anti PortScan</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="DOS014">Anti Invalid Packets Switch</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" class="table2">
+		<tr>
+			<th colspan="1" style="width:25% " id="DOS015">Enable</th>
+			<th colspan="2" style="width:75% " id="DOS016">Select</th>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti1"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS017">TCP Flags: Set "SYN FIN"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti2"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS018">TCP Flags: Set "SYN RST"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti3"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS019">TCP Flags: Set "FIN RST"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti4"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS020">TCP Flags: Unset "ACK", Set "FIN"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti5"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS021">TCP Flags: Unset "ACK", Set "PSH"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti6"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS022">TCP Flags: Unset "ACK", Set "URG"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti7"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS023">TCP Flags: Unset "SYN ACK FIN RST URG PSH"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti8"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS024">TCP Flags: Set "SYN ACK FIN RST URG PSH"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti9"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS025">TCP Flags: Unset "PSH", Set "SYN ACK FIN RST URG"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti10"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS026">TCP Flags: Unset "SYN ACK RST URG PSH", Set "FIN"</td>
+		</tr>
+		<tr>
+			<td colspan="1" style="width:25% "><input type="checkbox" id="CHB_Anti11"></td>
+			<td colspan="2" style="width:75%; text-align:left; " id="DOS027">TCP Flags: Unset "SYN ACK RST", Set "FIN URG PSH"</td>
+		</tr>
+	</table>
+	</div>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="DOS028"  value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="DOS029" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

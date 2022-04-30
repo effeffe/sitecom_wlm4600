@@ -1,0 +1,88 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  colspan="2"  id="6FIL001">IPv6 Filter Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="6FIL028">Use this page to configure a filter that allows or blocks IPv6 network traffic that matches a specified address or protocol.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="6FIL002">Enable IPv6 Filter : </td>
+			<td>
+				<input type="checkbox"  id="CHE_ipfilter" name="CHE_ipfilter">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="6FIL003">Security Level : </td>
+			<td>
+				<select id="SEL_SecurLevel"  size="1" onChange="uiOnload(this.value)">
+					<option value="3" id="6FIL004">High</option>
+					<option value="2" id="6FIL005">Middle</option>
+					<option value="1" id="6FIL006">Low</option>
+				</select>
+			</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="6FIL007">Filter Model</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="6FIL008">WAN &#8594; LAN : </td>
+			<td>
+				<input type="radio" id="RAD_wanTolan_white" name="RAD_wanTolan" value="1" onclick="createTable()">
+				<label for="RAD_wanTolan_white" id="6FIL009">White </label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_wanTolan_black" name="RAD_wanTolan" value="2" onclick="createTable()">
+				<label for="RAD_wanTolan_black" id="6FIL010">Black</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="6FIL011">LAN &#8594; WAN : </td>
+			<td>
+				<input type="radio" id="RAD_lanTowan_white" name="RAD_lanTowan" value="1" onclick="createTable()">
+				<label for="RAD_lanTowan_white" id="6FIL012">White </label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_lanTowan_black" name="RAD_lanTowan" value="2" onclick="createTable()">
+				<label for="RAD_lanTowan_black" id="6FIL013">Black</label>
+			</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="6FIL014" value="Submit" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="6FIL015" value="Refresh" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="6FIL016">Add IP filter rules : </td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="6FIL017">Choose : </td>
+			<td>
+				<select name="SEL_direct" id="SEL_direct" onChange="createTable()">
+					<option value="1">WAN &#8594; LAN</option>
+					<option value="2">LAN &#8594; WAN</option>
+				</select> 
+				<input type="button" id="6FIL027" name="add" value="Add a rule" onClick="uiAddRule()">
+			</td>
+		</tr>
+		<tr></tr>
+     </table> 
+	<table class="table2" width="900px" border="0" cellspacing="2" id="TA_ipfilter_List">
+		<tr>
+			<th id="6FIL018" width="5%" align="center">#</th>
+			<th id="6FIL019" width="15%" align="center">Enable</th>
+			<th id="6FIL020" width="15%" align="center">IP/Port(source)</th>
+			<th id="6FIL021" width="15%" align="center">IP/Port(destination)</th>
+			<th id="6FIL022" width="15%" align="center">Protocol</th>
+			<th id="6FIL023" width="15%" align="center">Description</th>
+			<th id="6FIL024" width="15%" align="center">Device Name</th>
+			<th id="6FIL025" width="5%" align="center">Edit</th>
+			<th id="6FIL026" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+</div>
+

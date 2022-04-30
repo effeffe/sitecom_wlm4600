@@ -1,0 +1,5 @@
+dev:    size   erasesize  name
+mtd0: 00030000 00010000 "boot"
+mtd1: 00154600 00010000 "kernel"
+mtd2: 004d5000 00010000 "rootfs"
+mtd3: 001a6a00 00010000 "data"

@@ -1,0 +1,192 @@
+﻿
+<div class="blockquote">
+	<div id="wireless_enable">
+		<table  width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize" colspan="3" id="2BAS001">Wireless Basic Settings</td>
+			</tr>
+			<tr>
+				<td colspan="4" id="2BAS002">This page is used to configure the parameters for the wireless LAN like wireless encryption settings, channel and band.</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="2BAS003">Access Point : </td>
+				<td>
+					<input type="radio" id="RAD_enable" name="RAD_enable" value="1" onClick="disWireless();" ><label for="RAD_enable" id="2BAS004">Enable</label>&nbsp;&nbsp;
+					<input type="radio" id="RAD_disable" name="RAD_enable"  value="0"  onClick="disWireless();"><label for="RAD_disable" id="2BAS005">Disable</label>   
+					<!--<input type="radio" id="RAD_enable" name="RAD_enable" value="1"><label for="RAD_enable" id="lang_enable">Enable</label>&nbsp;&nbsp;
+					<input type="radio" id="RAD_disable" name="RAD_enable"  value="0"><label for="RAD_disable" id="lang_disable">Disable</label> -->
+				</td>
+			 </tr>
+		</table>
+	</div> 
+	<div id="wlan_enable">
+	     <div>
+			<table  width="900px" border="0" cellspacing="2">
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS006">Country : </td>
+					<td>
+						<select id="SEL_country" onchange="ctrlChannelOpt(this.value)">
+						    <option></option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS007">Channel :</td>
+					<td>
+						<select id="SEL_channel" ><option></option></select>&nbsp;
+						<span id="2BAS008">Current Channel :</span>&nbsp;
+						<input type="text" id="TE_CurChannel" style="width:30px; ">
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS009">Wireless Mode :</td>
+					<td>
+						<select id="SEL_mode" onChange="OnBandWidthEnable(this.value)">
+							<option value="b">802.11b</option>
+							<option value="g">802.11g</option>
+							<option value="n">802.11n</option>
+							<option value="bg">802.11b+g</option>
+							<option value="ng">802.11g+n</option>
+							<option value="bgn" selected="">802.11b+g+n</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS010">Ap Isolation : </td>
+					<td>
+						<select id="SEL_ApIso">
+						    <option value="0">Off</option>
+                            <option value="1">On</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div id="wlan_enableNMode">
+			<table  width="900px" border="0" cellspacing="2">
+				<tr>
+					<td class="emphasize" colspan="3" id="2BAS011">11n Settings</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS012">Channel Width :</td>
+					<td>
+						<select id="SEL_BandWidth" onChange="ctrlChannelOpt(this.value)">
+							<option value="20">20M</option>
+							<option value="0">20/40M</option>
+<?if eq 1 $var:mod_5GWIFI
+`
+							<option value="40PLUS">40M Plus</option>
+							<option value="40MINUS">40M Minus</option>
+`?>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+		  <!--       <tr> 
+					<td class="background" style="width:25%; " id="lang_interval">Guard Interval :</td>
+					<td>
+						<select id="SEL_interval">
+							<option value="800">800 nsec</option>
+							<option value="Auto">Auto</option>
+						</select>
+					</td>
+				</tr>
+		
+		
+		  <tr>
+					<td class="background" style="width:25%; " id="lang_MCS">MCS :</td>
+					<td>
+						<select id="SEL_MCS">
+							<option value="Auto">Auto</option>
+						</select>
+					</td>
+				</tr>
+		--> 
+		<div>
+		     <table width="900px" border="0" cellspacing="2">   
+				<tr>
+					<td class="emphasize" colspan="3" id="2BAS013">SSID Settings</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS014">SSID index :</td>
+					<td>
+						<select id="SEL_SsidIndex" onChange="onchangeSsidName();">
+						</select>
+					</td>
+				</tr>
+			 </table>
+		</div>
+		<div id = "FirstSwitch">
+			<table width="900px" border="0" cellspacing="2">
+				<tr>
+				    <td class="background" style="width:25%; " id="2BAS015">Wireless Switch : </td>
+				    <td>
+					    <input type="radio" id="RAD_EnWL" name="RAD_EnWL" value="1" onClick="disSingleSsid()"><label for="RAD_EnWL" id="2BAS016">Enable</label>&nbsp;&nbsp;
+					    <input type="radio" id="RAD_DisWL" name="RAD_EnWL"  value="0" onClick="disSingleSsid()"><label for="RAD_DisWL" id="2BAS017">Disable</label>
+				    </td>
+			    </tr>
+			 </table>
+		</div>
+		<div id="SetSsidOpt">
+		   <div>
+			<table  width="900px" border="0" cellspacing="2" > 
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS018">SSID :</td>
+					<td>
+						<input type="text" id="TE_ssid">
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS019">Visibility Status : </td>
+					<td>
+						<input type="radio" id="RAD_visible" name="RAD_visible"  value="1" ><label for="RAD_visible" id="2BAS020">Visible</label>&nbsp;&nbsp;
+						<input type="radio" id="RAD_invisible" name="RAD_visible"  value="0"><label for="RAD_invisible" id="2BAS021">Invisible</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS022">Max User Index : </td>
+					<td>
+						<input type="text" id="TE_MaxUser">
+					</td>
+				</tr>
+				<tr>
+					<td class="background" style="width:25%; " id="2BAS023">User Isolation : </td>
+					<td>
+						<select id="SEL_UserIso">
+						    <option value="0">Off</option>
+                            <option value="1">On</option>
+						</select>
+					</td>
+				</tr>
+				
+			</table>
+			</div>
+			<div id="DisWMMAdv">
+				     <table  width="900px" border="0" cellspacing="2"> 
+						 <tr>
+							<td class="background" style="width:25%; " id="2BAS024">Disable WMM Advertise : </td>
+							<td>
+								<select id="SEL_DisWMMAdv">
+									<option value="0">Off</option>
+									<option value="1">On</option>
+								</select>
+							</td>
+						 </tr>
+			         </table>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="2BAS025" value="Save" onClick="uiSubmit()">&nbsp;
+					<input type="button" id="2BAS026" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

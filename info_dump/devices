@@ -1,0 +1,42 @@
+Character devices:
+  1 mem
+  2 pty
+  3 ttyp
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+ 10 misc
+ 21 sg
+ 90 mtd
+108 ppp
+128 ptm
+136 pts
+180 usb
+189 usb_device
+220 hwnat0
+230 acl0
+240 ac0
+250 mtr0
+254 bsg
+
+Block devices:
+  1 ramdisk
+259 blkext
+  8 sd
+ 31 mtdblock
+ 65 sd
+ 66 sd
+ 67 sd
+ 68 sd
+ 69 sd
+ 70 sd
+ 71 sd
+128 sd
+129 sd
+130 sd
+131 sd
+132 sd
+133 sd
+134 sd
+135 sd

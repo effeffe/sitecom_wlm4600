@@ -1,0 +1,331 @@
+﻿<script type="text/javascript" src="/html/js/ajax.js"></script>
+<form name=vsFrm id="uiPostForm" method="post" action="webproc">
+<div class="blockquote" id=VirtualServer>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="VIRT001">Virtual Server</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="VIRT002">Virtual Server allows you to direct incoming traffic from the WAN side (identified by protocol and external port)to the internal server with a private IP address on the LAN side. The internal port is required only if the external port needs to be converted to a different port number used by the server on the LAN side. A maximum of   entries can be configured.</td>
+		</tr>
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="VIRT003">Virtual Server Listing</td>
+		</tr>
+	</table> 
+	
+	<table class="table2" width="900px" border="0" cellspacing="2" id="PortMappingList">
+		<tr>
+			<th id="VIRT004" align="center">Server Name</th>
+			<th id="VIRT005" align="center">Wan Connection</th>
+			<th id="VIRT006" align="center">External Port Start/End</th>
+			<th id="VIRT007" align="center">Protocol</th>
+			<th id="VIRT008" align="center">Internal Port Start/End</th>
+			<th id="VIRT009" align="center">Server IP Address</th>
+			<th id="VIRT010" align="center">Schedule Rule</th>
+			<th id="VIRT011" align="center">Remote IP</th>
+			<th id="VIRT012" align="center">Edit</th>
+			<th id="VIRT013" align="center">Drop</th>
+		</tr>
+	</table>
+
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="VIRT014" value="Add" onClick="uiAddEntry()">
+			</td>
+		</tr>
+	</table>
+
+	<div id="port_setup" style="display:none">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="4"class="emphasize"  id="VIRT015">Add Vritual Server Rule(s)</td>
+			</tr>	
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT017">WAN Connection(s) :</td>
+				<td>
+					<select name="SELECT_WanConns" id="SELECT_WanConns" onChange="Table.Clear('PortMappingList');createTable()"><option> </option></select>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT018">Server Name :</td>
+				<td>
+					<input type='text' size="45"  maxlength="256" id="cusSrvName" >
+				</td>
+<!--	/*RT63365要求：页面取消"Select a Service"选项,故注掉;majaingying 2012/10/18*/
+				<td>
+					<input type="radio" name="radiosrv" value="0" onClick="onclkS_Server()" checked/> <span id="VIRT019"> Select a Service :</span>
+					<div id="s_service"> 
+					<div class="div_right" id='id_autoSrvName'>
+					    <select name='srvName' id='srvName' onChange='appSelect(this.value)' style="font-size:12px;">
+                    		<option value="FIRST_APP">(Click to Select)</option>
+                    		<option value="Active Worlds">Active Worlds</option>
+                    		<option value="Age of Empires">Age of Empires</option>
+		    			<option value="Age of Empires Expansion: The Rise of Rome">
+						Age of Empires Expansion: The Rise of Rome</option>
+		    			<option value="Age of Empires II Expansion: The Conquerors">
+						Age of Empires II Expansion: The Conquerors</option>
+		    			<option value="Age of Empires II: The Age of Kings">Age of Empires II: The Age of Kings</option>
+		    	    	<option value="Age of Kings">Age of Kings</option>
+		    	    	<option value="Age of Wonders">Age of Wonders</option>
+		    	    	<option value="Aliens vs. Predator">Aliens vs. Predator</option>
+		    	    	<option value="AOL Instant Messenger">AOL Instant Messenger</option>
+		    	    	<option value="Audiogalaxy Satellite">Audiogalaxy Satellite</option>
+		    	    	<option value="AUTH">AUTH</option>
+		    	    	<option value="Baldur's Gate">Baldur's Gate</option>
+		    	    	<option value="BattleCom">BattleCom</option>
+		    	    	<option value="Battlefield Communicator">Battlefield Communicator</option>
+		    	    	<option value="Black and White">Black and White</option>
+		    	    	<option value="Blizzard Battle.net">Blizzard Battle.net</option>
+		    	    	<option value="Buddy Phone">Buddy Phone</option>
+		    	    	<option value="Bungie.net">Bungie.net</option>
+		    	    	<option value="Camerades">Camerades</option>
+		    	    	<option value="CART Precision Racing">CART Precision Racing</option>
+		    	    	<option value="Close Combat for Windows">Close Combat for Windows</option>
+		    	    	<option value="Close Combat III: The Russian Front">Close Combat III: The Russian Front</option>
+		    	    	<option value="Close Combat: A Bridge Too Far">Close Combat: A Bridge Too Far</option>
+		    	    	<option value="Combat Flight Simulator 2: WWII Pacific Theater">
+										Combat Flight Simulator 2: WWII Pacific Theater</option>
+				    	<option value="Combat Flight Simulator: WWII Europe Series">
+										Combat Flight Simulator: WWII Europe Series</option>
+		    	    	<option value="Crimson Skies">Crimson Skies</option>
+		    	    	<option value="CuSeeMe">CuSeeMe</option>
+		    	    	<option value="Dark Reign 2">Dark Reign 2</option>
+		    	    	<option value="Delta Force 2">Delta Force 2</option>
+		    	    	<option value="Delta Three PC to Phone">Delta Three PC to Phone</option>
+		    	    	<option value="Descent 3">Descent 3</option>
+		    	    	<option value="Descent Freespace">Descent Freespace</option>
+		    	    	<option value="Diablo I">Diablo I</option>
+		    	    	<option value="Diablo II">Diablo II</option>
+		    	    	<option value="DialPad.Com">DialPad.Com</option>
+		    	    	<option value="DirectX 7 Games">DirectX 7 Games</option>
+		    	    	<option value="DirectX 8 Games">DirectX 8 Games</option>
+		    	    	<option value="Domain Name Server (DNS)">Domain Name Server (DNS)</option>
+		    	    	<option value="Doom">Doom</option>
+		    	    	<option value="Dune 2000">Dune 2000</option>
+		    	    	<option value="Dwyco Video Conferencing">Dwyco Video Conferencing</option>
+		    	    	<option value="Elite Force">Elite Force</option>
+		    	    	<option value="Everquest">Everquest</option>
+		    	    	<option value="F-16">F-16</option>
+		    	    	<option value="F-22 Lightning 3">F-22 Lightning 3</option>
+		    	    	<option value="F-22 Raptor">F-22 Raptor</option>
+		    	    	<option value="F22 Raptor (Novalogic)">F22 Raptor (Novalogic)</option>
+		    	    	<option value="Falcon 4.0">Falcon 4.0</option>
+		    	    	<option value="Fighter Ace II">Fighter Ace II</option>
+		    	    	<option value="Flight Simulator 2000">Flight Simulator 2000</option>
+		    	    	<option value="Freetel">Freetel</option>
+		    	    	<option value="FTP Server">FTP Server</option>
+		    	    	<option value="GNUtella">GNUtella</option>
+		    	    	<option value="Golf 2001 Edition">Golf 2001 Edition</option>
+		    	    	<option value="Go2Call">Go2Call</option>
+		    	    	<option value="Half Life">Half Life</option>
+		    	    	<option value="Half Life Server">Half Life Server</option>
+		    	    	<option value="Heretic II Server">Heretic II Server</option>
+		    	    	<option value="I76">I76</option>
+		    	    	<option value="ICUII Client">ICUII Client</option>
+		    	    	<option value="Ivisit">Ivisit</option>
+		    	    	<option value="IPSEC">IPSEC</option>
+		    	    	<option value="IRC">IRC</option>
+		    	    	<option value="IStreamVideo2HP">IStreamVideo2HP</option>
+		    	    	<option value="KaZaA">KaZaA</option>
+		    	    	<option value="Kohan Immortal Sovereigns">Kohan Immortal Sovereigns</option>
+		    	    	<option value="LapLink Gold">LapLink Gold</option>
+		    	    	<option value="Links 2001">Links 2001</option>
+		    	    	<option value="Lotus Notes Server">Lotus Notes Server</option>
+		    	    	<option value="Mail (POP3)">Mail (POP3)</option>
+		    	    	<option value="Mail (SMTP)">Mail (SMTP)</option>
+		    	    	<option value="MechCommander 2.0">MechCommander 2.0</option>
+		    	    	<option value="MechWarrior 4">MechWarrior 4</option>
+		    	    	<option value="Media Player 7">Media Player 7</option>
+		    	    	<option value="Midtown Madness 2">Midtown Madness 2</option>
+		    	    	<option value="Mig 29">Mig 29</option>
+		    	    	<option value="Monster Truck Madness 2">Monster Truck Madness 2</option>
+		    	    	<option value="Motocross Madness 2">Motocross Madness 2</option>
+		    	    	<option value="Motorhead Server">Motorhead Server</option>
+		    	    	<option value="MSN Gaming Zone">MSN Gaming Zone</option>
+		    	    	<option value="MSN Messenger">MSN Messenger</option>
+		    	    	<option value="Myth">Myth</option>
+		    	    	<option value="Myth II Server">Myth II Server</option>
+		    	    	<option value="Myth: The Fallen Lords">Myth: The Fallen Lords</option>
+		    	    	<option value="Need for Speed">Need for Speed</option>
+		    	    	<option value="NetMech">NetMech</option>
+		    	    	<option value="Netmeeting 2.0, 3.0, Intel Video Phone">
+						Netmeeting 2.0, 3.0, Intel Video Phone</option>
+		    	    	<option value="Network Time Protocol (NTP)">Network Time Protocol (NTP)</option>
+		    	    	<option value="News Server (NNTP)">News Server (NNTP)</option>
+		    	    	<option value="OKWeb">OKWeb</option>
+		    	    	<option value="OKWin">OKWin</option>
+		    	    	<option value="Outlaws">Outlaws</option>
+		    	    	<option value="Pal Talk">Pal Talk</option>
+		    	    	<option value="pcAnywhere v7.5">pcAnywhere v7.5</option>
+		    	    	<option value="PhoneFree">PhoneFree</option>
+		    	    	<option value="Polycom ViaVideo H.323">Polycom ViaVideo H.323</option>
+		    	    	<option value="Polycom ViaVideo H.324">Polycom ViaVideo H.324</option>
+		    	    	<option value="PPTP">PPTP</option>
+		    	    	<option value="Quake">Quake</option>
+		    	    	<option value="Quake II (Client and Server)">Quake II (Client and Server)</option>
+		    	    	<option value="Quake III">Quake III</option>
+		    	    	<option value="RealAudio">RealAudio</option>
+		    	    	<option value="Real Player 8 Plus">Real Player 8 Plus</option>
+		    	    	<option value="Red Alert">Red Alert</option>
+		    	    	<option value="Rise of Rome">Rise of Rome</option>
+		    	    	<option value="Roger Wilco">Roger Wilco</option>
+		    	    	<option value="Rogue Spear">Rogue Spear</option>
+		    	    	<option value="Secure Shell Server (SSH)">Secure Shell Server (SSH)</option>
+		    	    	<option value="Secure Web Server (HTTPS)">Secure Web Server (HTTPS)</option>
+		    	    	<option value="ShoutCast">ShoutCast</option>
+		    	    	<option value="SNMP">SNMP</option>
+		    	    	<option value="SNMP Trap">SNMP Trap</option>
+		    	    	<option value="Speak Freely">Speak Freely</option>
+		    	    	<option value="StarCraft">StarCraft</option>
+		    	    	<option value="Starfleet Command">Starfleet Command</option>
+		    	    	<option value="StarLancer">StarLancer</option>
+		    	    	<option value="SWAT3">SWAT3</option>
+		    	    	<option value="Telnet Server">Telnet Server</option>
+		    	    	<option value="The 4th Coming">The 4th Coming</option>
+		    	    	<option value="TFTP">TFTP</option>
+		    	    	<option value="Tiberian Sun: C&C III"">Tiberian Sun: C&C III"</option>
+		    	    	<option value="Total Annihilation">Total Annihilation</option>
+		    	    	<option value="Ultima">Ultima</option>
+		    	    	<option value="Unreal Tournament">Unreal Tournament</option>
+		    	    	<option value="Urban Assault">Urban Assault</option>
+		    	    	<option value="VoxPhone 3.0">VoxPhone 3.0</option>
+		    	    	<option value="Warbirds 2">Warbirds 2</option>
+		    	    	<option value="Web Server (HTTP)">Web Server (HTTP)</option>
+		    	    	<option value="WebPhone 3.0">WebPhone 3.0</option>
+		    	    	<option value="Westwood Online">Westwood Online</option>
+		    	    	<option value="Windows 2000 Terminal Server">Windows 2000 Terminal Server</option>
+		    	    	<option value="X Windows">X Windows</option>
+		    	    	<option value="Yahoo Pager">Yahoo Pager</option>
+		    	    	<option value="Yahoo Messenger Chat">Yahoo Messenger Chat</option></select>
+					</div>
+				</div> 
+
+				<input type="radio" name="radiosrv" value="1" onClick="onclkC_Server()" ><span id="VIRT020">Custom Server :</span>
+				<div id="c_server">	
+					<div class="div_right"><input type='text' size="45"  maxlength="256" id="cusSrvName" disabled></div>
+				</div>
+				</td>
+-->
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT021">Schedule : </td>
+				<td>
+					<select name='time_schedule' id = "time_schedule"></select> &nbsp;&nbsp;    
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT022">Server IP Address(Host Name) :</td>
+				<td>
+					<input type='text' size="32" maxlength="256" name="sIp" id="sIp">
+				</td>
+			</tr>
+		</table>
+		
+		<table class="table2" width="900px" border="0" cellspacing="2" id="PortMappingList">
+			<tr>
+				<th id="VIRT023">External Port Start</th>
+				<th id="VIRT024">External Port End</th>
+				<th id="VIRT025">Protocol</th>
+				<th id="VIRT026">Internal Port Start</th>
+				<th id="VIRT027">Internal Port End</th>
+				<th id="VIRT028">Remote Ip</th>
+			</tr>
+					
+			<script language='javascript'>
+			<!--hide
+			var i = 0;
+			var count = 11;
+			for (i==0; i <= count; i++)
+			{
+				document.writeln('<tr>');
+				document.writeln('<td><input type="text" size="8" maxlength="5" name="eStart" id="eStart" onchange="setiPt(0, ' + i + ')"></td>');
+				document.writeln('<td><input type="text" size="8" maxlength="5" name="eEnd" id="eEnd" onchange="setiPt(1, ' + i + ')"></td>');
+				document.writeln('<td><select name="proto" id="proto">');
+				//document.writeln('<option value="0">TCP/UDP');
+				document.writeln('<option value="1" selected>TCP');
+				document.writeln('<option value="2">UDP');
+				document.writeln('</select></td>');
+				document.writeln('<td><input type="text" size="8" maxlength="5" id="iStart" onkeypress="kPressed()" onblur="setiEnd(' + i + ')">');
+				document.writeln('<td><input type="text" size="8" maxlength="5" name="iEnd" disabled id="iEnd"></td>');
+				document.writeln('<td><input type="text" size="8" maxlength="15" name="iSrcIp" id="iSrcIp"></td>');
+				document.writeln('</tr>');
+			}
+			-->
+			</script>	
+			<input type="hidden" name="listLen">
+			<input type="hidden" name="eStartLocText">
+			<input type="hidden" name="eEndLocText">
+			<input type="hidden" name="protoLocText">
+			<input type="hidden" name="iStartLocText">
+			<input type="hidden" name="iEndLocText">
+			<input type="hidden" name="iSrcIpLocText">	
+		</table>
+		
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" value="Apply" id="VIRT029" onClick="btnApply()" /> 
+					<input type="button" value="Cancel" id="VIRT030" onClick="uiPageRefresh()" />
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	<div id="port_setup_edit" style="display:none">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="4"class="emphasize"  id="VIRT031">Edit Vritual Server Rule</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT032">Server Name :</td>
+				<td >
+					<input type='text' size="45"  maxlength="256" name="editCusSrvName" id="editCusSrvName">
+				<td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT033">Schedule : </td>
+				<td>
+					<select name='time_schedule_edit' id = "time_schedule_edit"></select> &nbsp;&nbsp;    
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="VIRT034">Server IP Address(Host Name) :</td>
+				<td>
+					<input type='text' size="32" maxlength="256" name="ipEdit" id="ipEdit">
+				</td>
+			</tr>
+		</table>			
+		<table  class="table2" width="900px" border="0" cellspacing="2" id="PortMappingEditList">
+			<tr>
+				<th id="VIRT035">External Port Start</th>
+				<th id="VIRT036">External Port End</th>
+				<th id="VIRT037">Protocol</th>
+				<th id="VIRT038">Internal Port Start</th>
+				<th id="VIRT039">Internal Port End</th>
+				<th id="VIRT040">Remote Ip</th>
+			</tr>
+			<tr>
+				<td><input type='text' size="10" maxlength="5" name="eStartEdit" id="eStartEdit" onchange='setiPtEdit(0)'></td>
+				<td><input type='text' size="10" maxlength="5" name="eEndEdit" id="eEndEdit" onchange='setiPtEdit(1)'></td>
+				<td><select name='protoEdit' id='protoEdit'>
+					<option value='1' selected>
+					TCP
+					<option value='2'>
+					UDP
+					</select></td>
+				<td><input type='text' size="10" maxlength="5" name="iStartEdit" id="iStartEdit" onkeypress='kPressed()' onblur='setiEndEdit(0)'>
+				<td><input type='text' size="10" maxlength="5" name="iEndEdit" id="iEndEdit"></td>
+				<td><input type='text' size="10" maxlength="15" name="iSrcIpEdit" id="iSrcIpEdit"></td>
+			</tr>	
+		</table>
+		<div colspan="2" align="right">
+			<input type="button" value="Apply"  name="apply" id="VIRT041" onClick="uiSubmit()" /> 
+			<input type="button" value="Cancel" name="cancle" id="VIRT042" onClick="uiPageRefresh()" />
+		</div>
+	</div>
+</div>
+</form>

@@ -1,0 +1,15 @@
+USE TFTP PROPERLY, not just the random python server, as it does NOT work.
+Here, I am using tftp-hpa
+
+stock:
+$console=ttyS0,115200 es=1 mem=64M root=31:2 mtdparts=sflash:196608(boot),1394176(kernel),5066752(rootfs),-(data) rootfstype=squashfs es=1 
+
+via serial boot - i.e. skip login:
+$booth 192.168.1.20 WLM-4600-stock_kernel -r root=31:2 mtdparts=sflash:196608(boot),1394176(kernel),5066752(rootfs),-(data) rootfstype=squashfs es=1 init=/bin/sh
+
+the follow with
+$/etc/init.d/rcS
+
+to back-up the entire flash, use cat as it is the only tool available and can't mount ext3:
+cat /dev/mtdblock0 > /mnt/usb1_1/mtd_dump/mtdblock0
+

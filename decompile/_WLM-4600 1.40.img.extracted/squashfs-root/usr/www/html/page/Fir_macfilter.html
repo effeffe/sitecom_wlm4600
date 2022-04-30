@@ -1,0 +1,182 @@
+﻿
+<div class="blockquote" id=IPMACFilter>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="MAC001">Block MAC Address</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="MAC002">This page adds a time of day restriction to a special LAN device connected to the router.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="MAC003" rowspan="2">Mac Filtering Global Policy : </td>
+			<td>
+				<input type="radio" id="RAD_black" name="RAD_mode" value="1" onClick="onMacfilterMode()">
+				<b><font color="red" id="MAC004">BLACK_LIST</font></b><span id="MAC005"> --Allow all packets but</span> <b><font color="red" id="MAC006">DENY</font></b><span id="MAC007"> those matching any of specific rules listed</span></label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_white" name="RAD_mode" value="0" onClick="onMacfilterMode()">
+				<b><font color="green" id="MAC008">WHITE_LIST</font></b><span id="MAC009"> --Deny all packets but </span> <b><font color="green" id="MAC010">ALLOW</font></b><span id="MAC011"> those matching any of specific rules listed</span></label>
+			</td>
+		</tr>
+		<tr></tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="MAC012" value="Apply" onClick="uiRadioSubmit()">
+				<input type="button" id="MAC013" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<div id="DIV_black" style="display:none">	
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize"  id="MAC014">Block MAC Address--blacklist</td>
+			</tr>
+		 </table> 
+		 <table class="table2" width="900px" border="0" cellspacing="2" id="TA_BlackList">
+			<tr>
+				<th id="MAC015" width="5%" align="center">#</th>
+				<th id="MAC016" width="15%" align="center">Username</th>
+				<th id="MAC017" width="15%" align="center">MAC</th>
+				<th id="MAC018" width="15%" align="center">Schedule</th>
+				<th id="MAC019" width="5%" align="center">Edit</th>
+				<th id="MAC020" width="5%" align="center">Drop</th>
+			</tr>
+			<tr></tr>
+		</table>
+	</div>
+	<div id="DIV_white" style="display:none">	
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize"  id="MAC021">Pass MAC Address--whitelist</td>
+			</tr>
+		 </table> 
+		 <table class="table2" width="900px" border="0" cellspacing="2" id="TA_WhiteList">
+			<tr>
+				<th id="MAC022" width="5%" align="center">#</th>
+				<th id="MAC023" width="15%" align="center">Username</th>
+				<th id="MAC024" width="15%" align="center">MAC</th>
+				<th id="MAC025" width="15%" align="center">Schedule</th>
+				<th id="MAC026" width="5%" align="center">Edit</th>
+				<th id="MAC027" width="5%" align="center">Drop</th>
+			</tr>
+			<tr></tr>
+		</table>
+	</div>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="MAC028" value="Add" onClick="uiAddEntry()">
+			</td>
+		</tr>
+	</table>
+	
+	<div id="DIV_AddEntry" style="display:none">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize"  id="MAC029">Add Schedule Rule</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC030">User Name : </td>
+				<td>
+					<input type="text" id="TE_username" maxlength="32" size="16">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC031" rowspan="2">MAC Address : </td>
+				<td>
+					<input type="radio" id="RAD_PC_mac" name="RAD_mac" value="1" onClick="changeMACSelect(1)">
+					<label for="RAD_PC_mac" id="MAC032">Current PC's </label>&nbsp;&nbsp;
+					<input type="text" id="TE_PC_mac" maxlength="18" size="18">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" id="RAD_other_mac" name="RAD_mac" value="0" onClick="changeMACSelect(0)" checked>
+					<label for="RAD_other_mac" id="MAC033">Other </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="text" id="TE_other_mac" maxlength="18" size="18">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC034">Schedule : </td>
+				<td>
+					<input type="radio" id="RAD_SelectSchedule" name="RAD_schedule" value="Select" onClick="changeScheduleMode(1)" checked>
+					<label for="RAD_SelectSchedule" id="MAC035">Select </label>&nbsp;&nbsp;
+					<select id="SEL_schedule" name="SEL_schedule" size="1"></select>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC036">Manual Schedule : </td>
+				<td>
+					<input type="radio" id="RAD_ManualSchedule" name="RAD_schedule" value="Manual" onClick="changeScheduleMode(0)">
+				</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="TA_ManualSche">
+			<tr>
+				<td class="background" style="width:25%; " id="MAC037" rowspan="3">Day(s) : </td>
+				<td>
+					<input type="radio" name="RAD_SelectDay" id="RAD_AllWeek" value="1" onClick="changeDaysSelect(1)">
+					<label for="RAD_AllWeek" id="MAC038">All Week</label>
+					<input type="radio" name="RAD_SelectDay" id="RAD_SelectDay" value="0" onClick="changeDaysSelect(0)" checked>
+					<label for="RAD_SelectDay" id="MAC039">Select Day(s)</label>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="CHE_sunday" name="CHE_sunday"><label for="CHE_sunday" id="MAC040">Sun</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_monday" name="CHE_monday"><label for="CHE_monday" id="MAC041">Mon</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_tuesday" name="CHE_tuesday"><label for="CHE_tuesday" id="MAC042">Tue</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_wednesday" name="CHE_wednesday"><label for="CHE_wednesday" id="MAC043">Wed</label>&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="checkbox" id="CHE_thursday" name="CHE_thursday"><label for="CHE_thursday" id="MAC044">Thu</label>&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_friday" name="CHE_friday"><label for="CHE_friday" id="MAC045">Fri</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="checkbox" id="CHE_saturday" name="CHE_saturday"><label for="CHE_saturday" id="MAC046">Sat</label>&nbsp;&nbsp;
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC047">All Day - 24 hrs : </td>
+				<td>
+					<input type="checkbox" id="CHE_wholeday" name="CHE_wholeday" onClick="setWholeDay()">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC048">Start Time : </td>
+				<td>
+					<input type="text" id="TE_StartTime_H" maxlength="2" size="8" style="WIDTH: 40px">
+					:
+					<input type="text" id="TE_StartTime_M" maxlength="2" size="8" style="WIDTH: 40px">
+					<span id="MAC049">(hour:minute, 24 hour time)</span>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="MAC050">End Time : </td>
+				<td>
+					<input type="text" id="TE_EndTime_H" maxlength="2" size="8" style="WIDTH: 40px">
+					:
+					<input type="text" id="TE_EndTime_M" maxlength="2" size="8" style="WIDTH: 40px">
+					<span id="MAC051">(hour:minute, 24 hour time)</span>
+				</td>
+			</tr>
+			<tr></tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="TA_apply">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="MAC052" value="Apply" onClick="uiSubmit()">&nbsp;
+					<input type="button" id="MAC053" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+
+

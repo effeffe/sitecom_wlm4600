@@ -1,0 +1,88 @@
+﻿<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="FI4A001">IP Filter Configuration</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A002">Connection : </td>
+			<td>
+				<select name="SEL_conn" id="SEL_conn" size="1">
+					<option>-</option>
+            	</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A003">Enable : </td>
+			<td>
+				<input type="checkbox"  id="CHE_enable" name="CHE_enable">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A004">Protocol : </td>
+			<td>
+				<select id="SEL_protocol" onChange="changeProtocol();">
+					<option value="TCP">TCP</option>
+					<option value="UDP">UDP</option>
+					<option value="ICMP">ICMP</option>
+					<option value="TCP/UDP">TCP/UDP</option>
+					<option value="all">ALL</option>
+            	</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A005">Source IP : </td>
+			<td>
+				<input type="text" maxlength="15" size="16" id="TE_SrcIp">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A006">Source Mask : </td>
+			<td>
+				<input type="text" maxlength="15" size="16" id="TE_SrcMask">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A007">Source Port : </td>
+			<td>
+				<input type="text" maxlength="6" size="16" id="TE_SrcPort_start">
+				-
+				<input type="text" maxlength="6" size="16" id="TE_SrcPort_end">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A008">Destination  IP : </td>
+			<td>
+				<input type="text" maxlength="15" size="16" id="TE_DestIp">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A009">Destination  Mask : </td>
+			<td>
+				<input type="text" maxlength="15" size="16" id="TE_DestMask">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A010">Destination  Port : </td>
+			<td>
+				<input type="text" maxlength="6" size="16" id="TE_DestPort_start">
+				-
+				<input type="text" maxlength="6" size="16" id="TE_DestPort_end">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FI4A011">Description : </td>
+			<td>
+				<input type="text" maxlength="32" size="16" id="TE_description">
+			</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="FI4A012" value="Submit" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="FI4A013" value="Refresh" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>
+

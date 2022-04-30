@@ -1,0 +1,7 @@
+Manufacturer: Sitecom Europe Bv
+ProductClass: WLM-4600/v1001
+SerialNumber: 001ee3995f25
+IP: 192.168.0.1
+HWVer: WLM-4600
+SWVer: 1.40
+

@@ -1,0 +1,87 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="SCH001">Schedules</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="SCH002">Schedule allows you to create scheduling rules to be applied for your firewall.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SCH003">Name : </td>
+			<td>
+				<input type="text" maxlength="15" size="20" id="INPUT_Name">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SCH004">Day(s) : </td>
+			<td>
+				<input type="radio" id="RAD_Allweek" name="RAD_Day" value="1" onClick="changeDaysSelect()">&nbsp;<label for="RAD_Allweek" id="SCH005">All Week</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_Selectday" name="RAD_Day" value="0" onClick="changeDaysSelect()" checked>&nbsp;<label for="RAD_Selectday" id="SCH006">Select Day(s)</label>
+			</td>
+		</tr>
+		<tr id="daysArea">
+			<td style="width:25%;">&nbsp;</td>
+			<td>
+				<input type="checkbox" id="CHB_Sun" />&nbsp;<label for="CHB_Sun" id="SCH007">Sun</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Mon" />&nbsp;<label for="CHB_Mon" id="SCH008">Mon</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Tue" />&nbsp;<label for="CHB_Tue" id="SCH009">Tue</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Wed" />&nbsp;<label for="CHB_Wed" id="SCH010">Wed</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Thu" />&nbsp;<label for="CHB_Thu" id="SCH011">Thu</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Fri" />&nbsp;<label for="CHB_Fri" id="SCH012">Fri</label>&nbsp;&nbsp;
+				<input type="checkbox" id="CHB_Sat" />&nbsp;<label for="CHB_Sat" id="SCH013">Sat</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SCH014">All Day - 24 hrs : </td>
+			<td>
+				<input type="checkbox" id="CHB_Allday" onClick="SetWholeDay()"/>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SCH015">Start Time : </td>
+			<td>
+				<input type="text" id="INPUT_StartTS" maxlength="2" size="3" />&nbsp;&nbsp;:&nbsp;
+				<input type="text" id="INPUT_StartTE" maxlength="2" size="3" />&nbsp;<span id="SCH016">(hour:minute, 24 hour time)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SCH034">End Time : </td>
+			<td>
+				<input type="text" id="INPUT_EndTS" maxlength="2" size="3" />&nbsp;&nbsp;:&nbsp;
+				<input type="text" id="INPUT_EndTE" maxlength="2" size="3" />&nbsp;<span id="SCH017">(hour:minute, 24 hour time)</span>
+			</td>
+		</tr>
+		
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="SCH018" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="SCH019" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="SCH020">Schedule Rule</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_scherule" class="table2">
+		<tr>
+			<th  style="width:5%"  	id="SCH021">#</th>
+			<th  style="width:20%"  id="SCH022">Rule Name</th>
+			<th  style="width:5%"  	id="SCH023">Sun</th>
+			<th  style="width:5%"  	id="SCH024">Mon</th>
+			<th  style="width:5%"  	id="SCH025">Tue</th>
+			<th  style="width:5%"  	id="SCH026">Wed</th>
+			<th  style="width:5%"  	id="SCH027">Thu</th>
+			<th  style="width:5%"  	id="SCH028">Fri</th>
+			<th  style="width:5%"  	id="SCH029">Sat</th>
+			<th  style="width:12%"  id="SCH030">Start Time</th>
+			<th  style="width:12%"  id="SCH031">End time</th>
+			<th  style="width:8%"  	id="SCH032">Edit</th>
+			<th  style="width:8%"  	id="SCH033">Drop</th>
+		</tr>
+	</table>
+</div>

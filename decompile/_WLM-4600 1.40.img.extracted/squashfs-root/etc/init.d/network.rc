@@ -1,0 +1,24 @@
+#!/bin/sh
+
+if [ `cat /proc/llconfig/phys_mem_size` -eq 1000000 ]; then
+    #The memory size is 16M!
+    echo 4096 >/proc/sys/net/nf_conntrack_max
+elif [ `cat /proc/llconfig/phys_mem_size` -eq 2000000 ]; then
+    #The memory size is 32M!
+    echo 8192 >/proc/sys/net/nf_conntrack_max
+elif  [ `cat /proc/llconfig/phys_mem_size` -gt 2000000 ]; then
+    #The memory size is 64M or larger!
+    echo 8192 >/proc/sys/net/nf_conntrack_max
+fi
+
+echo 2048 > /proc/sys/net/netfilter/nf_conntrack_expect_max
+
+###Network Initializing Configuration
+
+
+###设置路由缓存条目最大值和超时时间
+echo 10000 >/proc/sys/net/ipv4/route/max_size
+echo 100 >/proc/sys/net/ipv4/route/gc_timeout
+
+#echo "insmod ra hwnat driver"
+#insmod /lib/modules/hw_nat.ko

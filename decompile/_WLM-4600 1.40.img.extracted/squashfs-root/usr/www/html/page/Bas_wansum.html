@@ -1,0 +1,53 @@
+﻿
+<div class="blockquote">
+
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="WINFO018">WAN Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="WINFO019">This page is used to configure basic WAN settings like ADSL and DNS Settings.</td>
+		</tr>
+		<tr>
+            <td class="background" style="width:25%; " id="WINFO013">Default GateWay Mode</td>
+            <td>
+                <input type="radio" id="AutoGW" name="AutoGW_Switch" value="AutoDeftGW" onClick="">
+                    <label for="RAD_GetStaticMode" id="WINFO014">Auto</label>&nbsp;&nbsp;
+                <input type="radio" id="ManualGw" name="AutoGW_Switch" value="UserInIf" onClick="" checked>
+                    <label for="ManualGw" id="WINFO015">Manual</label>
+            </td>
+        </tr>
+        <tr>
+			<td colspan="2" align="right">
+				<input type="button" id="WINFO016" value="Apply" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="WINFO017" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+    <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="WINFO001">WAN Lists</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="ta_wanlists" class="table2">
+		<tr>
+			<th style="width:10%; " id="WINFO002">VPI/VCI</th>
+			<th style="width:10%; " id="WINFO003">VLAN ID</th>
+			<th style="width:10%; " id="WINFO004">Protocol</th>
+			<th style="width:10%; " id="WINFO005">ENCAP</th>
+			<th style="width:28%; " id="WINFO006">Status</th>
+			<th style="width:12%; " id="WINFO007">Default Route</th>			
+			<th style="width:10%; " id="WINFO008">Action</th>
+			<th style="width:5%; " id="WINFO009">Edit</th>
+			<th style="width:5%; " id="WINFO010">Drop</th>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="WINFO011" value="Add" onClick="uiAdd()">&nbsp;
+				<input type="button" id="WINFO012" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

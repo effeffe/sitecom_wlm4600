@@ -1,0 +1,32 @@
+WLM-4600v1-001
+
+Firmware 1.40
+- Fixed ISP Wizard settings
+- Changed SIP setting to enabled by default
+
+
+
+Firmware 1.22
+
+
+- Fixed WiFi authentication issue
+
+- Fixed DNS security issue
+
+
+
+Firmware 1.21
+
+
+- Various bugfixes and improvements
+
+
+
+Firmware 1.20
+
+
+- Full IPv6 compatibility
+
+- New Sitecom Cloud Security scan engine
+
+- Disable WPS PIN for security issues

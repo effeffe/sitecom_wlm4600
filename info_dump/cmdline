@@ -1,0 +1,1 @@
+console=ttyS0,115200 es=1 mem=64M root=31:2 mtdparts=sflash:196608(boot),1394176(kernel),5066752(rootfs),-(data) rootfstype=squashfs es=1 init=/bin/sh  rootfstype=squashfs es=1

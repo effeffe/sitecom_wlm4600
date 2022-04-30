@@ -1,0 +1,263 @@
+﻿
+<div class="blockquote">
+	<div id="DIV_DHCP">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BDHCP001">DHCP Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="BDHCP002">This page is used to configure the DHCP Server and DHCP Relay Settings.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP003">DHCP Mode : </td>
+			<td>
+				<input type="radio" id="RAD_dhcpnone" name="RAD_dhcpmode" value="dhcpnone" onClick="onClkDHCPMode(this.value)">
+				<label for="RAD_dhcpnone" id="BDHCP004">None</label>&nbsp;
+				<input type="radio" id="RAD_dhcpserver" name="RAD_dhcpmode" value="dhcpserver" onClick="onClkDHCPMode(this.value)">
+				<label for="RAD_dhcpserver" id="BDHCP005">DHCP Server</label>&nbsp;
+				<input type="radio" id="RAD_dhcprelay" name="RAD_dhcpmode" value="dhcprelay" onClick="onClkDHCPMode(this.value)">
+				<label for="RAD_dhcprelay" id="BDHCP006">DHCP Relay configuration</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_dhcprelay" style="display:none; ">
+		<tr>
+			<td class="background" style="width:25%; " id="lang_dhcprelay">Relay IP Address : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_DHCPRelay">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_dhcpmode" style="display:none; ">
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP007">Start IP Address : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_StartIP">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP008">End IP Address : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_EndIP">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP009">Max lease time : </td>
+			<td>
+				<input type="text" maxlength="7" size="6" id="INPUT_Leasetime">
+				<span id="BDHCP010">Seconds</span>&nbsp;&nbsp;
+				<span id="BDHCP011">(0 sets to the default value of 259200)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP012">Domain Name : </td>
+			<td>
+				<input type="text" size="20" id="INPUT_DomainName">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP013">DNS Relay : </td>
+			<td>
+				<input type="radio" id="RAD_autodnsrelay" name="RAD_dnsrelay" value="1" onClick="onClkDNSMode()">
+				<label for="RAD_autodnsrelay" id="BDHCP059">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_manualdnsrelay" name="RAD_dnsrelay" value="0" onClick="onClkDNSMode()">
+				<label for="RAD_manualdnsrelay" id="BDHCP060">Disable</label>
+			</td>
+		</tr>
+        <!--
+        <tr>
+			<td class="background" style="width:25%; " id="BDHCP058">DNS Mode : </td>
+			<td>
+				<input type="radio" id="DNS_auto" name="DNS_mode" value="1" onClick="onClkDNSMode()">
+				<label for="DNS_auto" id="BDHCP055">Automatically</label>&nbsp;&nbsp;
+				<input type="radio" id="DNS_manual" name="DNS_mode" value="0" onClick="onClkDNSMode()">
+				<label for="DNS_manual" id="BDHCP014">Manually</label>
+			</td>
+		</tr>
+        -->
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP015">Primary DNS :</td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_pridns">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP016">Secondary DNS : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_secdns">
+			</td>
+		</tr>
+	</table>	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BDHCP017">Radvd</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP018">Radvd : </td>
+			<td>
+				<input type="radio" id="RAD_disradvd" name="RAD_radvd" value="0" onClick="onClkRadvd(this.value)"><label for="RAD_disradvd" id="BDHCP019">Disable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_enradvd" name="RAD_radvd" value="1" onClick="onClkRadvd(this.value)"><label for="RAD_enradvd" id="BDHCP020">Enable</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_radvdmode" style="display:none; ">	
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP021">Preferred Lifetime : </td>
+			<td>
+				<input type="text" maxlength="6" size="15" id="INPUT_RadvdPreferred">
+			</td>
+		</tr>		
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP022">Valid Lifetime : </td>
+			<td>
+				<input type="text" maxlength="6" size="15" id="INPUT_RadvdLifetime">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BDHCP023">DHCPv6</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP024">DHCP6 Server : </td>
+			<td>
+				<input type="radio" id="RAD_v6disdhcps" name="RAD_dhcpv6s" value="0" onClick="onClkDHCPv6S(this.value)"><label for="RAD_v6disdhcps" id="BDHCP056">Disable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_v6endhcps" name="RAD_dhcpv6s" value="1" onClick="onClkDHCPv6S(this.value)"><label for="RAD_v6endhcps" id="BDHCP025">Enable</label>
+			</td>
+		</tr>
+	</table>
+	<div id="tb_v6dhcpmode">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP026">LAN Address Config Mode : </td>
+			<td>
+				<input type="radio" id="RAD_Stateless" name="RAD_State" value="1" onClick="onClklanAddrMode(this.value)"><label for="RAD_Stateless" id="BDHCP027">Stateless</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_Statefull" name="RAD_State" value="0" onClick="onClklanAddrMode(this.value)"><label for="RAD_Statefull" id="BDHCP028">Statefull</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP029">Interface ID : </td>
+			<td>
+				<input type="text" size="6" id="INPUT_StartID">&nbsp;~&nbsp;<input type="text" size="6" id="INPUT_EndID">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP030">Preferred Lifetime : </td>
+			<td>
+				<input type="text" maxlength="6" size="15" id="INPUT_V6Preferred">
+			</td>
+		</tr>		
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP031">Valid Lifetime : </td>
+			<td>
+				<input type="text" maxlength="6" size="15" id="INPUT_V6Lifetime">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP032">Get DNS Mode : </td>
+			<td>
+				<input type="radio" id="RAD_DNSfromWAN" name="RAD_getDNSMode" value="DHCP" onClick="onClkgetDNSMode(this.value)"><label for="RAD_DNSfromWAN" id="BDHCP057">From WAN</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DNSfromStatic" name="RAD_getDNSMode" value="Static" onClick="onClkgetDNSMode(this.value)"><label for="RAD_DNSfromStatic" id="BDHCP033">Static</label>
+			</td>
+		</tr>
+		<tr id="SelectDNSWan">
+           	<td class="background" style="width:25%; " id="BDHCP061">WAN interface</div>
+           	<td><select id="SELECT_DNS_Wan"> </select></td>
+       	</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP034">Primary DNS : </td>
+			<td>
+				<input type="text" maxlength="39" size="39" id="INPUT_V6PriDNS">
+			</td>
+		</tr>		
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP035">Secondary DNS : </td>
+			<td>
+				<input type="text" maxlength="39" size="39" id="INPUT_V6SecDNS">
+			</td>
+		</tr>
+	</table>
+	</div>
+	<table width="900px" border="0" cellspacing="2" id="tb_prefix">
+		<tr>
+			<td class="emphasize" colspan="3" id="BDHCP036">Prefix</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP037">Get Prefix Mode : </td>
+			<td>
+				<input type="radio" id="RAD_fromWAN" name="RAD_getMode" value="0" onClick="onClkgetMode(this.value)"><label for="RAD_fromWAN" id="BDHCP038">From WAN</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_fromStatic" name="RAD_getMode" value="1" onClick="onClkgetMode(this.value)"><label for="RAD_fromStatic" id="BDHCP039">Static</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP040">Prefix/Length : </td>
+			<td >
+				<input type="text"  maxlength="39" size="39" id="INPUT_RadvdPrefix">
+				<font size="+1">&nbsp;<span>/</span>&nbsp;
+				<input type="text" maxlength="3" size="3" id="INPUT_RadvdLength"  value="64" readonly="1">
+				</font>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="BDHCP041" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="BDHCP042" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+		<div id="DIV_ModeNone" style="display:none; ">
+		<table width="900px" border="0" cellspacing="2" id="tb_dhcpreservation">
+			<tr>
+				<td class="emphasize" colspan="3" id="BDHCP043">Add DHCP Reservation</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="ta_dhcplist" class="table2">
+			<tr>
+				<th  style="width:10%; "  id="BDHCP044">#</th>
+				<th  style="width:25%; "  id="BDHCP045">IP Address</th>
+				<th  style="width:25%; "  id="BDHCP046">MAC Address</th>
+				<th  style="width:20%; "  id="BDHCP047">Edit</th>
+				<th  style="width:20%; "  id="BDHCP048">Drop</th>
+			</tr>
+		</table>	
+		<table width="900px" border="0" cellspacing="2" id="tb_addbutton">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="BDHCP049" value="Add" onClick="uiRedirect()">
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div id="RESERVATION" style="display:none; ">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BDHCP050">DHCP Reservation</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP051">IP Address : </td>
+			<td>
+				<input type="text" maxlength="15" size="18" id="INPUT_ReservationIP">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BDHCP052">MAC Address : </td>
+			<td>
+				<input type="text" maxlength="17" size="18" id="INPUT_ReservationMAC">
+			</td>
+		</tr>
+	</table>	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="BDHCP053" value="Save" onClick="uiApply()">&nbsp;
+				<input type="button" id="BDHCP054" value="Back" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	</div>
+</div>

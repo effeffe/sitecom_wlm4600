@@ -1,0 +1,166 @@
+﻿
+<div class="blockquote">
+	<!--IPV4 -->	
+	<div id="DIV_RouteList">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="ROUT001">IPv4 Routing Table List</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="ROUT002">This list displayes IPv4 routing information.</td>
+		</tr>
+	</table>
+	<table class="table2" width="900px" border="0" cellspacing="2" id="TA_RouteList">
+		<tr>
+			<th id="ROUT003" width="5%" align="center">#</th>
+			<th id="ROUT004" width="15%" align="center">Destination</th>
+			<th id="ROUT005" width="15%" align="center">Subnet Mask</th>
+			<th id="ROUT006" width="15%" align="center">Gateway Address</th>
+			<th id="ROUT007" width="15%" align="center">Metric</th>
+			<th id="ROUT008" width="15%" align="center">Device</th>
+			<th id="ROUT009" width="10%" align="center">Use</th>
+			<th id="ROUT010" width="5%" align="center">Edit</th>
+			<th id="ROUT011" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr><td colspan="2" align="right"></td></tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="ROUT012" value="Add Route" onClick="doAddRoute()">
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div id="DIV_AddRoute" style="display:none">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="ROUT013">IPv4 Static Route</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="ROUT017">Use Interface : </td>
+			<td>
+				<select size='1' id="SEL_interface"></select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="ROUT014">Destination IP : </td>
+			<td>
+				<input type="text" maxlength="16" size='16' id="TE_DestIp">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="ROUT015">Subnet Mask : </td>
+			<td>
+				<input type="text" maxlength="16" size='16' id="TE_mask">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="ROUT016">Use Gateway Address : </td>
+			<td>
+				<input type="text" maxlength="16" size='16' id="TE_gateway">
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="ROUT018">Metric : </td>
+			<td>
+				<input type="text" maxlength="5" size='3' id="TE_metric">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="ROUT019" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="ROUT020" value="Back" onClick="uiBack()">&nbsp;
+				<input type="button" id="ROUT021" value="Cancel" onClick="uiCancel()">
+			</td>
+		</tr>
+	</table>
+	</div>
+	
+
+<!--IPV6 -->	
+	<div id="V6_DIV_RouteList">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="V6_ROUT001">IPv6 Routing Table List</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="V6_ROUT002">This list displayes IPv6 routing information.</td>
+		</tr>
+	</table>
+	<table class="table2" width="900px" border="0" cellspacing="2" id="V6_TA_RouteList">
+		<tr>
+			<th id="ROUT003" width="5%" align="center">#</th>
+			<th id="ROUT004" width="15%" align="center">Destination</th>
+			<th id="ROUT005" width="15%" align="center">Prefix Length</th>
+			<th id="ROUT006" width="15%" align="center">Gateway Address</th>
+			<th id="ROUT008" width="15%" align="center">Device</th>
+			<th id="ROUT009" width="10%" align="center">Use</th>
+			<th id="ROUT010" width="5%" align="center">Edit</th>
+			<th id="ROUT011" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr><td colspan="2" align="right"></td></tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="V6_ROUT012" value="Add Route" onClick="V6_doAddRoute()">
+			</td>
+		</tr>
+	</table>
+	</div>
+		  
+	<div id="V6_DIV_AddRoute" style="display:none">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="V6_ROUT013">IPv6 Static Route</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="V6_ROUT012_1">Enable :</td>
+			<td>
+				<input type="checkbox" name="V6_staticRoutingEnable" id="V6_staticRoutingEnable" />
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="V6_ROUT017">Use Interface : </td>
+			<td>
+				<select size='1' id="V6_SEL_interface"  onChange="V6_interfaceChanged()"></select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="V6_ROUT014">Destination IP : </td>
+			<td>
+				<input type="text" maxlength="43" size="25" id="V6_TE_DestIp">
+				<font size="+1">&nbsp;<span>/</span>&nbsp;
+					<input type="text" maxlength="3" size="2" id="V6_TE_Prefix">
+				</font>
+			</td>
+		</tr>
+		</table>
+	<div id="V6_TR_Gateway">	
+	<table width="900px" border="0" cellspacing="2">
+		<tr >
+			<td class="background" style="width:25%; " id="V6_ROUT016">Use Gateway Address : </td>
+			<td>
+				<input type="text" maxlength="43" size="38" id="V6_TE_gateway">
+			</td>
+		</tr>
+	</table>
+	</div>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="V6_ROUT019" value="Save" onClick="V6_uiSubmit()">&nbsp;
+				<input type="button" id="V6_ROUT020" value="Back" onClick="V6_uiBack()">&nbsp;
+				<input type="button" id="V6_ROUT021" value="Cancel" onClick="V6_uiCancel()">
+			</td>
+		</tr>
+	</table>
+	</div>
+	
+	
+</div>

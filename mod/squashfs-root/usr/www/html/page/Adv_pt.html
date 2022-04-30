@@ -1,0 +1,59 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="PT001">Port Triggering</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="PT002">&nbsp;&nbsp;&nbsp;&nbsp;Some applications require that specific ports in the Router's firewall be opened for access by remote parties. A maximum 32 entries can be configured.</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="PT003">Port Triggering Setting</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PT004">Enable Port Trigger : </td>
+			<td>
+				<input type="checkbox" name="CHE_pt" id="CHE_pt">
+			</td>
+		</tr>
+		<tr>
+			<td class="emphasize"></td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button"  id="PT005" value="Apply" onClick="uiSubmit();"/> 
+				<input type="button"  id="PT006" value="Cancel" onClick="uiPageRefresh();"/> 	
+			</td>
+		</tr>
+	</table>
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td nowrap="" colspan="6" class="lable" id="PT007">Max of rules: 32</span></td>
+		</tr>
+	</table>
+	<table class="table2" width="900px" border="0" cellspacing="2" id="TA_pt_List">
+		<tr>
+			<th id="PT008" width="5%" align="center">#</th>
+			<th id="PT009" width="15%" align="center">Server Name</th>
+			<th id="PT010" width="15%" align="center">Service Type</th>
+			<th id="PT011" width="15%" align="center">Required Inbound Connection</th>
+			<th id="PT012" width="15%" align="center">Service User</th>
+			<th id="PT013" width="5%" align="center">Edit</th>
+			<th id="PT014" width="5%" align="center">Drop</th>
+		</tr>
+
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr><td colspan="2" align="right"></td></tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button"  id="PT015" value="Add Service" onClick="uiAdd();"/> 
+			</td>
+		</tr>
+	</table>
+</div>
+

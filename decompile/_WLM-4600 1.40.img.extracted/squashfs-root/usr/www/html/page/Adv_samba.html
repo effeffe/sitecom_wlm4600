@@ -1,0 +1,74 @@
+﻿<div class="blockquote">
+    <div id ="smbMainTitle">
+        <table width="900px" border="0" cellspacing="2">
+            <tr>
+                <td class="emphasize" colspan="3" id="SAM001">USB Access Mode</td>
+            </tr>
+            <tr>
+                <td colspan="4" id="SAM002">You can use the USB port in Server mode as a Samba server for filesharing in your home network or in NetUSB mode as a virtual USB port on your computer. Please note that for NetUSB mode you need the Control Center software installed on your computer.</td>
+            </tr>
+            <tr>
+                <td style="height:10px"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" id="RAD_Ensmb" name="RAD_smb" value="Server" onclick="doSMBActive()">
+                    <label for="RAD_Ensmb" id="SAM004">Server Mode</label>&nbsp;&nbsp;
+                    <input type="radio" id="RAD_Dissmb" name="RAD_smb" value="NetUSB" onclick="doSMBActive()">
+                    <label for="RAD_Dissmb" id="SAM005">NetUSB Mode</label>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="smbMain">
+        <table width="900px" border="0" cellspacing="2" id="detailSet">
+            <tr>
+                <td class="emphasize" colspan="3" id="SAM003">Server Information</td>
+            </tr>
+            <tr>
+                <td class="background" style="width:25%; " id="SAM006">Server Name :</td>
+                <td>
+                    <input type="text" name="INPUT_ServerName" id="INPUT_ServerName">
+                </td>
+            </tr>
+            <tr>
+                <td class="background" style="width:25%; " id="SAM007">Workgroup :</td>
+                <td>
+                    <input type="text" name="INPUT_Workgroup" id="INPUT_Workgroup">
+                </td>
+            </tr>
+            <tr>
+                <td class="background" style="width:25%; " id="SAM008">Administrator :</td>
+                <td>
+                    <input type="text" name="INPUT_Admin" value="admin" id="INPUT_Admin" readonly>
+                </td>
+            </tr>
+            <tr>
+                <td class="background" style="width:25%; " id="SAM009">New SMB password :</td>
+                <td>
+                    <input type="password" name="INPUT_NewSMBPasswd" id="INPUT_NewSMBPasswd">
+                </td>
+            </tr>
+            <tr>
+                <td class="background" style="width:25%; " id="SAM010">Retype new SMB password :</td>
+                <td>
+                    <input type="password" name="INPUT_RNewSMBPasswd" id="INPUT_RNewSMBPasswd">
+                </td>
+            </tr>
+
+        
+        </table>
+    </div>
+    <div id = "smbMainBtn">
+        <table width="900px" border="0" cellspacing="2">
+            <tr>
+                <td colspan="2" align="right">
+                    <input type="button" id="SAM011" value="Save" onClick="uiSubmit()">
+                    <input type="button" id="SAM012" value="Cancel" onClick="uiPageRefresh()">
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+

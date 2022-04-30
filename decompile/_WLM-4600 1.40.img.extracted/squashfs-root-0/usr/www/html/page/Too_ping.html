@@ -1,0 +1,53 @@
+﻿<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="PING007">Ping diagnostics</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="PING008">Ping diagnostics used to test the reachability of a host on a network and to measure the round-trip time for messages sent from the originating host to a destination computer.</td> 
+		</tr>
+        <tr>
+            <td class="background" style="width:25%; " id="PING001">Host:</td>
+			<td>
+                <input type="text" maxlength=256 name="INPUT_Host" id="INPUT_Host" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="PING002">Number of retries:</td>
+			<td>
+                <input type="text" maxlength=32 name="INPUT_NumberOfRepetitions" id="INPUT_NumberOfRepetitions" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="PING003">Timeout:</td>
+			<td>
+                <input type="text" maxlength=32 name="INPUT_TimeOut" id="INPUT_TimeOut" value="" />
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="PING004">Packet Size</td>
+			<td>
+                <input type="text" maxlength=32 name="INPUT_DataBlockSize" id="INPUT_DataBlockSize" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="PING005">WAN Connection:</td>
+			<td>
+                <select id="SELECT_Conns" onChange="ctrlPing()"></select>
+            </td>
+        </tr>
+    </table>
+    <table width="900px" cellspacing="2" border="0">
+        <tr>
+			<td class="tabdata" align="center">
+                <textarea name="TEXTAREA_Output" cols="98" rows="17" id="TEXTAREA_Output" readonly></textarea>
+			</td>
+		</tr>
+        <tr>
+			<td colspan="2" align="right">
+				<input type="button" name="ping" id="PING006" value="Ping..." onClick="uiSubmit();"/>
+			</td>
+		</tr>
+        
+    </table>
+</div>

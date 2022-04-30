@@ -1,0 +1,42 @@
+﻿<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+        <tr>
+            <td class="background" style="width:25%; " id="TRAC001">Host</td>
+			<td>
+                <input type="text" maxlength=32 name="INPUT_Host" id="INPUT_Host" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="TRAC002">Max TTL</td>
+			<td>
+                <input type="text" maxlength=3 name="INPUT_MAXTTL" id="INPUT_MAXTTL" value="" />&nbsp;
+                <span id="TRAC003">(1-128)</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="TRAC004">Wait times</td>
+			<td>
+                <input type="text" maxlength=2 name="INPUT_WaitTime" id="INPUT_WaitTime" value="" />&nbsp;
+                <span id="TRAC005">(2-60s)</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="TRAC007">WAN Connection</td>
+			<td>
+                <select id="SELECT_Conns" onChange="ctrlTracert()"></select>
+            </td>
+        </tr>
+    </table>
+    <table width="900px" cellspacing="2" border="0">
+        <tr>
+			<td class="tabdata" align="center">
+				<textarea name="TEXTAREA_Output" cols="98" rows="17" id="TEXTAREA_Output" readonly></textarea>
+			</td>
+		</tr>
+        <tr>
+			<td colspan="2" align="right">
+				<input type="button" id="TRAC008" value="traceroute" onClick="uiSubmit()" />
+			</td>
+		</tr>
+    </table>
+</div>

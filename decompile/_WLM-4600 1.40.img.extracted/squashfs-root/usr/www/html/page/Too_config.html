@@ -1,0 +1,52 @@
+﻿
+<div class="blockquote">
+
+	<form name="BackupForm"  method="post" action="webupg">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="FW001">Firmware upgrade</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="FW002">On this option you can upgrade or download the routers config</td>
+		</tr>
+
+	</table>
+	
+		<table width="900px" cellspacing="2" border="0">
+			<tr>
+				<td class="background" style="width:25%"  id="FW009">Backup Config : </td>
+				<td>				
+					<input type="submit" id="FW010" value="Backup" />
+					<input type="hidden" id="name" name="name" value="downloadConfig" />				
+				</td>
+			</tr>
+			<tr>
+				<td style="height:15px" colspan="4"></td>
+			</tr>
+		</table>
+	</form>
+	<form name="confForm1"  method="post" action="webupg" enctype="multipart/form-data" onSubmit="return upConfigProgress();">
+		<table width="900px" cellspacing="2" border="0">
+			<tr>
+				<td class="background" style="width:25%"  id="FW012">Config File : </td>
+				<td>
+					<input type="file" name="config" id="config" maxlength="128" size="30" />
+					<input type="hidden" name="updateConfig" value="update">
+				</td>
+			</tr>
+			<tr>
+				<td style="height:15px" colspan="4"></td>
+			</tr>
+			<tr>
+				<td style="text-align:right" colspan="2">
+					<input type="submit" id="FW013"  value="Upgrade Config" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<table width="900px" cellspacing="2" border="0" id="tb_config">
+		<tr>
+			<td colspan="4" id="FW014">This might take several minutes, don't power off the router during upgrade. The router will restart after the upgrade.</td>
+		</tr>
+	</table>
+</div>

@@ -1,0 +1,385 @@
+
+TBS bootloader V1.0 Build6399 for RT63368_WLM4600(Feb 15 2014-17:20:11)
+
+DRAM:  64 MB
+FLASH:  8 MB MX25L6405D at mode 1
+IP: 192.168.1.1 MAC: 64:d1:a3:46:67:64
+Hit Space or Enter key to stop autoboot:  0 
+Checking version 1 image... First image OK
+Checking ethernet link state... port 1 UP
+Request CRC=0x7151e233
+Request for massive upgrade:  0 Timed out!
+Uncompress linux from 0x80600000 to 0x80010000... OK!
+Booting the kernel ...
+Linux version 2.6.36 (heyuehui@software.gj.com) (gcc version 4.3.4 (GCC) ) #1 SMP Fri Jan 23 13:47:02 CST 2015
+ISPRAM0: PA=00328000,Size=00008000,enabled
+Enable SRAM=1c000001
+Ralink RT63365 SOC prom init
+bootconsole [early0] enabled
+CPU revision is: 00019555 (MIPS 34Kc)
+Determined physical RAM map:
+ memory: 03fe0000 @ 00020000 (usable)
+User-defined physical RAM map:
+ memory: 04000000 @ 00000000 (usable)
+Zone PFN ranges:
+  Normal   0x00000000 -> 0x00004000
+Movable zone start PFN for each node
+early_node_map[1] active PFN ranges
+    0: 0x00000000 -> 0x00004000
+3 available secondary CPU TC(s)
+PERCPU: Embedded 7 pages/cpu @81083000 s7168 r8192 d13312 u65536
+pcpu-alloc: s7168 r8192 d13312 u65536 alloc=16*4096
+pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+Kernel command line: console=ttyS0,115200 es=1 mem=64M root=31:2 mtdparts=sflash:196608(boot),1394176(kernel),5066752(rootfs),-(data) rootfstype=squashfs es=1
+PID hash table entries: 256 (order: -2, 1024 bytes)
+Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+Writing ErrCtl register=00008000
+Readback ErrCtl register=00008000
+Memory: 60524k/65536k available (3200k kernel code, 5012k reserved, 694k data, 224k init, 0k highmem)
+Hierarchical RCU implementation.
+        Verbose stalled-CPUs detection is disabled.
+NR_IRQS:64
+CPU frequency 699.00 MHz
+CPU frequency 699.00 MHz
+console [ttyS0] enabled, bootconsole disabled
+console [ttyS0] enabled, bootconsole disabled
+Calibrating delay loop... 465.30 BogoMIPS (lpj=2326528)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+IPI buffer pool of 64 buffers
+34K sync es set to 1.
+Config7: 0x80080500
+Limit of 4 TCs set
+TLB of 64 entry pairs shared by 2 VPEs
+VPE 0: TC 0 1 2, VPE 1: TC 3
+CPU revision is: 00019555 ((null))
+TC 1 going on-line as CPU 1
+CPU revision is: 00019555 ((null))
+TC 2 going on-line as CPU 2
+CPU revision is: 00019555 ((null))
+TC 3 going on-line as CPU 3
+Brought up 4 CPUs
+kworker/u:0 used greatest stack depth: 15220 bytes left
+kworker/u:0 used greatest stack depth: 14856 bytes left
+NET: Registered protocol family 16
+RT63368_pcie_init
+registering PCI controller with io_map_base unset
+bio: create slab <bio-0> at 0
+vgaarb: loaded
+SCSI subsystem initialized
+pci 0000:00:00.0: BAR 8: assigned [mem 0x20000000-0x200fffff]
+pci 0000:01:00.0: BAR 0: assigned [mem 0x20000000-0x2000ffff]
+pci 0000:01:00.0: BAR 0: set to [mem 0x20000000-0x2000ffff] (PCI address [0x20000000-0x2000ffff]
+pci 0000:00:00.0: PCI bridge to [bus 01-01]
+pci 0000:00:00.0:   bridge window [io  disabled]
+pci 0000:00:00.0:   bridge window [mem 0x20000000-0x200fffff]
+pci 0000:00:00.0:   bridge window [mem pref disabled]
+PCI: Enabling device 0000:00:00.0 (0000 -> 0002)
+Sangoma WANPIPE Router v1.1 (c) 1995-2000 Sangoma Technologies Inc.
+NET: Registered protocol family 8
+NET: Registered protocol family 20
+Switching to clocksource MIPS
+NET: Registered protocol family 2
+IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+TCP established hash table entries: 2048 (order: 2, 16384 bytes)
+TCP bind hash table entries: 2048 (order: 2, 16384 bytes)
+TCP: Hash tables configured (established 2048 bind 2048)
+TCP reno registered
+UDP hash table entries: 128 (order: 0, 4096 bytes)
+UDP-Lite hash table entries: 128 (order: 0, 4096 bytes)
+NET: Registered protocol family 1
+Hardware watchdog initialized
+squashfs: version 4.0 (2009/01/31) Phillip Lougher
+msgmni has been set to 118
+Block layer SCSI generic (bsg) driver version 0.4 loaded (major 254)
+io scheduler noop registered (default)
+ttyS0 at I/O 0xbfbf0003 (irq = 1) is a TC3162
+brd: module loaded
+Found SPIFLASH  8 MB
+4 cmdlinepart partitions found on MTD device sflash
+Creating 4 MTD partitions on "sflash":
+0x000000000000-0x000000030000 : "boot"
+0x000000030000-0x000000184600 : "kernel"
+mtd: partition "kernel" doesn't end on an erase block -- force read-only
+0x000000184600-0x000000659600 : "rootfs"
+mtd: partition "rootfs" doesn't start on an erase block boundary -- force read-only
+0x000000659600-0x000000800000 : "data"
+mtd: partition "data" doesn't start on an erase block boundary -- force read-only
+PPP generic driver version 2.4.2
+NET: Registered protocol family 24
+IMQ driver loaded successfully.
+        Hooking IMQ before NAT on PREROUTING.
+        Hooking IMQ after NAT on POSTROUTING.
+RT3xxx EHCI/OHCI init.
+Mirror/redirect action on
+u32 classifier
+    Performance counters on
+    input device check on
+    Actions configured
+Netfilter messages via NETLINK v0.30.
+nf_conntrack version 0.5.0 (945 buckets, 3780 max)
+ctnetlink v0.93: registering with nfnetlink.
+nf_conntrack_rtsp v0.6.21 loading
+NF_TPROXY: Transparent proxy support initialized, version 4.1.0
+NF_TPROXY: Copyright (c) 2006-2007 BalaBit IT Ltd.
+xt_time: kernel timezone is -0000
+GRE over IPv4 tunneling driver
+nf_nat_rtsp v0.6.21 loading
+ip_tables: (C) 2000-2006 Netfilter Core Team
+
+ipt_conenat_init for cone nat nf_conntrack 
+TCP cubic registered
+NET: Registered protocol family 10
+ip6_tables: (C) 2000-2006 Netfilter Core Team
+IPv6 over IPv4 tunneling driver
+NET: Registered protocol family 17
+Bridge firewalling registered
+Ebtables v2.0 registered
+TBS port mirror initialized successfully!
+TBS port dst initialized successfully!
+802.1Q VLAN Support v1.8 Ben Greear <greearb@candelatech.com>
+All bugs added by David S. Miller <davem@redhat.com>
+Registering the dns_resolver key type
+VFS: Mounted root (squashfs filesystem) readonly on device 31:2.
+Freeing unused kernel memory: 224k freed
+init started: BusyBox v1.6.1 (2015-01-23 13:50:12 CST) multi-call binary
+starting pid 237, tty '/dev/console': '/etc/init.d/rcS'
+@@@@@@@Welcome to TBS System@@@@@@@
+load tccicmd driver
+tccicmd V1.1.0.0 (Jan 23 2015-14:00:27)
+insmod used greatest stack depth: 14288 bytes left
+load sel driver
+hotplug used greatest stack depth: 14192 bytes left
+load raeth driver
+GEMAC 2.00-NAPI 24.Sep.2012, IRQ=22
+alloc_sram p=bc000800 free=7800
+alloc_sram p=bc002800 free=5800
+Switch interrupt Enabled, IRQ=11
+load tc3162 atm driver
+TSARM: TC3162 ATM SAR driver 1.5 init
+
+tc3162sar V1.2.0.0 (Jan 23 2015-14:00:30)
+register autopvc cmd to sys
+TSARM: TC3162 ATM SAR driver 1.5 done
+load tc3162 dmt driver
+tc3162_dmt: module license 'unspecified' taints kernel.
+Disabling lock debugging due to kernel taint
+ADSL DMT initialization starting
+Begin AdslTaskInit.....
+End AdslTaskInit
+Begin to  request IRQ 20
+DMT:Succeed to request IRQ 20
+Initializing ADSL F/W 3.20.40.0 ......
+Reset dmt
+Check DMT version =b2 ........ 
+Initializing ADSL F/W ........ done 
+ADSL HW version: b2, HCLK 233
+insmod used greatest stack depth: 14168 bytes left
+mount: mounting none on /proc/bus/usb failed
+=============Begin Load Modules==============
+modprobe usbcore
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+modprobe usblp
+modprobe: module usblp not found
+modprobe: failed to load module usblp
+insmod: usblp.ko: no module by that name found
+modprobe usbserial
+modprobe: module usbserial not found
+modprobe: failed to load module usbserial
+insmod: usbserial.ko: no module by that name found
+=============End Load Modules================
+Loading product modules
+TBS button driver for RT63368_WLM4600 initialized, IRQ=11
+insmod used greatest stack depth: 13880 bytes left
+Loading led modules
+TBS leds core driver initialized
+Register led device for RT63368_WLM4600: 01 02 03 04 05 07 08 09 11 12 13 14 15 16 22
+load wifi rt5392ap driver
+Get item <wlan_cfg>, len: 512
+Contents:
+Output raw data to /var/RT30xxEEPROM.bin ...
+Done!
+PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+dropbear used greatest stack depth: 13784 bytes left
+2684d started
+
+ *** TBS ver:8969, compile time:Jan 23 2015,13:59:45 *** 
+Set coredump file size to 2147483647, path = /var/core
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+xflu: rt3xxx_ehci_probe() start
+rt3xxx-ehci rt3xxx-ehci: Ralink EHCI Host Controller
+rt3xxx-ehci rt3xxx-ehci: new USB bus registered, assigned bus number 1
+rt3xxx-ehci rt3xxx-ehci: irq 18, io mem 0x1fbb0000
+rt3xxx-ehci rt3xxx-ehci: USB 0.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 2 ports detected
+ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+xflu: ohci_hcd_rt3xxx_drv_probe()
+xflu: !usb_disable()
+rt3xxx-ohci rt3xxx-ohci: RT3xxx OHCI Controller
+rt3xxx-ohci rt3xxx-ohci: new USB bus registered, assigned bus number 2
+rt3xxx-ohci rt3xxx-ohci: irq 18, io mem 0x1fba0000
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 2 ports detected
+usb 1-1: new high speed USB device using rt3xxx-ehci and address 2
+starting pid 427, tty '/dev/ttyS0': '/bin/login'
+buffer:2012-03-11/02:00 2012-11-04/02:00
+tbs_check_time:2012-03-11/02:00
+2012-3-11 2:0
+tbs_check_time:2012-11-04/02:00
+2012-11-4 2:0
+tmp_info:1331431200 1351994400
+process '-/bin/login' (pid 427) exited. Scheduling it for restart.
+starting pid 447, tty '/dev/ttyS0': '/bin/login'
+username:[system]: wan ghs set annex aijlm
+ANNEXAIJLM
+Testlab 8 
+rai0      no private ioctls.
+
+Creat Interface = 2684ctl -t 0 -e 1 -c nas1 -q ubr,aal5:pcr=0 -a 0.8.35
+Interface "nas1" created sucessfully
+optarg : ubr,aal5:pcr=0
+device nas1 entered promiscuous mode
+VNET: Setting underlying device(nas1) to promiscious mode.
+Turn ON PHY power on port 0
+ADDRCONF(NETDEV_UP): eth0.1: link is not ready
+Turn ON PHY power on port 1
+ADDRCONF(NETDEV_UP): eth0.2: link is not ready
+Turn ON PHY power on port 2
+ADDRCONF(NETDEV_UP): eth0.3: link is not ready
+ifconfig used greatest stack depth: 13600 bytes left
+Turn ON PHY power on port 3
+ADDRCONF(NETDEV_UP): eth0.4: link is not ready
+device eth0.1 entered promiscuous mode
+device eth0.2 entered promiscuous mode
+device eth0.3 entered promiscuous mode
+device eth0.4 entered promiscuous mode
+device ra0 entered promiscuous mode
+device ra0 left promiscuous mode
+device ra0 entered promiscuous mode
+device ra0 left promiscuous mode
+Port 1 Link UP!
+ADDRCONF(NETDEV_CHANGE): eth0.1: link becomes ready
+br0: port 1(eth0.1) entering learning state
+Port 1 Link DOWN!
+br0: port 1(eth0.1) entering forwarding state
+br0: port 1(eth0.1) entering disabled state
+Port 1 Link UP!
+br0: port 1(eth0.1) entering learning state
+##In## ReadLanDeviceName
+br0: port 1(eth0.1) entering forwarding state
+ip6tables: No chain/target/match by that name.
+ip6tables: No chain/target/match by that name.
+Ralink HW NAT Module Enabled
+SMBD_customdata:985=Charles Alison= iRet[0]
+SMBD_customdata:995=Charles Alison= 
+kcg 323 :GPL NetUSB up!
+##
+ip used greatest stack depth: 12760 bytes left
+####RTNETLINK answers: Cannot assign requested address
+
+xyyou : in pcie init function,need not reset
+0x1300 = 00064380
+jiffies=ffff98ff, POLLING_MODE_DETECT_INTV=300
+device ra0 entered promiscuous mode
+br0: port 5(ra0) entering learning state
+device wds0 entered promiscuous mode
+device ra1 entered promiscuous mode
+device wds1 entered promiscuous mode
+device ra2 entered promiscuous mode
+device wds2 entered promiscuous mode
+device ra3 entered promiscuous mode
+device wds3 entered promiscuous mode
+Interface doesn't accept private ioctl...
+set (8BE2): Invalid argument
+killall: rtdot1xd: no process killed
+br0: port 5(ra0) entering forwarding state
+br0: port 5(ra0) entering disabled state
+xyyou : in pcie init function,need not reset
+xz
+password:
+0x1300 = 00064380
+jiffies=ffff9bb4, POLLING_MODE_DETECT_INTV=300
+br0: port 5(ra0) entering learning state
+ifconfig used greatest stack depth: 12700 bytes left
+iwpriv used greatest stack depth: 12676 bytes left
+device ra0 left promiscuous mode
+br0: port 5(ra0) entering disabled state
+device ra0 entered promiscuous mode
+br0: port 5(ra0) entering learning state
+device ra1 left promiscuous mode
+br0: port 7(ra1) entering disabled state
+device ra1 entered promiscuous mode
+device ra2 left promiscuous mode
+br0: port 9(ra2) entering disabled state
+device ra2 entered promiscuous mode
+device ra3 left promiscuous mode
+br0: port 11(ra3) entering disabled state
+device ra3 entered promiscuous mode
+br0: port 5(ra0) entering forwarding state
+Sorry, rule does not exist.
+Sorry, rule does not exist.
+Nothing to flush.
+Initializing USB Mass Storage driver...
+scsi0 : usb-storage 1-1:1.0
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+kc   90 : run_telnetDBGDServer start 
+kc  227 : init_DebugD end
+INFO17B7: NetUSB 1.02.28, 00020624 : Nov 27 2012 11:40:16
+INFO17B9:  AUTH ISOC
+INFO17BA:  filterAudio
+Login incorrect
+username:usbcore: registered new interface driver KC NetUSB General Driver
+INFO0110:  init proc : PAGE_SIZE 4096
+INFO168B:  infomap c277fa98 
+INFO168E:  sleep to wait br0 to wake up
+INFO02D0:  use dev Name br0 
+INFO1697:  sleep to wait br0 end.
+INFO16B0:  UDP_BROAD 7421 tcpPort:625868800 
+INFO02D0:  use dev Name br0 
+INFO1597: tcpConnector() started...
+Modules apply succeed...
+##
+scsi 0:0:0:0: Direct-Access     Generic  Flash Disk       8.07 PQ: 0 ANSI: 4
+sd 0:0:0:0: [sda] 7782400 512-byte logical blocks: (3.98 GB/3.71 GiB)
+sd 0:0:0:0: Attached scsi generic sg0 type 0
+sd 0:0:0:0: [sda] Write Protect is off
+sd 0:0:0:0: [sda] Assuming drive cache: write through
+Problem with the IP address ''.
+sd 0:0:0:0: [sda] Assuming drive cache: write through
+ sda: sda1
+sd 0:0:0:0: [sda] Assuming drive cache: write through
+sd 0:0:0:0: [sda] Attached SCSI removable disk
+Sorry, rule does not exist.
+iptables: No chain/target/match by that name.
+##iptables: No chain/target/match by that name.
+##buffer:2012-03-11/02:00 2012-11-04/02:00
+tbs_check_time:2012-03-11/02:00
+2012-3-11 2:0
+tbs_check_time:2012-11-04/02:00
+2012-11-4 2:0
+tmp_info:1331431200 1351994400
+s_magic err
+failed_mount err=8
+sh (1930): /proc/1924/oom_adj is deprecated, please use /proc/1924/oom_score_adj instead.
+Digital Media Server Version [1.3 Build Jan 23 2015 13:59:02]
+IP: 192.168.0.1
+
+FriendlyName=Sitecom Digital Media Server
+Udn=uuid:3059349e-1dd2-11b2-91eb-717b27498c0a
+DMS: Start Scanning
+DMS: CDS Scanning Done: there isn't media file. Re-try it after 3600 seconds.
+INFO1474: Bind to br0
+(HOME)(SITECOMMODEM)
+SMB Start (VNov 28 2012)
+
+process '-/bin/login' (pid 447) exited. Scheduling it for restart.
+starting pid 1974, tty '/dev/ttyS0': '/bin/login'
+username:

@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Loading led modules"
+insmod /lib/module/driver/led.ko
+

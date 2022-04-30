@@ -1,0 +1,2369 @@
+
+<InternetGatewayDevice type="object">
+	<X_TWSZ-COM_IPTunnelNumberOfEntries type="unsignedInt" Writable="0">0</X_TWSZ-COM_IPTunnelNumberOfEntries>
+	<LANConfigSecurity>
+		<ConfigPassword type="string(64)" Writable="1"></ConfigPassword>
+	</LANConfigSecurity>
+	<WANDeviceNumberOfEntries type="unsignedInt" Writable="0"></WANDeviceNumberOfEntries>
+	<LANDeviceNumberOfEntries type="unsignedInt" Writable="0">0</LANDeviceNumberOfEntries>
+	<X_SITCOM-COM_CLOUD type="object">
+		<Enable type="boolean">1</Enable>
+	</X_SITCOM-COM_CLOUD>
+	<X_SITCOM-COM_AUTOUPGRADE type="object">
+		<FWAction type="string" Writable="1">0</FWAction>
+		<Enable type="boolean" Wirtable="1">1</Enable>
+	</X_SITCOM-COM_AUTOUPGRADE>
+	<X_TWSZ-COM_SNMPAgent type="object" Writable="0">
+		<MemThreshold type="unsignedInt" Writable="1">98</MemThreshold>
+		<MemDuration type="unsignedInt" Writable="1">60</MemDuration>
+		<CPUThreshold type="unsignedInt" Writable="1">98</CPUThreshold>
+		<CPUDuration type="unsignedInt" Writable="1">60</CPUDuration>
+		<PollInterval type="unsignedInt" Writable="1">5</PollInterval>
+		<TrapVersion type="int[1:3]" Writable="1">2</TrapVersion>
+		<TrapCommunity type="string(63)" Writable="1">public</TrapCommunity>
+		<TrapHost type="string(63)" Writable="1"></TrapHost>
+		<RWCommunity type="string(127)" Writable="1">private</RWCommunity>
+		<ROCommunity type="string(127)" Writable="1">public</ROCommunity>
+		<Status type="int[0:3]" Writable="0">0</Status>
+		<Enable type="boolean" Writable="1">0</Enable>
+	</X_TWSZ-COM_SNMPAgent>
+	<X_TWSZ-COM_KC_SAMBA type="object">
+		<CurSambaNumberOfEntries type="unsignedInt" Writable="0">0</CurSambaNumberOfEntries>
+		<MaxSambaNumberOfEntries type="unsignedInt" Writable="0">20</MaxSambaNumberOfEntries>
+		<USBMode type="string" Writable="1">NetUSB</USBMode>
+		<USBEnable type="boolean" Writable="1">1</USBEnable>
+		<Newpassword type="string" Wirtable="1">123456</Newpassword>
+		<NetbiosName type="string" Wirtable="1">dsl_route</NetbiosName>
+		<Workgroup type="string" Writable="1">home</Workgroup>
+		<Status type="int[0:3]" Writable="0">0</Status>
+		<SambaEnable type="boolean" Writable="1">1</SambaEnable>
+		<User type="object" CurNode="CurSambaNumberOfEntries" MaxNode="MaxSambaNumberOfEntries">
+			<i type="object">
+				<ReadOnly type="boolean" Writable="1">1</ReadOnly>
+				<Enabled type="boolean" Writable="1">0</Enabled>
+				<Name type="string" Writable="1"></Name>
+				<Password type="string" Writable="1"></Password>
+			</i>
+		</User>
+	</X_TWSZ-COM_KC_SAMBA>
+	<WANDevice type="object" Writable="0" CurNode="WANDeviceNumberOfEntries">
+		<i type="object">
+			<WANDSLDiagnostics>
+				<SATNus type="string(24)" Writable="0">0</SATNus>
+				<SATNds type="string(24)" Writable="0"></SATNds>
+				<LATNpbus type="string(24)" Writable="0"></LATNpbus>
+				<LATNpbds type="string(24)" Writable="0"></LATNpbds>
+				<SNRMTus type="unsignedInt" Writable="0">0</SNRMTus>
+				<SNRMTds type="unsignedInt" Writable="0">0</SNRMTds>
+				<SNRpsus type="string(61430)" Writable="0"></SNRpsus>
+				<SNRGus type="unsignedInt" Writable="0">1</SNRGus>
+				<SNRGds type="unsignedInt" Writable="0">1</SNRGds>
+				<QLNMTus type="unsignedInt" Writable="0">0</QLNMTus>
+				<QLNMTds type="unsignedInt" Writable="0">0</QLNMTds>
+				<QLNpsus type="string" Writable="0">0</QLNpsus>
+				<QLNGus type="unsignedInt" Writable="0">1</QLNGus>
+				<QLNGds type="unsignedInt" Writable="0">1</QLNGds>
+				<HLOGMTus type="unsignedInt" Writable="0">0</HLOGMTus>
+				<HLOGMTds type="unsignedInt" Writable="0">0</HLOGMTds>
+				<HLOGpsus type="string(2559)" Writable="0">0</HLOGpsus>
+				<HLOGpsds type="string(2559)" Writable="0"></HLOGpsds>
+				<HLOGGus type="unsignedInt" Writable="0">1</HLOGGus>
+				<HLOGGds type="unsignedInt" Writable="0">1</HLOGGds>
+				<HLINpsus type="unsignedInt" Writable="0">1</HLINpsus>
+				<HLINGus type="unsignedInt" Writable="0">1</HLINGus>
+				<HLINGds type="unsignedInt" Writable="0">1</HLINGds>
+				<HLINSCus type="int" Writable="0">0</HLINSCus>
+				<HLINSCds type="int" Writable="0"></HLINSCds>
+				<ACTATPus type="int" Writable="0"></ACTATPus>
+				<ACTATPds type="int" Writable="0"></ACTATPds>
+				<ACTPSDus type="int" Writable="0"></ACTPSDus>
+				<ACTPSDds type="int" Writable="0"></ACTPSDds>
+				<LoopDiagnosticsState type="string"></LoopDiagnosticsState>
+			</WANDSLDiagnostics>
+			<X_TWSZ-COM_WANConnectionIndex type="unsignedInt" Writable="0">0</X_TWSZ-COM_WANConnectionIndex>
+			<MAXWANConnectionNumberOfEntries type="unsignedInt" Writable="0">8</MAXWANConnectionNumberOfEntries>
+			<WANConnectionNumberOfEntries type="unsignedInt" Writable="0">0</WANConnectionNumberOfEntries>
+			<WANConnectionDevice type="object" MaxNode="MAXWANConnectionNumberOfEntries" CurNode="WANConnectionNumberOfEntries">
+				<i type="object">
+					<X_TWSZ-COM_IGMPEnabled type="boolean" Writable="1">0</X_TWSZ-COM_IGMPEnabled>
+					<X_TWSZ-COM_MACAddress type="string" Writable="0"></X_TWSZ-COM_MACAddress>
+					<X_TWSZ-COM_DSLType type="string"></X_TWSZ-COM_DSLType>
+					<X_TWSZ-COM_QinQEnable type="boolean">0</X_TWSZ-COM_QinQEnable>
+					<X_TWSZ-COM_VLANPriority type="unsignedInt">0</X_TWSZ-COM_VLANPriority>
+					<X_TWSZ-COM_VLANID type="unsignedInt">0</X_TWSZ-COM_VLANID>
+					<X_TWSZ-COM_ProxyArp type="boolean">0</X_TWSZ-COM_ProxyArp>
+					<X_TWSZ-COM_DeviceName type="string" Writable="0"></X_TWSZ-COM_DeviceName>
+					<MaxIPConnectionNumberOfEntries type="unsignedInt" Writable="0">1</MaxIPConnectionNumberOfEntries>
+					<WANIPConnectionNumberOfEntries type="unsignedInt" Writable="0">0</WANIPConnectionNumberOfEntries>
+					<MaxPPPConnectionNumberOfEntries type="unsignedInt" Writable="0">1</MaxPPPConnectionNumberOfEntries>
+					<WANPPPConnectionNumberOfEntries type="unsignedInt" Writable="0">0</WANPPPConnectionNumberOfEntries>
+					<WANPPPConnection type="object" CurNode="WANPPPConnectionNumberOfEntries" MaxNode="MaxPPPConnectionNumberOfEntries">
+						<i type="object">
+							<X_TWSZ-COM_DynamicStatus type="string" Writable="0">Disconnected</X_TWSZ-COM_DynamicStatus>
+							<X_TWSZ-COM_DelFlag type="string" Writable="0">0</X_TWSZ-COM_DelFlag>
+							<RIPngEnabled type="boolean">0</RIPngEnabled>
+							<RipDirection type="string"></RipDirection>
+							<RipPassive type="string"></RipPassive>
+							<RouteProtocolRx type="string">Off</RouteProtocolRx>
+							<PortMappingNumberOfEntries type="unsignedInt" Writable="0">0</PortMappingNumberOfEntries>
+							<X_TWSZ-COM_MaxPortMappingEntries type="unsignedInt" Writable="0">16</X_TWSZ-COM_MaxPortMappingEntries>
+							<X_TWSZ-COM_SvcType type="string"></X_TWSZ-COM_SvcType>
+							<X_TWSZ-COM_DMZHost type="string"></X_TWSZ-COM_DMZHost>
+							<X_TWSZ-COM_DMZEnabled type="boolean">0</X_TWSZ-COM_DMZEnabled>
+							<X_TWSZ-COM_NATType type="string">full cone</X_TWSZ-COM_NATType>
+							<NATEnabled type="boolean">0</NATEnabled>
+							<MACAddress type="string" Writable="0"></MACAddress>
+							<X_TWSZ-COM_ServiceList type="string">Internet</X_TWSZ-COM_ServiceList>
+							<X_TWSZ-COM_LanInterface type="string"></X_TWSZ-COM_LanInterface>
+							<X_TWSZ-COM_UsrDNSServers type="string"></X_TWSZ-COM_UsrDNSServers>
+							<DNSServers type="string(64)" Writable="0"></DNSServers>
+							<DNSOverrideAllowed type="boolean">0</DNSOverrideAllowed>
+							<DNSEnabled type="boolean">1</DNSEnabled>
+							<TransportType type="string" Writable="0"></TransportType>
+							<RSIPAvailable type="boolean" Writable="0"></RSIPAvailable>
+							<Uptime type="unsignedint" Writable="0"></Uptime>
+							<PPPoESessionID type="unsignedint[1:]" Writable="0"></PPPoESessionID>
+							<DefaultGateway type="string" Writable="0"></DefaultGateway>
+							<PossibleConnectionTypes type="string" Writable="0"></PossibleConnectionTypes>
+							<Reset type="boolean">0</Reset>
+							<X_TWSZ-COM_ProxyDevName type="string"></X_TWSZ-COM_ProxyDevName>
+							<X_TWSZ-COM_ProxyEnable type="boolean">0</X_TWSZ-COM_ProxyEnable>
+							<X_TWSZ-COM_ConnectionMode type="string" Writable="0">PPP</X_TWSZ-COM_ConnectionMode>
+							<X_TWSZ-COM_ProtocolType type="string" Writable="0">IPv4</X_TWSZ-COM_ProtocolType>
+							<IdleDisconnectTime type="unsignedInt">60</IdleDisconnectTime>
+							<X_TWSZ-COM_StaticIPAddress type="string"></X_TWSZ-COM_StaticIPAddress>
+							<X_TWSZ-COM_PppoeRetryNum type="unsignedInt">0</X_TWSZ-COM_PppoeRetryNum>
+							<PPPoEServiceName type="string(256)"></PPPoEServiceName>
+							<PPPoEACName type="string(256)"></PPPoEACName>
+							<PPPLCPEchoRetry type="unsignedInt" Writable="0">5</PPPLCPEchoRetry>
+							<PPPLCPEcho type="unsignedInt" Writable="0">30</PPPLCPEcho>
+							<ConnectionTrigger type="string">AlwaysOn</ConnectionTrigger>
+							<IdleDelayTime type="unsignedInt">60</IdleDelayTime>
+							<MaxMTUSize type="unsignedInt">1400</MaxMTUSize>
+							<MaxMRUSize type="unsignedInt">1492</MaxMRUSize>
+							<RemoteIPAddress type="string" Writable="0"></RemoteIPAddress>
+							<ExternalIPAddress type="string" Writable="0" Notification="2"></ExternalIPAddress>
+							<PPPAuthenticationProtocol type="string" Writable="1">Auto</PPPAuthenticationProtocol>
+							<X_TWSZ-COM_FlageChangeWan type="boolean" Writable="0">1</X_TWSZ-COM_FlageChangeWan>
+							<X_TWSZ-COM_ModemBaud type="string(64)">460800</X_TWSZ-COM_ModemBaud>
+							<Password type="string(64)">user</Password>
+							<Username type="string(64)">user</Username>
+							<LastConnectionError type="string" Writable="0">ERROR_NONE</LastConnectionError>
+							<X_TWSZ-COM_ConnectedDeviceName type="string" Writable="0"></X_TWSZ-COM_ConnectedDeviceName>
+							<Name type="string(256)">WANConnection</Name>
+							<X_TWSZ-COM_ConnectionAction type="string">Disconnect</X_TWSZ-COM_ConnectionAction>
+							<ConnectionType type="string">IP_Routed</ConnectionType>
+							<ConnectionTime type="string" Writable="0">0</ConnectionTime>
+							<ConnectionStatus type="string" Writable="0">Unconfigured</ConnectionStatus>
+							<Enable type="boolean">0</Enable>
+							<Stats type="object">
+								<EthernetDiscardPacketsReceived type="unsignedInt" Writable="0"></EthernetDiscardPacketsReceived>
+								<EthernetDiscardPacketsSent type="unsignedInt" Writable="0"></EthernetDiscardPacketsSent>
+								<EthernetErrorsReceived type="unsignedInt" Writable="0"></EthernetErrorsReceived>
+								<EthernetErrorsSent type="unsignedInt" Writable="0"></EthernetErrorsSent>
+								<EthernetPacketsReceived type="unsignedInt" Writable="0"></EthernetPacketsReceived>
+								<EthernetPacketsSent type="unsignedInt" Writable="0"></EthernetPacketsSent>
+								<EthernetBytesReceived type="unsignedInt" Writable="0"></EthernetBytesReceived>
+								<EthernetBytesSent type="unsignedInt" Writable="0"></EthernetBytesSent>
+							</Stats>
+							<PortMapping type="object" MaxNode="X_TWSZ-COM_MaxPortMappingEntries" CurNode="PortMappingNumberOfEntries">
+								<i type="object">
+									<X_TWSZ-COM_Weight type="string" Writable="0">0</X_TWSZ-COM_Weight>
+									<PortMappingTime type="string">Always</PortMappingTime>
+									<PortMappingDescription type="string(256)"></PortMappingDescription>
+									<InternalClient type="string(256)"></InternalClient>
+									<PortMappingProtocol type="string">TCP</PortMappingProtocol>
+									<InternalPort type="unsignedInt">0</InternalPort>
+									<ExternalPortEndRange type="unsignedInt">0</ExternalPortEndRange>
+									<ExternalPort type="unsignedInt">0</ExternalPort>
+									<X_TWSZ-COM_RemoteMask type="string">255.255.255.255</X_TWSZ-COM_RemoteMask>
+									<RemoteHost type="string"></RemoteHost>
+									<PortMappingLeaseDuration type="unsignedInt">0</PortMappingLeaseDuration>
+									<PortMappingEnabled type="boolean">0</PortMappingEnabled>
+								</i>
+							</PortMapping>
+							<X_TWSZ-COM_IPv6Config type="object">
+								<IPv6NTPServers type="string" Writable="0"></IPv6NTPServers>
+								<GetIPv6NTPServers type="boolean">0</GetIPv6NTPServers>
+								<UsrIPv6DNSServers type="string"></UsrIPv6DNSServers>
+								<IPv6DNSServers type="string" Writable="0"></IPv6DNSServers>
+								<IPv6DNSOverrideAllowed type="boolean">0</IPv6DNSOverrideAllowed>
+								<IPv6DNSEnabled type="boolean">1</IPv6DNSEnabled>
+								<DHCP6cForAddress type="boolean">0</DHCP6cForAddress>
+								<IPv6PrefixDelegationEnabled type="boolean">1</IPv6PrefixDelegationEnabled>
+								<DUID type="string">00:01:00:01:00:00:00:01:00:00:00:00:00:01</DUID>
+								<DUIDConfigType type="string">Auto</DUIDConfigType>
+								<X_TWSZ-COM_ConnectedDeviceName type="string" Writable="0"></X_TWSZ-COM_ConnectedDeviceName>
+								<ConnectionStatus type="string" Writable="0">Disconnected</ConnectionStatus>
+								<RemoteIPv6LinkLocalAddress type="string"></RemoteIPv6LinkLocalAddress>
+								<IPv6AddressList type="object" Writable="0">
+									<i type="object">
+										<AddressStatus type="string" Writable="0">Invalid</AddressStatus>
+										<PrefixLength type="unsignedInt" Writable="0"></PrefixLength>
+										<IPv6Address type="string" Writable="0"></IPv6Address>
+										<AddressingType type="string" Writable="0"></AddressingType>
+										<AddressScope type="string" Writable="0"></AddressScope>
+									</i>
+								</IPv6AddressList>
+								<IPv6DefaultRouterList type="object" Writable="0">
+									<i type="object">
+										<DefaultRouter type="string"></DefaultRouter>
+										<ConfigType type="string">OTHER</ConfigType>
+									</i>
+								</IPv6DefaultRouterList>
+								<IPv6SitePrefixInfo type="object">
+									<PrefixStatus type="string" Writable="0">Invalid</PrefixStatus>
+									<ValidLifeTime type="string" Writable="0"></ValidLifeTime>
+									<PreferredLifeTime type="string" Writable="0"></PreferredLifeTime>
+									<IPv6SitePrefixLength type="unsignedInt" Writable="0"></IPv6SitePrefixLength>
+									<IPv6SitePrefix type="string" Writable="0"></IPv6SitePrefix>
+								</IPv6SitePrefixInfo>
+							</X_TWSZ-COM_IPv6Config>
+						</i>
+					</WANPPPConnection>
+					<WANIPConnection type="object" CurNode="WANIPConnectionNumberOfEntries" MaxNode="MaxIPConnectionNumberOfEntries">
+						<i type="object">
+							<X_TWSZ-COM_DynamicStatus type="string" Writable="0">Disconnected</X_TWSZ-COM_DynamicStatus>
+							<X_TWSZ-COM_DelFlag type="string" Writable="0">0</X_TWSZ-COM_DelFlag>
+							<RIPngEnabled type="boolean">0</RIPngEnabled>
+							<RipDirection type="string"></RipDirection>
+							<RipPassive type="string"></RipPassive>
+							<RouteProtocolRx type="string">Off</RouteProtocolRx>
+							<PortMappingNumberOfEntries type="unsignedInt" Writable="0">0</PortMappingNumberOfEntries>
+							<X_TWSZ-COM_MaxPortMappingEntries type="unsignedInt" Writable="0">16</X_TWSZ-COM_MaxPortMappingEntries>
+							<X_TWSZ-COM_SvcType type="string"></X_TWSZ-COM_SvcType>
+							<X_TWSZ-COM_DMZHost type="string"></X_TWSZ-COM_DMZHost>
+							<X_TWSZ-COM_DMZEnabled type="boolean">0</X_TWSZ-COM_DMZEnabled>
+							<X_TWSZ-COM_NATType type="string">full cone</X_TWSZ-COM_NATType>
+							<NATEnabled type="boolean">0</NATEnabled>
+							<X_TWSZ-COM_ServiceList type="string">Internet</X_TWSZ-COM_ServiceList>
+							<X_TWSZ-COM_LanInterface type="string"></X_TWSZ-COM_LanInterface>
+							<X_TWSZ-COM_UsrDNSServers type="string"></X_TWSZ-COM_UsrDNSServers>
+							<DNSServers type="string(64)"></DNSServers>
+							<DNSOverrideAllowed type="boolean">0</DNSOverrideAllowed>
+							<DNSEnabled type="boolean">1</DNSEnabled>
+							<Uptime type="unsignedInt" Writable="0"></Uptime>
+							<Reset type="boolean" Writable="1">0</Reset>
+							<ConnectionTrigger type="string">On-Demand</ConnectionTrigger>
+							<MACAddress type="string"></MACAddress>
+							<PossibleConnectionTypes type="string" Writable="0"></PossibleConnectionTypes>
+							<X_TWSZ-COM_ConnectionMode type="string" Writable="0">IP</X_TWSZ-COM_ConnectionMode>
+							<X_TWSZ-COM_ProtocolType type="string" Writable="0">IPv4</X_TWSZ-COM_ProtocolType>
+							<X_TWSZ-COM_NTPServers type="string"></X_TWSZ-COM_NTPServers>
+							<X_TWSZ-COM_GetNTPServers type="boolean">0</X_TWSZ-COM_GetNTPServers>
+							<X_TWSZ-COM_DomainName type="string"></X_TWSZ-COM_DomainName>
+							<DefaultGateway type="string"></DefaultGateway>
+							<SubnetMask type="string"></SubnetMask>
+							<ExternalIPAddress type="string" Notification="2"></ExternalIPAddress>
+							<AddressingType type="string"></AddressingType>
+							<LastConnectionError type="string" Writable="0">ERROR_NONE</LastConnectionError>
+							<X_TWSZ-COM_ConnectedDeviceName type="string" Writable="0"></X_TWSZ-COM_ConnectedDeviceName>
+							<X_TWSZ-COM_ProtocolClass type="string" Writable="0">IPv4</X_TWSZ-COM_ProtocolClass>
+							<Name type="string(256)">WANConnection</Name>
+							<ConnectionType type="string">IP_Routed</ConnectionType>
+							<ConnectionStatus type="string" Writable="0"></ConnectionStatus>
+							<Enable type="boolean">0</Enable>
+							<Stats type="object" Writable="0">
+								<EthernetDiscardPacketsReceived type="unsignedInt" Writable="0"></EthernetDiscardPacketsReceived>
+								<EthernetDiscardPacketsSent type="unsignedInt" Writable="0"></EthernetDiscardPacketsSent>
+								<EthernetErrorsReceived type="unsignedInt" Writable="0"></EthernetErrorsReceived>
+								<EthernetErrorsSent type="unsignedInt" Writable="0"></EthernetErrorsSent>
+								<EthernetPacketsReceived type="unsignedInt" Writable="0"></EthernetPacketsReceived>
+								<EthernetPacketsSent type="unsignedInt" Writable="0"></EthernetPacketsSent>
+								<EthernetBytesReceived type="unsignedInt" Writable="0"></EthernetBytesReceived>
+								<EthernetBytesSent type="unsignedInt" Writable="0"></EthernetBytesSent>
+							</Stats>
+							<X_TWSZ-COM_DHCPOPTION60 type="object">
+								<i type="object">
+									<Value type="string" Writable="1">0</Value>
+									<ValueMode type="unsignedInt" Writable="1">0</ValueMode>
+									<Type type="unsignedInt" Writable="1">34</Type>
+									<Enable type="boolean" Writable="1">0</Enable>
+								</i>
+							</X_TWSZ-COM_DHCPOPTION60>
+							<X_TWSZ-COM_DHCPOPTION125 type="object">
+								<i type="object">
+									<Value type="string" Writable="1">0</Value>
+									<Enable type="boolean" Writable="1">0</Enable>
+								</i>
+							</X_TWSZ-COM_DHCPOPTION125>
+							<PortMapping type="object" MaxNode="X_TWSZ-COM_MaxPortMappingEntries" CurNode="PortMappingNumberOfEntries">
+								<i type="object">
+									<X_TWSZ-COM_Weight type="string" Writable="0">0</X_TWSZ-COM_Weight>
+									<PortMappingTime type="string">Always</PortMappingTime>
+									<PortMappingDescription type="string(256)"></PortMappingDescription>
+									<InternalClient type="string(256)"></InternalClient>
+									<PortMappingProtocol type="string">TCP</PortMappingProtocol>
+									<InternalPort type="unsignedInt">0</InternalPort>
+									<ExternalPortEndRange type="unsignedInt">0</ExternalPortEndRange>
+									<ExternalPort type="unsignedInt">0</ExternalPort>
+									<X_TWSZ-COM_RemoteMask type="string">255.255.255.255</X_TWSZ-COM_RemoteMask>
+									<RemoteHost type="string"></RemoteHost>
+									<PortMappingLeaseDuration type="unsignedInt">0</PortMappingLeaseDuration>
+									<PortMappingEnabled type="boolean">0</PortMappingEnabled>
+								</i>
+							</PortMapping>
+							<X_TWSZ-COM_IPv6Config type="object">
+								<IPv6NTPServers type="string" Writable="0"></IPv6NTPServers>
+								<GetIPv6NTPServers type="boolean">0</GetIPv6NTPServers>
+								<UsrIPv6DNSServers type="string"></UsrIPv6DNSServers>
+								<IPv6DNSServers type="string" Writable="0"></IPv6DNSServers>
+								<IPv6DNSOverrideAllowed type="boolean">0</IPv6DNSOverrideAllowed>
+								<IPv6DNSEnabled type="boolean">1</IPv6DNSEnabled>
+								<DHCP6cForAddress type="boolean">0</DHCP6cForAddress>
+								<IPv6PrefixDelegationEnabled type="boolean">1</IPv6PrefixDelegationEnabled>
+								<DUID type="string">00:01:00:01:00:00:00:01:00:00:00:00:00:01</DUID>
+								<DUIDConfigType type="string">Auto</DUIDConfigType>
+								<X_TWSZ-COM_ConnectedDeviceName type="string" Writable="0"></X_TWSZ-COM_ConnectedDeviceName>
+								<ConnectionStatus type="string" Writable="0">Disconnected</ConnectionStatus>
+								<IPv6AddressList type="object" Writable="0">
+									<i type="object">
+										<AddressStatus type="string" Writable="0">Invalid</AddressStatus>
+										<PrefixLength type="unsignedInt" Writable="0"></PrefixLength>
+										<IPv6Address type="string" Writable="0"></IPv6Address>
+										<AddressingType type="string" Writable="0"></AddressingType>
+										<AddressScope type="string" Writable="0"></AddressScope>
+									</i>
+								</IPv6AddressList>
+								<IPv6DefaultRouterList type="object" Writable="0">
+									<i type="object">
+										<DefaultRouter type="string" Writable="0"></DefaultRouter>
+										<ConfigType type="string" Writable="0">OTHER</ConfigType>
+									</i>
+								</IPv6DefaultRouterList>
+								<IPv6SitePrefixInfo type="object">
+									<PrefixStatus type="string" Writable="0">Invalid</PrefixStatus>
+									<ValidLifeTime type="string" Writable="0"></ValidLifeTime>
+									<PreferredLifeTime type="string" Writable="0"></PreferredLifeTime>
+									<IPv6SitePrefixLength type="unsignedInt" Writable="0"></IPv6SitePrefixLength>
+									<IPv6SitePrefix type="string" Writable="0"></IPv6SitePrefix>
+								</IPv6SitePrefixInfo>
+							</X_TWSZ-COM_IPv6Config>
+						</i>
+					</WANIPConnection>
+					<WANEthernetLinkConfig type="object">
+						<EthernetLinkStatus type="string" Writable="0">Unavailable</EthernetLinkStatus>
+					</WANEthernetLinkConfig>
+					<WANDSLLinkConfig type="object">
+						<ATMCRCErrors type="unsignedInt" Writable="0">0</ATMCRCErrors>
+						<ATMReceivedBlocks type="unsignedInt" Writable="0">0</ATMReceivedBlocks>
+						<ATMTransmittedBlocks type="unsignedInt" Writable="0">0</ATMTransmittedBlocks>
+						<AutoConfig type="boolean" Writable="0">1</AutoConfig>
+						<ATMSustainableCellRate type="unsignedInt">0</ATMSustainableCellRate>
+						<ATMMaximumBurstSize type="unsignedInt">0</ATMMaximumBurstSize>
+						<ATMPeakCellRate type="unsignedInt">0</ATMPeakCellRate>
+						<ATMQoS type="string">UBR</ATMQoS>
+						<ATMAAL type="string" Writable="0">AAL5</ATMAAL>
+						<ATMEncapsulation type="string">LLC</ATMEncapsulation>
+						<DestinationAddress type="string"></DestinationAddress>
+						<LinkType type="string(256)">EoA</LinkType>
+						<LinkStatus type="string" Writable="0">Unavailable</LinkStatus>
+						<Enable type="boolean" Writable="0">1</Enable>
+					</WANDSLLinkConfig>
+					<WANPTMLinkConfig type="object">
+						<Stats>
+							<UnknownProtoPacketsReceived type="unsignedInt" Writable="0">0</UnknownProtoPacketsReceived>
+							<BroadcastPacketsReceived type="unsignedInt" Writable="0">0</BroadcastPacketsReceived>
+							<BroadcastPacketsSent type="unsignedInt" Writable="0">0</BroadcastPacketsSent>
+							<MulticastPacketsReceived type="unsignedInt" Writable="0">0</MulticastPacketsReceived>
+							<MulticastPacketsSent type="unsignedInt" Writable="0">0</MulticastPacketsSent>
+							<DiscardPacketsReceived type="unsignedInt" Writable="0">0</DiscardPacketsReceived>
+							<DiscardPacketsSent type="unsignedInt" Writable="0">0</DiscardPacketsSent>
+							<UnicastPacketsReceived type="unsignedInt" Writable="0">0</UnicastPacketsReceived>
+							<UnicastPacketsSent type="unsignedInt" Writable="0">0</UnicastPacketsSent>
+							<ErrorsReceived type="unsignedInt" Writable="0">0</ErrorsReceived>
+							<ErrorsSent type="unsignedInt" Writable="0">0</ErrorsSent>
+							<OOSFarEnd type="boolean" Writable="0">0</OOSFarEnd>
+							<OOSNearEnd type="boolean" Writable="0">0</OOSNearEnd>
+							<FramesReceived type="unsignedInt" Writable="0">0</FramesReceived>
+							<FramesSent type="unsignedInt" Writable="0">0</FramesSent>
+							<BytesReceived type="unsignedInt" Writable="0">0</BytesReceived>
+							<BytesSent type="unsignedInt" Writable="0">0</BytesSent>
+						</Stats>
+						<MACAddress type="string" Writable="0"></MACAddress>
+						<LinkStatus type="string" Writable="0">Unavailable</LinkStatus>
+						<Enable type="boolean" Writable="0">1</Enable>
+					</WANPTMLinkConfig>
+					<WANWirelessLinkConfig type="object" Writable="1">
+						<ProfileNumberOfEntries type="unsignedInt" Writable="0"></ProfileNumberOfEntries>
+						<SSIDReference type="string(256)" Writable="0"></SSIDReference>
+						<ProfileReference type="string(256)"></ProfileReference>
+						<Alias type="string(64)"></Alias>
+						<Status type="string" Writable="0"></Status>
+						<Enable type="boolean"></Enable>
+						<Stats type="object" Writable="0">
+							<Retransmissions type="unsignedInt-[0:100]"></Retransmissions>
+							<SignalStrength type="int[-200:0]"></SignalStrength>
+							<LastDataUplinkRate type="unsignedInt-[1000:600000]"></LastDataUplinkRate>
+							<LastDataDownlinkRate type="unsignedInt-[1000:600000]"></LastDataDownlinkRate>
+						</Stats>
+						<Security type="object" Writable="0">
+							<ModesSupported type="string" Writable="0"></ModesSupported>
+						</Security>
+						<Profile type="object">
+							<i type="object">
+								<Priority type="unsignedInt-[:255]"></Priority>
+								<Location type="string"></Location>
+								<SSID type="string(32)"></SSID>
+								<Alias type="string(64)"></Alias>
+								<Status type="string" Writable="0"></Status>
+								<Enable type="boolean"></Enable>
+								<Sercrity type="object" Writable="0">
+									<KeyPassphrase type="string(63)"></KeyPassphrase>
+									<PreSharedKey type="hexBinary-(32)"></PreSharedKey>
+									<WEPKey type="hexBinary-(5:5,13:13)"></WEPKey>
+									<ModeEnabled type="string"></ModeEnabled>
+								</Sercrity>
+							</i>
+						</Profile>
+						<WPS type="object" Writable="0">
+							<ConfigMethodsEnabled type="string"></ConfigMethodsEnabled>
+							<ConfigMethodsSupported type="string" Writable="0"></ConfigMethodsSupported>
+							<Enable type="boolean"></Enable>
+						</WPS>
+					</WANWirelessLinkConfig>
+				</i>
+			</WANConnectionDevice>
+			<WANEthernetInterfaceConfig type="object">
+				<ShapingBurstSize type="unsignedInt">0</ShapingBurstSize>
+				<ShapingRate type="int[-1:]"></ShapingRate>
+				<DuplexMode type="string">Auto</DuplexMode>
+				<MaxBitRate type="string">Auto</MaxBitRate>
+				<MACAddress type="string" Writable="0"></MACAddress>
+				<Status type="string" Writable="0"></Status>
+				<Enable type="boolean">1</Enable>
+				<Stats type="object">
+					<PacketsReceived type="unsignedInt" Writable="0"></PacketsReceived>
+					<PacketsSent type="unsignedInt" Writable="0"></PacketsSent>
+					<BytesReceived type="unsignedInt" Writable="0"></BytesReceived>
+					<BytesSent type="unsignedInt" Writable="0"></BytesSent>
+				</Stats>
+			</WANEthernetInterfaceConfig>
+			<WANCommonInterfaceConfig type="object">
+				<X_TWSZ-COM_NumberOfEnabledConnections type="unsignedInt" Writable="0">0</X_TWSZ-COM_NumberOfEnabledConnections>
+				<NumberOfActiveConnections type="unsignedInt" Writable="0">0</NumberOfActiveConnections>
+				<MaximumActiveConnections type="unsignedInt" Writable="0">4</MaximumActiveConnections>
+				<X_TWSZ-COM_MaximumPPPConnections type="unsignedInt" Writable="0">16</X_TWSZ-COM_MaximumPPPConnections>
+				<X_TWSZ-COM_MaximumIPConnections type="unsignedInt" Writable="0">8</X_TWSZ-COM_MaximumIPConnections>
+				<X_TWSZ-COM_MaximumConnections type="unsignedInt" Writable="0">16</X_TWSZ-COM_MaximumConnections>
+				<TotalPacketsReceived type="unsignedInt" Writable="0"></TotalPacketsReceived>
+				<TotalPacketsSent type="unsignedInt" Writable="0"></TotalPacketsSent>
+				<TotalBytesReceived type="unsignedInt" Writable="0"></TotalBytesReceived>
+				<TotalBytesSent type="unsignedInt" Writable="0"></TotalBytesSent>
+				<WANAccessProvider type="string(256)" Writable="0"></WANAccessProvider>
+				<PhysicalLinkStatus type="string" Writable="0"></PhysicalLinkStatus>
+				<Layer1DownstreamMaxBitRate type="unsignedInt" Writable="0"></Layer1DownstreamMaxBitRate>
+				<Layer1UpstreamMaxBitRate type="unsignedInt" Writable="0"></Layer1UpstreamMaxBitRate>
+				<X_TWSZ-COM_MultiNATMode type="string" Writable="1">One-to-One</X_TWSZ-COM_MultiNATMode>
+				<X_TWSZ-COM_MultiNATModeSupported type="string" Writable="0">One-to-One,Many-to-one,Many-to-Many,Server</X_TWSZ-COM_MultiNATModeSupported>
+				<WANAccessType type="string" Writable="0"></WANAccessType>
+				<EnabledForInternet type="boolean">1</EnabledForInternet>
+				<X_TWSZ-COM_DeviceName type="string" Writable="0">ADSL</X_TWSZ-COM_DeviceName>
+				<Connection type="object" Writable="0" MaxNode="MaximumActiveConnections" CurNode="NumberOfActiveConnections">
+					<i type="object">
+						<ActiveConnectionRef type="unsignedInt" Writable="0"></ActiveConnectionRef>
+						<ActiveConnectionServiceID type="string(256)" Writable="0"></ActiveConnectionServiceID>
+						<ActiveConnectionDeviceContainer type="string(256)" Writable="0"></ActiveConnectionDeviceContainer>
+					</i>
+				</Connection>
+			</WANCommonInterfaceConfig>
+			<WANDSLInterfaceConfig type="object">
+				<ShowtimeStart type="unsignedInt" Writable="0">1816</ShowtimeStart>
+				<TotalStart type="unsignedInt" Writable="0"></TotalStart>
+				<SNRMpbus type="string(24)" Writable="0"></SNRMpbus>
+				<SNRMpbds type="string(24)" Writable="0"></SNRMpbds>
+				<ACTUALCE type="unsignedInt" Writable="0">0</ACTUALCE>
+				<ACTSNRMODEus type="unsignedInt" Writable="0">0</ACTSNRMODEus>
+				<ACTSNRMODEds type="unsignedInt" Writable="0">0</ACTSNRMODEds>
+				<TRELLISus type="int" Writable="0">0</TRELLISus>
+				<TRELLISds type="int" Writable="0">0</TRELLISds>
+				<X_TWSZ-COM_DownstreamDelay type="unsignedInt" Writable="0"></X_TWSZ-COM_DownstreamDelay>
+				<X_TWSZ-COM_UpstreamDelay type="unsignedInt" Writable="0"></X_TWSZ-COM_UpstreamDelay>
+				<X_TWSZ-COM_DownstreamInterleaveDepth type="unsignedInt" Writable="0"></X_TWSZ-COM_DownstreamInterleaveDepth>
+				<X_TWSZ-COM_UpstreamInterleaveDepth type="unsignedInt" Writable="0"></X_TWSZ-COM_UpstreamInterleaveDepth>
+				<DownstreamPower type="int" Writable="0"></DownstreamPower>
+				<UpstreamPower type="int" Writable="0"></UpstreamPower>
+				<DownstreamAttenuation type="int" Writable="0">40</DownstreamAttenuation>
+				<UpstreamAttenuation type="int" Writable="0">20</UpstreamAttenuation>
+				<DownstreamNoiseMargin type="int" Writable="0">80</DownstreamNoiseMargin>
+				<UpstreamNoiseMargin type="int" Writable="0">95</UpstreamNoiseMargin>
+				<DownstreamMaxRate type="unsignedInt" Writable="0">23080</DownstreamMaxRate>
+				<UpstreamMaxRate type="unsignedInt" Writable="0">1112</UpstreamMaxRate>
+				<DownstreamCurrRate type="unsignedInt" Writable="0">21566</DownstreamCurrRate>
+				<UpstreamCurrRate type="unsignedInt" Writable="0">1004</UpstreamCurrRate>
+				<UPBOKLE type="unsignedInt[0:1280]" Writable="0">0</UPBOKLE>
+				<InterleaveDepth type="unsignedInt" Writable="0">0</InterleaveDepth>
+				<DataPath type="string" Writable="0">None</DataPath>
+				<PowerManagementState type="string" Writable="0">L0</PowerManagementState>
+				<X_TWSZ-COM_PowerManagement type="string" Writable="1">L0</X_TWSZ-COM_PowerManagement>
+				<CurrentProfile type="string" Writable="0"></CurrentProfile>
+				<AllowedProfiles type="string" Writable="0">30a</AllowedProfiles>
+				<StandardUsed type="string" Writable="0">G.992.3_Annex_A</StandardUsed>
+				<X_TWSZ-COM_StandardRequested type="string" Writable="1">Annex_A,Annex_I,Annex_J,Annex_L,Annex_M</X_TWSZ-COM_StandardRequested>
+				<X_TWSZ-COM_DSLMode type="string" Writable="1">ADSL2</X_TWSZ-COM_DSLMode>
+				<StandardsSupported type="string" Writable="0"></StandardsSupported>
+				<LinkEncapsulationUsed type="string" Writable="0"></LinkEncapsulationUsed>
+				<LinkEncapsulationRequested type="string" Writable="1"></LinkEncapsulationRequested>
+				<LinkEncapsulationSupported type="string" Writable="0">G.992.3_Annex_K_ATM</LinkEncapsulationSupported>
+				<X_TWSZ-COM_UpTime type="string" Writable="0">1816</X_TWSZ-COM_UpTime>
+				<X_TWSZ-COM_PTMDeviceName type="string" Writable="0"></X_TWSZ-COM_PTMDeviceName>
+				<Status type="string" Writable="0"></Status>
+				<Enable type="boolean">1</Enable>
+				<TestParams type="object">
+					<SATNus type="string(24)" Writable="0"></SATNus>
+					<SATNds type="string(24)" Writable="0"></SATNds>
+					<LATNus type="string(24)" Writable="0"></LATNus>
+					<LATNds type="string(24)" Writable="0"></LATNds>
+					<SNRMTus type="unsignedInt" Writable="0">0</SNRMTus>
+					<SNRMTds type="unsignedInt" Writable="0">0</SNRMTds>
+					<SNRpsus type="string(2047)" Writable="0"></SNRpsus>
+					<SNRpsds type="string(2047)" Writable="0"></SNRpsds>
+					<SNRGus type="unsignedInt" Writable="0">1</SNRGus>
+					<SNRGds type="unsignedInt" Writable="0">1</SNRGds>
+					<QLNMTus type="unsignedInt" Writable="0">1</QLNMTus>
+					<QLNMTds type="unsignedInt" Writable="0">1</QLNMTds>
+					<QLNpsus type="string(2047)" Writable="0"></QLNpsus>
+					<QLNpsds type="string(2047)" Writable="0"></QLNpsds>
+					<QLNGus type="unsignedInt" Writable="0">1</QLNGus>
+					<QLNGds type="unsignedInt" Writable="0">1</QLNGds>
+					<HLOGMTus type="unsignedInt" Writable="0">1</HLOGMTus>
+					<HLOGMTds type="unsignedInt" Writable="0">1</HLOGMTds>
+					<HLOGpsus type="string(2559)" Writable="0"></HLOGpsus>
+					<HLOGpsds type="string(2559)" Writable="0"></HLOGpsds>
+					<HLOGGus type="unsignedInt" Writable="0">8</HLOGGus>
+					<HLOGGds type="unsignedInt" Writable="0">8</HLOGGds>
+				</TestParams>
+				<Stats type="object">
+					<Total type="object">
+						<LossOfFraming type="unsignedInt" Writable="0">0</LossOfFraming>
+						<InitTimeouts type="unsignedInt" Writable="0">0</InitTimeouts>
+						<InitErrors type="unsignedInt" Writable="0">0</InitErrors>
+						<LinkRetrain type="unsignedInt" Writable="0">0</LinkRetrain>
+						<CellDelin type="unsignedInt" Writable="0">0</CellDelin>
+						<TransmitBlocks type="unsignedInt" Writable="0">0</TransmitBlocks>
+						<ReceiveBlocks type="unsignedInt" Writable="0">0</ReceiveBlocks>
+						<ATUCCRCErrors type="unsignedInt" Writable="0">4294967295</ATUCCRCErrors>
+						<CRCErrors type="unsignedInt" Writable="0">4294967295</CRCErrors>
+						<ATUCHECErrors type="unsignedInt" Writable="0">4294967295</ATUCHECErrors>
+						<HECErrors type="unsignedInt" Writable="0">4294967295</HECErrors>
+						<ATUCFECErrors type="unsignedInt" Writable="0">4294967295</ATUCFECErrors>
+						<FECErrors type="unsignedInt" Writable="0">4294967295</FECErrors>
+						<ATUCSeverelyErroredSecs type="unsignedInt" Writable="0">4294967295</ATUCSeverelyErroredSecs>
+						<SeverelyErroredSecs type="unsignedInt" Writable="0">4294967295</SeverelyErroredSecs>
+						<ATUCErroredSecs type="unsignedInt" Writable="0">4294967295</ATUCErroredSecs>
+						<ErroredSecs type="unsignedInt" Writable="0">4294967295</ErroredSecs>
+						<DownstreamTotalFrames type="string" Writable="0">0</DownstreamTotalFrames>
+						<UpstreamTotalFrames type="string" Writable="0">0</UpstreamTotalFrames>
+						<DownstreamTotalES type="string" Writable="0">0</DownstreamTotalES>
+						<UpstreamTotalES type="string" Writable="0">0</UpstreamTotalES>
+						<DownstreamLCDErrors type="string" Writable="0">0</DownstreamLCDErrors>
+						<UpstreamLCDErrors type="string" Writable="0">0</UpstreamLCDErrors>
+						<DownstreamOCDErrors type="string" Writable="0">0</DownstreamOCDErrors>
+						<UpstreamOCDErrors type="string" Writable="0">0</UpstreamOCDErrors>
+						<DownstreamHECErrors type="string" Writable="0">0</DownstreamHECErrors>
+						<UpstreamHECErrors type="string" Writable="0">0</UpstreamHECErrors>
+						<DownstreamCRCErrors type="string" Writable="0">0</DownstreamCRCErrors>
+						<UpstreamCRCErrors type="string" Writable="0">0</UpstreamCRCErrors>
+					</Total>
+				</Stats>
+			</WANDSLInterfaceConfig>
+		</i>
+	</WANDevice>
+	<LANDevice type="object" Writable="1" CurNode="LANDeviceNumberOfEntries">
+		<i type="object">
+			<X_TWSZ-COM_ReconfigFinishFlag type="boolean" Writable="0">1</X_TWSZ-COM_ReconfigFinishFlag>
+			<RipDirection type="string"></RipDirection>
+			<RipPassive type="string"></RipPassive>
+			<RouteProtocolRx type="string">Off</RouteProtocolRx>
+			<LANEthernetInterfaceNumberOfEntries type="unsignedInt" Writable="0"></LANEthernetInterfaceNumberOfEntries>
+			<X_TWSZ-COM_ProxyArp type="boolean">0</X_TWSZ-COM_ProxyArp>
+			<X_TWSZ-COM_MacAddress type="string" Writable="0"></X_TWSZ-COM_MacAddress>
+			<X_TWSZ-COM_Name type="string">LAN1</X_TWSZ-COM_Name>
+			<X_TWSZ-COM_DeviceName type="string" Writable="0">br0</X_TWSZ-COM_DeviceName>
+			<LANHostConfigManagement type="object">
+				<ReservedAddresses type="string(256)" Writable="1"></ReservedAddresses>
+				<UseAllocatedWAN type="string">Normal</UseAllocatedWAN>
+				<DHCPLeaseTime type="int[-1:]">86400</DHCPLeaseTime>
+				<IPRouters type="string(64)">192.168.1.1</IPRouters>
+				<DomainName type="string(64)">gj.com</DomainName>
+				<SubnetMask type="string">255.255.255.0</SubnetMask>
+				<DHCPOptionNumberOfEntries type="unsignedInt" Writable="0">0</DHCPOptionNumberOfEntries>
+				<X_TWSZ-COM_ClientClassesMaxEntries type="unsignedInt" Writable="0">16</X_TWSZ-COM_ClientClassesMaxEntries>
+				<DHCPConditionalPoolNumberOfEntries type="unsignedInt" Writable="0">0</DHCPConditionalPoolNumberOfEntries>
+				<MaxAddress type="string">192.168.1.100</MaxAddress>
+				<MinAddress type="string">192.168.1.2</MinAddress>
+				<ClientIPPoolSize type="unsignedInt">98</ClientIPPoolSize>
+				<X_TWSZ-COM_DHCPRelayAddress type="string">192.168.0.200</X_TWSZ-COM_DHCPRelayAddress>
+				<DHCPRelay type="boolean" Writable="0">0</DHCPRelay>
+				<DHCPServerEnable type="boolean">1</DHCPServerEnable>
+				<X_TWSZ-COM_UseIPRoutersAsDNSServer type="boolean">0</X_TWSZ-COM_UseIPRoutersAsDNSServer>
+				<X_TWSZ-COM_WANDNSServers type="string(64)"></X_TWSZ-COM_WANDNSServers>
+				<X_TWSZ-COM_DNSRelayEnable type="boolean" Writable="1">1</X_TWSZ-COM_DNSRelayEnable>
+				<DNSServers type="string(64)"></DNSServers>
+				<IPInterfaceNumberOfEntries type="unsignedInt" Writable="0">0</IPInterfaceNumberOfEntries>
+				<AllowedMACAddresses type="string(512)"></AllowedMACAddresses>
+				<DHCPServerConfigurable type="boolean" Writable="1">1</DHCPServerConfigurable>
+				<MACAddress type="string" Writable="0"></MACAddress>
+				<IPInterface type="object" CurNode="IPInterfaceNumberOfEntries">
+					<i type="object">
+						<X_TWSZ-COM_IPv6InterfaceAddressScope type="string">LinkLocal</X_TWSZ-COM_IPv6InterfaceAddressScope>
+						<X_TWSZ-COM_IPv6InterfacePrefixLength type="unsignedInt">64</X_TWSZ-COM_IPv6InterfacePrefixLength>
+						<X_TWSZ-COM_IPv6InterfaceAddress type="string">fe80::1</X_TWSZ-COM_IPv6InterfaceAddress>
+						<IPInterfaceAddressingType type="string">DHCP</IPInterfaceAddressingType>
+						<IPInterfaceSubnetMask type="string">255.255.255.0</IPInterfaceSubnetMask>
+						<IPInterfaceIPAddress type="string">0.0.0.0</IPInterfaceIPAddress>
+						<Enable type="boolean">1</Enable>
+						<X_TWSZ-COM_IPv6InterfaceAddressingType type="object">
+							<StaticDelegated type="boolean" Writable="0">0</StaticDelegated>
+						</X_TWSZ-COM_IPv6InterfaceAddressingType>
+						<X_TWSZ-COM_IPv6LanIntfAddress type="object">
+							<DelegatedAddressNumberOfEntries type="unsignedInt" Writable="0">0</DelegatedAddressNumberOfEntries>
+							<UniqueLocalAddress type="string"></UniqueLocalAddress>
+							<DelegatedAddress type="object" CurNode="DelegatedAddressNumberOfEntries">
+								<i type="object">
+									<IPv6PrefixLength type="unsignedInt"></IPv6PrefixLength>
+									<IPv6PrefixAddress type="string"></IPv6PrefixAddress>
+									<IPv6InterfaceAddress type="string"></IPv6InterfaceAddress>
+									<DelegatedConnection type="string"></DelegatedConnection>
+									<Mode type="string">WANDelegated</Mode>
+								</i>
+							</DelegatedAddress>
+						</X_TWSZ-COM_IPv6LanIntfAddress>
+					</i>
+				</IPInterface>
+				<DHCPOption type="object" CurNode="DHCPOptionNumberOfEntries">
+					<i type="object">
+						<Value type="base64(340)"></Value>
+						<Tag type="unsignedInt"></Tag>
+						<Enable type="boolean">0</Enable>
+					</i>
+				</DHCPOption>
+				<DHCPConditionalServingPool type="object" MaxNode="X_TWSZ-COM_ClientClassesMaxEntries" CurNode="DHCPConditionalPoolNumberOfEntries">
+					<i type="object">
+						<DHCPOptionNumberOfEntries type="unsignedInt" Writable="0">0</DHCPOptionNumberOfEntries>
+						<UseAllocatedWAN type="string">Normal</UseAllocatedWAN>
+						<DHCPLeaseTime type="int[-1:]">86400</DHCPLeaseTime>
+						<DNSServers type="string">192.168.1.1</DNSServers>
+						<MaxAddress type="string">192.168.1.20</MaxAddress>
+						<MinAddress type="string">192.168.1.10</MinAddress>
+						<IPRouters type="string(64)" Writable="1"></IPRouters>
+						<SubnetMask type="string" Writable="1"></SubnetMask>
+						<ReservedAddresses type="string(512)" Writable="1"></ReservedAddresses>
+						<LocallyServed type="boolean" Writable="1">true</LocallyServed>
+						<Chaddr type="string" Writable="1"></Chaddr>
+						<ClientID type="string(256)" Writable="1"></ClientID>
+						<VendorClassIDMode type="string" Writable="1">Exact</VendorClassIDMode>
+						<VendorClassIDExclude type="boolean" Writable="1">false</VendorClassIDExclude>
+						<VendorClassID type="string">[IAL]</VendorClassID>
+						<SourceInterface type="string(1024)" Writable="1"></SourceInterface>
+						<PoolOrder type="unsignedInt" Writable="1">1</PoolOrder>
+						<Enable type="boolean">0</Enable>
+						<DHCPOption type="object" CurNode="DHCPOptionNumberOfEntries">
+							<i type="object">
+								<Value type="base64(340)"></Value>
+								<Tag type="unsignedInt"></Tag>
+								<Enable type="boolean">0</Enable>
+							</i>
+						</DHCPOption>
+					</i>
+				</DHCPConditionalServingPool>
+				<X_TWSZ-COM_DHCPFilter type="object">
+					<DHCPFilterNumberOfEntries type="unsignedInt" Writable="0">0</DHCPFilterNumberOfEntries>
+					<MaxDHCPFilterNumberOfEntries type="unsignedInt" Writable="0">32</MaxDHCPFilterNumberOfEntries>
+					<Enabled type="boolean">0</Enabled>
+					<WhiteList type="object" CurNode="DHCPFilterNumberOfEntries" MaxNode="MaxDHCPFilterNumberOfEntries">
+						<i type="object">
+							<FilterMAC type="string" Writable="1">00:11:22:33:44:55</FilterMAC>
+							<FilterPCName type="string" Writable="1">wc</FilterPCName>
+							<FilterIP type="string" Writable="1">1.0.0.1</FilterIP>
+							<PerEnabled type="boolean">0</PerEnabled>
+						</i>
+					</WhiteList>
+					<BlackList type="object">
+						<i type="object">
+							<FilterMAC type="string" Writable="1">00:11:22:33:44:56</FilterMAC>
+						</i>
+					</BlackList>
+				</X_TWSZ-COM_DHCPFilter>
+			</LANHostConfigManagement>
+			<X_TWSZ-COM_IPv6LANHostConfigManagement type="object">
+				<AutoConfigurationAddress type="boolean">1</AutoConfigurationAddress>
+				<IPv6DNSRelayEnable type="boolean">1</IPv6DNSRelayEnable>
+				<IPv6DNSWanConnection type="string"></IPv6DNSWanConnection>
+				<ServerType type="object">
+					<Stateless type="boolean">1</Stateless>
+					<StatefullDHCPv6 type="object">
+						<IPv6DomainName type="string">gj.com</IPv6DomainName>
+						<DHCPv6ValidTime type="int">86400</DHCPv6ValidTime>
+						<DHCPv6LeaseTime type="int">14400</DHCPv6LeaseTime>
+						<MaxInterfaceID type="string">ff</MaxInterfaceID>
+						<MinInterfaceID type="string">0</MinInterfaceID>
+						<IPv6DNSServers type="string">2111:3c:123:0:c:135:9a:a15,2111:3c:123:0:3bc6:a:9cc:518</IPv6DNSServers>
+						<IPv6DNSConfigType type="string">DHCP</IPv6DNSConfigType>
+					</StatefullDHCPv6>
+				</ServerType>
+				<RADVD type="object">
+					<Enabled type="boolean">1</Enabled>
+				</RADVD>
+				<IPv6SitePrefixConfigType type="object">
+					<StaticDelegated type="boolean">0</StaticDelegated>
+				</IPv6SitePrefixConfigType>
+				<IPv6PDWanConnection type="object">
+					<Interface type="string"></Interface>
+				</IPv6PDWanConnection>
+				<IPv6InterfaceNumberOfEntries type="object">
+					<N_entries type="unsignedInt">1</N_entries>
+				</IPv6InterfaceNumberOfEntries>
+				<RadVDConfigManagement type="object">
+					<PrefixInformationNumberOfEntries type="unsignedInt" Writable="0">0</PrefixInformationNumberOfEntries>
+					<ULAPrefixInfo type="object">
+						<ValidLifeTime type="int">86400</ValidLifeTime>
+						<PreferredLifeTime type="int">14400</PreferredLifeTime>
+						<Prefix type="string">11:22:33:44:55</Prefix>
+						<Enable type="boolean">0</Enable>
+					</ULAPrefixInfo>
+					<PrefixInformation type="object" CurNode="PrefixInformationNumberOfEntries">
+						<i type="object">
+							<ValidLifeTime type="int">172800</ValidLifeTime>
+							<PreferredLifeTime type="int">7200</PreferredLifeTime>
+							<Prefix type="string"></Prefix>
+							<DelegatedConnection type="string"></DelegatedConnection>
+							<Mode type="string"></Mode>
+						</i>
+					</PrefixInformation>
+				</RadVDConfigManagement>
+			</X_TWSZ-COM_IPv6LANHostConfigManagement>
+			<LANEthernetInterfaceConfig type="object" Writable="0">
+				<i type="object">
+					<DuplexMode type="string">Auto</DuplexMode>
+					<MaxBitRate type="string">Auto</MaxBitRate>
+					<X_TWSZ-COM_MACAddressControlAction type="string" Writeable="1">Blacklist</X_TWSZ-COM_MACAddressControlAction>
+					<MACAddressControlEnabled type="boolean"></MACAddressControlEnabled>
+					<MACAddress type="string" Writable="0"></MACAddress>
+					<Status type="string" Writable="0"></Status>
+					<DhcpServerEnable type="boolean">1</DhcpServerEnable>
+					<Enable type="boolean">1</Enable>
+					<X_TWSZ-COM_Description type="string" Writable="0">ethernet1</X_TWSZ-COM_Description>
+					<X_TWSZ-COM_DeviceName type="string" Writable="0">eth0</X_TWSZ-COM_DeviceName>
+					<Stats type="object">
+						<UnknownProtoPacketsReceived type="unsignedInt" Writable="0"></UnknownProtoPacketsReceived>
+						<BroadcastPacketsReceived type="unsignedInt" Writable="0"></BroadcastPacketsReceived>
+						<BroadcastPacketsSent type="unsignedInt" Writable="0"></BroadcastPacketsSent>
+						<MulticastPacketsReceived type="unsignedInt" Writable="0"></MulticastPacketsReceived>
+						<MulticastPacketsSent type="unsignedInt" Writable="0"></MulticastPacketsSent>
+						<DiscardPacketsReceived type="unsignedInt" Writable="0"></DiscardPacketsReceived>
+						<DiscardPacketsSent type="unsignedInt" Writable="0"></DiscardPacketsSent>
+						<UnicastPacketsReceived type="unsignedInt" Writable="0"></UnicastPacketsReceived>
+						<UnicastPacketsSent type="unsignedInt" Writable="0"></UnicastPacketsSent>
+						<ErrorsReceived type="unsignedInt" Writable="0"></ErrorsReceived>
+						<ErrorsSent type="unsignedInt" Writable="0"></ErrorsSent>
+						<TxDrop type="unsignedInt" Writable="0"></TxDrop>
+						<RxDrop type="unsignedInt" Writable="0"></RxDrop>
+						<TxError type="unsignedInt" Writable="0"></TxError>
+						<RxError type="unsignedInt" Writable="0"></RxError>
+						<PacketsReceived type="unsignedInt" Writable="0"></PacketsReceived>
+						<PacketsSent type="unsignedInt" Writable="0"></PacketsSent>
+						<BytesReceived type="unsignedInt" Writable="0"></BytesReceived>
+						<BytesSent type="unsignedInt" Writable="0"></BytesSent>
+					</Stats>
+				</i>
+			</LANEthernetInterfaceConfig>
+			<Hosts type="object">
+				<HostNumberOfEntries type="unsignedInt" Writable="0">0</HostNumberOfEntries>
+				<Host type="object" Writable="0">
+					<i type="object" NeedSave="0">
+						<Active type="boolean" Writable="1"></Active>
+						<InterfaceType type="string" Writable="0"></InterfaceType>
+						<Layer2Interface type="string(256)" Writable="0"></Layer2Interface>
+						<HostName type="string" Writable="0"></HostName>
+						<MACAddress type="string" Writable="0"></MACAddress>
+						<VendorClassID type="string" Writable="0"></VendorClassID>
+						<X_TWSZ-COM_LeaseTimeExpire type="unsignedInt" Writable="0"></X_TWSZ-COM_LeaseTimeExpire>
+						<LeaseTimeRemaining type="int[-1:]" Writable="0"></LeaseTimeRemaining>
+						<AddressSource type="string" Writable="0"></AddressSource>
+						<IPAddress type="string" Writable="0"></IPAddress>
+					</i>
+				</Host>
+			</Hosts>
+			<X_TWSZ-COM_IGMPSnoop type="object">
+				<MaxGroups type="unsignedInt" Writable="1">100</MaxGroups>
+				<LeaveTimeout type="unsignedInt" Writable="1">0</LeaveTimeout>
+				<MrouterTimeout type="unsignedInt" Writable="1">1</MrouterTimeout>
+				<HostTimeout type="unsignedInt" Writable="1">3000000</HostTimeout>
+				<LastMemberQueryInterval type="unsignedInt" Writable="1">200000</LastMemberQueryInterval>
+				<Enabled type="boolean" Writable="1">1</Enabled>
+			</X_TWSZ-COM_IGMPSnoop>
+			<WLANConfiguration type="object" Writable="0">
+				<i type="object">
+					<X_TWSZ-COM_GuestAccess type="boolean">1</X_TWSZ-COM_GuestAccess>
+					<X_TWSZ-COM_MACListEnable type="boolean">0</X_TWSZ-COM_MACListEnable>
+					<X_TWSZ-COM_RadioInterface type="unsignedInt" Writable="0">1</X_TWSZ-COM_RadioInterface>
+					<X_TWSZ-COM_MACListNumberOfEntries type="unsignedInt" Writable="1">0</X_TWSZ-COM_MACListNumberOfEntries>
+					<X_TWSZ-COM_MaxMACListNumberOfEntries type="unsignedInt" Writable="0" Stat="1">16</X_TWSZ-COM_MaxMACListNumberOfEntries>
+					<X_TWSZ-COM_MACAddressControlAction type="string">Whitelist</X_TWSZ-COM_MACAddressControlAction>
+					<X_TWSZ-COM_WPAGroupRekey type="unsignedInt[60:65535]">100</X_TWSZ-COM_WPAGroupRekey>
+					<X_TWSZ-COM_WPAStrictRekey type="boolean">0</X_TWSZ-COM_WPAStrictRekey>
+					<X_TWSZ-COM_BakRadiusEnable type="boolean">0</X_TWSZ-COM_BakRadiusEnable>
+					<X_TWSZ-COM_AccountInterval type="unsignedInt[60:65535]">100</X_TWSZ-COM_AccountInterval>
+					<X_TWSZ-COM_AccountEnable type="boolean">0</X_TWSZ-COM_AccountEnable>
+					<X_TWSZ-COM_MAXSTATION type="unsignedInt[0:31]">16</X_TWSZ-COM_MAXSTATION>
+					<X_TWSZ-COM_MulticastRate type="string(256)">0</X_TWSZ-COM_MulticastRate>
+					<X_TWSZ-COM_VapIndex type="unsignedInt" Writable="0" Stat="1">0</X_TWSZ-COM_VapIndex>
+					<X_TWSZ-COM_IsMatchCondition type="string" Writable="0" Stat="1">0</X_TWSZ-COM_IsMatchCondition>
+					<X_TWSZ-COM_RFBand type="unsignedInt" Writable="1">0</X_TWSZ-COM_RFBand>
+					<X_TWSZ-COM_Frequency type="string">5G</X_TWSZ-COM_Frequency>
+					<X_TWSZ-COM_DHCPEnabled type="boolean">1</X_TWSZ-COM_DHCPEnabled>
+					<X_TWSZ-COM_DeviceName type="string" Writable="0" Stat="1"></X_TWSZ-COM_DeviceName>
+					<X_TWSZ-COM_PowerValue type="string" Writable="0" Stat="1">1</X_TWSZ-COM_PowerValue>
+					<X_TWSZ-COM_APCreated type="boolean">1</X_TWSZ-COM_APCreated>
+					<X_TWSZ-COM_UpTime type="unsignedInt" Writable="0" Stat="1"></X_TWSZ-COM_UpTime>
+					<TotalAssociations type="unsignedInt" Writable="0" Stat="1">0</TotalAssociations>
+					<TotalPacketsReceived type="unsignedInt" Writable="0" Stat="1"></TotalPacketsReceived>
+					<TotalPacketsSent type="unsignedInt" Writable="0" Stat="1"></TotalPacketsSent>
+					<TotalBytesReceived type="unsignedInt" Writable="0" Stat="1"></TotalBytesReceived>
+					<TotalBytesSent type="unsignedInt" Writable="0" Stat="1"></TotalBytesSent>
+					<UAPSDEnable type="boolean"></UAPSDEnable>
+					<WMMEnable type="boolean"></WMMEnable>
+					<AuthenticationServiceMode type="string"></AuthenticationServiceMode>
+					<PeerBSSID type="string"></PeerBSSID>
+					<TotalIntegrityFailures type="unsignedInt" Writable="0" Stat="1"></TotalIntegrityFailures>
+					<X_TWSZ-COM_SSIDHide type="boolean">0</X_TWSZ-COM_SSIDHide>
+					<SSIDAdvertisementEnabled type="boolean"></SSIDAdvertisementEnabled>
+					<IEEE11iAuthenticationMode type="string">PSKAuthentication</IEEE11iAuthenticationMode>
+					<IEEE11iEncryptionModes type="string"></IEEE11iEncryptionModes>
+					<WPAAuthenticationMode type="string">PSKAuthentication</WPAAuthenticationMode>
+					<WPAEncryptionModes type="string"></WPAEncryptionModes>
+					<BasicAuthenticationMode type="string">None</BasicAuthenticationMode>
+					<BasicEncryptionModes type="string"></BasicEncryptionModes>
+					<WEPEncryptionLevel type="string(64)">40-bit</WEPEncryptionLevel>
+					<KeyPassphrase type="string(63)"></KeyPassphrase>
+					<WEPKeyIndex type="unsignedInt[1:4]">1</WEPKeyIndex>
+					<MACAddressControlEnabled type="boolean" Cache="1">0</MACAddressControlEnabled>
+					<BeaconType type="string">WPA</BeaconType>
+					<SSID type="string(32)">ChinaNet-0001</SSID>
+					<X_TWSZ-COM_PSKExpression type="string(31)">KeyPassphrase</X_TWSZ-COM_PSKExpression>
+					<X_TWSZ-COM_Powerlevel type="string">1</X_TWSZ-COM_Powerlevel>
+					<WEPKeyFormat type="unsignedInt[1:4]">0</WEPKeyFormat>
+					<BSSID type="string" Writable="0" Stat="1"></BSSID>
+					<Name type="string(16)" Writable="0">ath0</Name>
+					<Status type="string" Writable="0" Stat="1"></Status>
+					<X_TWSZ-COM_AMPDU type="boolean" Writable="1" Stat="1">1</X_TWSZ-COM_AMPDU>
+					<GuardInterval type="boolean" Stat="1">1</GuardInterval>
+					<X_TWSZ-COM_MIMO type="boolean" Stat="1">1</X_TWSZ-COM_MIMO>
+					<XR type="boolean" Stat="1">0</XR>
+					<FRAGLEN type="unsignedInt[256:2346]" Stat="1">2346</FRAGLEN>
+					<BSSRelay type="boolean" Stat="1">0</BSSRelay>
+					<X_TWSZ-COM_ChannelWidth type="string" Writable="1" Stat="1">0</X_TWSZ-COM_ChannelWidth>
+					<OperatingChannelBandwidth type="string" Writable="1" Stat="1">0</OperatingChannelBandwidth>
+					<DTIM type="unsignedInt[1:15]" Stat="1">10</DTIM>
+					<PowerSave type="boolean" Stat="1">0</PowerSave>
+					<RCSCTSThreshlod type="unsignedInt[256:2347]" Stat="1">2346</RCSCTSThreshlod>
+					<BeaconInterval type="unsignedInt[20:1000]" Stat="1">200</BeaconInterval>
+					<X_TWSZ-COM_PreambleType type="boolean" Stat="1">0</X_TWSZ-COM_PreambleType>
+					<UAPSDSupported type="boolean" Stat="1">1</UAPSDSupported>
+					<WMMSupported type="boolean" Stat="1">1</WMMSupported>
+					<DistanceFromRoot type="unsignedInt" Stat="1">0</DistanceFromRoot>
+					<DeviceOperationMode type="string" Stat="1">InfrastructureAccessPoint</DeviceOperationMode>
+					<ChannelsInUse type="string(1024)" Writable="0" Stat="1"></ChannelsInUse>
+					<RegulatoryDomain type="string(3)" Stat="1">CN</RegulatoryDomain>
+					<LocationDescription type="string(4096)" Stat="1"></LocationDescription>
+					<AutoRateFallBackEnabled type="boolean" Stat="1">1</AutoRateFallBackEnabled>
+					<TransmitPower type="unsignedInt" Stat="1"></TransmitPower>
+					<TransmitPowerSupported type="string(64)" Writable="0" Stat="1"></TransmitPowerSupported>
+					<X_TWSZ-COM_APModuleEnable type="boolean" Stat="1">1</X_TWSZ-COM_APModuleEnable>
+					<BeaconAdvertisementEnabled type="boolean" Stat="1">1</BeaconAdvertisementEnabled>
+					<InsecureOOBAccessEnabled type="boolean" Stat="1">1</InsecureOOBAccessEnabled>
+					<PossibleDataTransmitRates type="string(256)" Writable="0" Stat="1"></PossibleDataTransmitRates>
+					<OperationalDataTransmitRates type="string(256)" Stat="1"></OperationalDataTransmitRates>
+					<BasicDataTransmitRates type="string(256)" Stat="1"></BasicDataTransmitRates>
+					<PossibleChannels type="string(1024)" Writable="0" Stat="1"></PossibleChannels>
+					<Standard type="string" Stat="1">b,g,n</Standard>
+					<AutoChannelEnable type="boolean" Stat="1">1</AutoChannelEnable>
+					<Channel type="unsignedInt[0:255]" Stat="1">0</Channel>
+					<MaxBitRate type="string(4)" Stat="1">Auto</MaxBitRate>
+					<Enable type="boolean">1</Enable>
+					<Stats type="object">
+						<UnknownProtoRacketsReceived type="unsignedInt" Writable="0"></UnknownProtoRacketsReceived>
+						<BroadcastPacketsReceived type="unsignedInt" Writable="0"></BroadcastPacketsReceived>
+						<BroadcastPacketsSent type="unsignedInt" Writable="0"></BroadcastPacketsSent>
+						<MulticastPacketsReceived type="unsignedInt" Writable="0"></MulticastPacketsReceived>
+						<MulticastPacketsSent type="unsignedInt" Writable="0"></MulticastPacketsSent>
+						<DiscardPacketsReceived type="unsignedInt" Writable="0" Stat="1"></DiscardPacketsReceived>
+						<DiscardPacketsSent type="unsignedInt" Writable="0" Stat="1"></DiscardPacketsSent>
+						<UnicastPacketsReceived type="unsignedInt" Writable="0"></UnicastPacketsReceived>
+						<UnicastPacketsSent type="unsignedInt" Writable="0"></UnicastPacketsSent>
+						<ErrorsReceived type="unsignedInt" Writable="0" Stat="1"></ErrorsReceived>
+						<ErrorsSent type="unsignedInt" Writable="0" Stat="1"></ErrorsSent>
+					</Stats>
+					<WPS type="object">
+						<X_TWSZ-COM_OriginalEnc type="string" Writable="0" Stat="1">None</X_TWSZ-COM_OriginalEnc>
+						<X_TWSZ-COM_OriginalAuth type="string" Writable="0" Stat="1">None</X_TWSZ-COM_OriginalAuth>
+						<X_TWSZ-COM_OriginalSSID type="string(32)" Writable="0" Stat="1">NetGear-001</X_TWSZ-COM_OriginalSSID>
+						<X_TWSZ-COM_SetupMethod type="string" Cache="1" Stat="1">None</X_TWSZ-COM_SetupMethod>
+						<X_TWSZ-COM_GeneratePinStatus type="string" Writable="0" Stat="1"></X_TWSZ-COM_GeneratePinStatus>
+						<X_TWSZ-COM_WpsSessionStatus type="string" Writable="0" Stat="1"></X_TWSZ-COM_WpsSessionStatus>
+						<X_TWSZ-COM_GeneratePin type="string" Cache="1" Stat="1">0</X_TWSZ-COM_GeneratePin>
+						<X_TWSZ-COM_GeneratePinEnable type="boolean" Writable="1" Stat="1">1</X_TWSZ-COM_GeneratePinEnable>
+						<X_TWSZ-COM_StartWpsSession type="string" Stat="1">0</X_TWSZ-COM_StartWpsSession>
+						<X_TWSZ-COM_PeerPassword type="string" Stat="1"></X_TWSZ-COM_PeerPassword>
+						<X_TWSZ-COM_DevicePassword type="string">12345670</X_TWSZ-COM_DevicePassword>
+						<RegistrarEstablished type="boolean" Writable="0"></RegistrarEstablished>
+						<RegistrarNumberOfEntries type="unsignedInt" Writable="0"></RegistrarNumberOfEntries>
+						<LastConfigurationError type="string" Writable="0"></LastConfigurationError>
+						<ConfigurationState type="string" Writable="0" Stat="1">Not configured</ConfigurationState>
+						<SetupLock type="boolean" Stat="1">0</SetupLock>
+						<SetupLockedState type="string" Writable="0" Stat="1"></SetupLockedState>
+						<ConfigMethodsEnabled type="string"></ConfigMethodsEnabled>
+						<ConfigMethodsSupported type="string" Writable="0" Stat="1"></ConfigMethodsSupported>
+						<Version type="unsignedInt" Writable="0" Stat="1"></Version>
+						<UUID type="string(36)" Writable="0" Stat="1">63041253101920061228000000000000</UUID>
+						<IsMatchCondition type="string" Writable="0">0</IsMatchCondition>
+						<DevicePassword type="string" Stat="1">12345670</DevicePassword>
+						<DeviceName type="string(32)" Writable="0"></DeviceName>
+						<Enable type="boolean">1</Enable>
+						<Registrar type="object">
+							<DeviceName type="string(32)" Writable="0"></DeviceName>
+							<UUID type="string(36)" Writable="0"></UUID>
+							<Enable type="boolean" Writable="1"></Enable>
+						</Registrar>
+					</WPS>
+					<AssociatedDevice type="object" Writable="0">
+						<i type="object">
+							<X_TWSZ-COM_AssociatedDeviceType type="string(256)" Writable="0"></X_TWSZ-COM_AssociatedDeviceType>
+							<X_TWSZ-COM_AssociatedDeviceState type="string(256)" Writable="0"></X_TWSZ-COM_AssociatedDeviceState>
+							<X_TWSZ-COM_AssociatedDeviceRSSI type="string(256)" Writable="0"></X_TWSZ-COM_AssociatedDeviceRSSI>
+							<X_TWSZ-COM_AssociatedDeviceRate type="string(256)"></X_TWSZ-COM_AssociatedDeviceRate>
+							<LastDataTransmitRate type="string(4)" Writable="0"></LastDataTransmitRate>
+							<LastPMKId type="string(256)" Writable="0"></LastPMKId>
+							<LastRequestedMulticastCipher type="string(256)" Writable="0"></LastRequestedMulticastCipher>
+							<LastRequestedUnicastCipher type="string(256)" Writable="0"></LastRequestedUnicastCipher>
+							<AssociatedDeviceAuthenticationState type="boolean" Writable="0"></AssociatedDeviceAuthenticationState>
+							<AssociatedDeviceIPAddress type="string(64)" Writable="0"></AssociatedDeviceIPAddress>
+							<AssociatedDeviceMACAddress type="string" Writable="0"></AssociatedDeviceMACAddress>
+							<X_TWSZ-COM_HostName type="string" Writable="0"></X_TWSZ-COM_HostName>
+						</i>
+					</AssociatedDevice>
+					<WEPKey type="object" Writable="0">
+						<i type="object">
+							<WEPKey type="string(128)"></WEPKey>
+						</i>
+					</WEPKey>
+					<PreSharedKey type="object" Writable="0">
+						<i type="object">
+							<AssociatedDeviceMACAddress type="string"></AssociatedDeviceMACAddress>
+							<KeyPassphrase type="string(63)">1234567890</KeyPassphrase>
+							<PreSharedKey type="string(64)"></PreSharedKey>
+						</i>
+					</PreSharedKey>
+					<APWMMParameter type="object" Writable="0">
+						<i type="object">
+							<AckPolicy type="boolean" Writable="1"></AckPolicy>
+							<TXOP type="unsignedInt[0:255]" Writable="1"></TXOP>
+							<ECWMax type="unsignedInt[0:15]" Writable="1"></ECWMax>
+							<ECWMin type="unsignedInt[0:15]" Writable="1"></ECWMin>
+							<AIFSN type="unsignedInt[2:15]" Writable="1"></AIFSN>
+						</i>
+					</APWMMParameter>
+					<STAWMMParameter type="object" Writable="0">
+						<i type="object">
+							<AckPolicy type="boolean" Writable="1"></AckPolicy>
+							<TXOP type="unsignedInt[0:255]" Writable="1"></TXOP>
+							<ECWMax type="unsignedInt[0:15]" Writable="1"></ECWMax>
+							<ECWMin type="unsignedInt[0:15]" Writable="1"></ECWMin>
+							<AIFSN type="unsignedInt[2:15]" Writable="1"></AIFSN>
+						</i>
+					</STAWMMParameter>
+					<X_TWSZ-COM_RadiusServer type="object" Writable="1">
+						<i type="object">
+							<X_TWSZ-COM_AccountPort type="unsignedInt" Writable="1"></X_TWSZ-COM_AccountPort>
+							<X_TWSZ-COM_ShareKey type="string(64)"></X_TWSZ-COM_ShareKey>
+							<X_TWSZ-COM_Port type="unsignedInt" Writable="1"></X_TWSZ-COM_Port>
+							<X_TWSZ-COM_IPAddress type="string" Writable="1"></X_TWSZ-COM_IPAddress>
+						</i>
+					</X_TWSZ-COM_RadiusServer>
+					<X_TWSZ-COM_WPS type="object">
+						<X_TWSZ-COM_Configured type="boolean">0</X_TWSZ-COM_Configured>
+					</X_TWSZ-COM_WPS>
+					<X_TWSZ-COM_MACList type="object" MaxNode="X_TWSZ-COM_MaxMACListNumberOfEntries" CurNode="X_TWSZ-COM_MACListNumberOfEntries">
+						<i type="object">
+							<MACAddress type="string"></MACAddress>
+							<Description type="string"></Description>
+						</i>
+					</X_TWSZ-COM_MACList>
+				</i>
+			</WLANConfiguration>
+		</i>
+	</LANDevice>
+	<Layer2Bridging type="object">
+		<AvailableInterfaceNumberOfEntries type="unsignedInt" Writable="0"></AvailableInterfaceNumberOfEntries>
+		<MaxVLANEntries type="unsignedInt" Writable="0"></MaxVLANEntries>
+		<MarkingNumberOfEntries type="unsignedInt" Writable="0"></MarkingNumberOfEntries>
+		<FilterNumberOfEntries type="unsignedInt" Writable="0"></FilterNumberOfEntries>
+		<BridgeNumberOfEntries type="unsignedInt" Writable="0"></BridgeNumberOfEntries>
+		<MaxMarkingEntries type="unsignedInt" Writable="0"></MaxMarkingEntries>
+		<MaxAvailableInterface type="unsignedInt" Writable="0"></MaxAvailableInterface>
+		<MaxFilterEntries type="unsignedInt" Writable="0"></MaxFilterEntries>
+		<MaxQBridgeEntries type="unsignedInt" Writable="0"></MaxQBridgeEntries>
+		<MaxDBridgeEntries type="unsignedInt" Writable="0"></MaxDBridgeEntries>
+		<MaxBridgeEntries type="unsignedInt" Writable="0"></MaxBridgeEntries>
+		<X_TWSZ-COM_STP type="boolean" Writable="0">0</X_TWSZ-COM_STP>
+		<Bridge type="object" MaxNode="MaxBridgeEntries" CurNode="BridgeNumberOfEntries">
+			<i type="object">
+				<NumOfAssociatedEthPort type="unsignedInt" Writable="0" NeedSave="0">0</NumOfAssociatedEthPort>
+				<X_TWSZ-COM_AssociatedLANDevice type="string" Writable="0"></X_TWSZ-COM_AssociatedLANDevice>
+				<VLANID type="unsignedInt[0:4094]"></VLANID>
+				<VLANNumberOfEntries type="unsignedInt"></VLANNumberOfEntries>
+				<PortNumberOfEntries type="unsignedInt"></PortNumberOfEntries>
+				<BridgeName type="string(64)"></BridgeName>
+				<BridgeStatus type="string" Writable="0"></BridgeStatus>
+				<BridgeEnable type="boolean">0</BridgeEnable>
+				<BridgeStandard type="boolean"></BridgeStandard>
+				<BridgeKey type="unsignedInt" Writable="0"></BridgeKey>
+				<Port type="object">
+					<i type="object">
+						<IngressFiltering type="boolean">0</IngressFiltering>
+						<AcceptableFrameTypes type="string">AdmitAll</AcceptableFrameTypes>
+						<PVID type="unsignedInt[1:4094]">1</PVID>
+						<PortState type="string" Writable="0">Disabled</PortState>
+						<PortInterface type="string(64)"></PortInterface>
+						<PortEnable type="boolean">0</PortEnable>
+					</i>
+				</Port>
+				<VLAN type="object">
+					<i type="object">
+						<VLANID type="unsignedInt[1:4094]"></VLANID>
+						<VLANName type="string(64)"></VLANName>
+						<VLANEnable type="boolean">0</VLANEnable>
+					</i>
+				</VLAN>
+			</i>
+		</Bridge>
+		<Filter type="object" MaxNode="MaxFilterEntries" CurNode="FilterNumberOfEntries">
+			<i type="object">
+				<DestMACFromUserClassIDFilterExclude type="boolean"></DestMACFromUserClassIDFilterExclude>
+				<DestMACFromUserClassIDFilter type="string(256)"></DestMACFromUserClassIDFilter>
+				<SourceMACFromUserClassIDFilterExclude type="boolean"></SourceMACFromUserClassIDFilterExclude>
+				<SourceMACFromUserClassIDFilter type="string(256)"></SourceMACFromUserClassIDFilter>
+				<DestMACFromClientIDFilterExclude type="boolean"></DestMACFromClientIDFilterExclude>
+				<DestMACFromClientIDFilter type="string(256)"></DestMACFromClientIDFilter>
+				<SourceMACFromClientIDFilterExclude type="boolean"></SourceMACFromClientIDFilterExclude>
+				<SourceMACFromClientIDFilter type="string(256)"></SourceMACFromClientIDFilter>
+				<DestMACFromVendorClassIDFilterExclude type="boolean"></DestMACFromVendorClassIDFilterExclude>
+				<DestMACFromVendorClassIDFilter type="string(256)"></DestMACFromVendorClassIDFilter>
+				<SourceMACFromVendorClassIDFilterExclude type="boolean"></SourceMACFromVendorClassIDFilterExclude>
+				<SourceMACFromVendorClassIDFilter type="string(256)"></SourceMACFromVendorClassIDFilter>
+				<DestMACAddressFilterExclude type="boolean"></DestMACAddressFilterExclude>
+				<DestMACAddressFilterList type="string(512)"></DestMACAddressFilterList>
+				<SourceMACAddressFilterExclude type="boolean"></SourceMACAddressFilterExclude>
+				<SourceMACAddressFilterList type="string(512)"></SourceMACAddressFilterList>
+				<EthertypeFilterExclude type="boolean"></EthertypeFilterExclude>
+				<EthertypeFilterList type="string(256)"></EthertypeFilterList>
+				<AdmitOnlyVLANTagged type="boolean">0</AdmitOnlyVLANTagged>
+				<VLANIDFilter type="int[-1:4095]"></VLANIDFilter>
+				<FilterInterface type="string">0</FilterInterface>
+				<ExclusivityOrder type="unsignedInt"></ExclusivityOrder>
+				<FilterBridgeReference type="int[-1:]">-1</FilterBridgeReference>
+				<FilterStatus type="string" Writable="0"></FilterStatus>
+				<FilterEnable type="boolean">0</FilterEnable>
+				<FilterKey type="unsignedInt" Writable="0"></FilterKey>
+			</i>
+		</Filter>
+		<Marking type="object" MaxNode="MaxMarkingEntries" CurNode="MarkingNumberOfEntries">
+			<i type="object">
+				<EthernetPriorityOverride type="boolean"></EthernetPriorityOverride>
+				<EthernetPriorityMark type="int[-1:7]"></EthernetPriorityMark>
+				<VLANIDMarkOverride type="boolean"></VLANIDMarkOverride>
+				<VLANIDMark type="int[-1:4095]"></VLANIDMark>
+				<VLANIDUntag type="boolean"></VLANIDUntag>
+				<MarkingInterface type="string"></MarkingInterface>
+				<MarkingBridgeReference type="int[-1:]"></MarkingBridgeReference>
+				<MarkingStatus type="string" Writable="0"></MarkingStatus>
+				<MarkingEnable type="boolean"></MarkingEnable>
+				<MarkingKey type="unsignedInt" Writable="0"></MarkingKey>
+			</i>
+		</Marking>
+		<AvailableInterface type="object" Writable="0" MaxNode="MaxAvailableInterface" CurNode="AvailableInterfaceNumberOfEntries">
+			<i type="object">
+				<InterfaceReference type="string(256)" Writable="0"></InterfaceReference>
+				<InterfaceType type="string" Writable="0"></InterfaceType>
+				<AvailableInterfaceKey type="unsignedInt" Writable="0"></AvailableInterfaceKey>
+			</i>
+		</AvailableInterface>
+	</Layer2Bridging>
+	<IPPingDiagnostics type="object">
+		<MaximumResponseTime type="unsignedInt" Writable="0"></MaximumResponseTime>
+		<MinimumResponseTime type="unsignedInt" Writable="0"></MinimumResponseTime>
+		<AverageResponseTime type="unsignedInt" Writable="0"></AverageResponseTime>
+		<FailureCount type="unsignedInt" Writable="0"></FailureCount>
+		<SuccessCount type="unsignedInt" Writable="0"></SuccessCount>
+		<DSCP type="unsignedInt[0:63]"></DSCP>
+		<DataBlockSize type="unsignedInt[1:60000]"></DataBlockSize>
+		<Timeout type="unsignedInt[1:]"></Timeout>
+		<NumberOfRepetitions type="unsignedInt[1:]"></NumberOfRepetitions>
+		<Host type="string(256)"></Host>
+		<Interface type="string(256)"></Interface>
+		<DiagnosticsState type="string"></DiagnosticsState>
+	</IPPingDiagnostics>
+	<ManagementServer type="object">
+		<NATDetected type="boolean" Writable="0"></NATDetected>
+		<STUNMinimumKeepAlivePeriod type="unsignedInt" Writable="1"></STUNMinimumKeepAlivePeriod>
+		<STUNMaximumKeepAlivePeriod type="int[-1:]" Writable="1"></STUNMaximumKeepAlivePeriod>
+		<STUNPassword type="string(256)" Writable="1"></STUNPassword>
+		<STUNUsername type="string(256)" Writable="1"></STUNUsername>
+		<STUNServerPort type="unsignedInt[0:65535]" Writable="1"></STUNServerPort>
+		<STUNServerAddress type="string(256)" Writable="1"></STUNServerAddress>
+		<STUNEnable type="boolean" Writable="1"></STUNEnable>
+		<UDPConnectionRequestAddressNotificationLimit type="unsignedInt" Writable="1"></UDPConnectionRequestAddressNotificationLimit>
+		<UDPConnectionRequestAddress type="string(256)" Writable="0"></UDPConnectionRequestAddress>
+		<action type="string(32)" Standard="0"></action>
+		<X_TWSZ-COM_DefaultManageConnectionService type="string" Standard="0"></X_TWSZ-COM_DefaultManageConnectionService>
+		<X_TWSZ-COM_CheckInterval type="unsignedInt"></X_TWSZ-COM_CheckInterval>
+		<ManageableDeviceNotificationLimit type="unsignedInt" Notification="2"></ManageableDeviceNotificationLimit>
+		<ManageableDeviceNumberOfEntries type="unsignedInt" Writable="0" Notification="2">0</ManageableDeviceNumberOfEntries>
+		<UpgradesManaged type="boolean">1</UpgradesManaged>
+		<ConnectionRequestPassword type="string(256)">5678</ConnectionRequestPassword>
+		<ConnectionRequestUsername type="string(256)">admin</ConnectionRequestUsername>
+		<ConnectionRequestURL type="string(256)" Writable="0" Notification="0"></ConnectionRequestURL>
+		<ParameterKey type="string(32)" Writable="0"></ParameterKey>
+		<PeriodicInformTime type="dateTime">0000-00-00T00:00:00</PeriodicInformTime>
+		<PeriodicInformInterval type="unsignedInt[1:]">86400</PeriodicInformInterval>
+		<PeriodicInformEnable type="boolean">0</PeriodicInformEnable>
+		<Password type="string(256)">1234</Password>
+		<Username type="string(256)">serial</Username>
+		<URL type="string(256)">http://192.168.1.123:888/</URL>
+		<X_TWSZ-COM_DownloadCompleteTime type="string(32)" Writable="0" Standard="0">0000-00-00T00:00:00-00:00</X_TWSZ-COM_DownloadCompleteTime>
+		<X_TWSZ-COM_DownloadStartTime type="string(32)" Writable="0" Standard="0">0000-00-00T00:00:00-00:00</X_TWSZ-COM_DownloadStartTime>
+		<X_TWSZ-COM_FaultStruct type="string" Writable="0" Standard="0"></X_TWSZ-COM_FaultStruct>
+		<X_TWSZ-COM_CommandKey type="string(32)" Writable="0"></X_TWSZ-COM_CommandKey>
+		<X_TWSZ-COM_CAFilePath type="string(64)" Writable="0" Standard="0"></X_TWSZ-COM_CAFilePath>
+		<X_TWSZ-COM_MaintainComplete type="boolean" Writable="0" Standard="0"></X_TWSZ-COM_MaintainComplete>
+		<X_TWSZ-COM_CAFile type="string" Writable="0" Standard="0"></X_TWSZ-COM_CAFile>
+		<EnableCWMP type="boolean">1</EnableCWMP>
+		<X_TWSZ-COM_Events type="object" Writable="0">
+			<i type="object">
+				<CommandKey type="string(32)" Writable="0"></CommandKey>
+				<Event type="string(64)" Writable="0"></Event>
+			</i>
+		</X_TWSZ-COM_Events>
+		<ManageableDevice type="object" Writable="0">
+			<i type="object">
+				<Host type="string(1024)" Writable="0" Notification="1"></Host>
+				<X_TWSZ-COM_ClientIP type="string(64)" Writable="0"></X_TWSZ-COM_ClientIP>
+				<ProductClass type="string(64)" Writable="0" Notification="1"></ProductClass>
+				<SerialNumber type="string(64)" Writable="0" Notification="1"></SerialNumber>
+				<ManufacturerOUI type="string(64)" Writable="0" Notification="1"></ManufacturerOUI>
+			</i>
+		</ManageableDevice>
+	</ManagementServer>
+	<X_TWSZ-COM_ACL type="object">
+		<LACLNumberOfEntries type="unsignedInt" Writable="0">0</LACLNumberOfEntries>
+		<LACLEnable type="boolean">0</LACLEnable>
+		<RACLNumberOfEntries type="unsignedInt" Writable="0">0</RACLNumberOfEntries>
+		<RACLEnable type="boolean">0</RACLEnable>
+		<RACL type="object" Writable="0" CurNode="RACLNumberOfEntries">
+			<i type="object">
+				<IPv6ServiceNumberOfEntries type="unsignedInt" Writable="0">0</IPv6ServiceNumberOfEntries>
+				<ServiceNumberOfEntries type="unsignedInt" Writable="0">0</ServiceNumberOfEntries>
+				<Cache_DeviceIP type="string" Writable="0"></Cache_DeviceIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string" Writable="0"></DevPath>
+				<Service type="object" Writable="0" CurNode="ServiceNumberOfEntries">
+					<i type="object">
+						<ExternalPort type="unsignedInt">0</ExternalPort>
+						<InternalPort type="unsignedInt" Writable="0">0</InternalPort>
+						<SrcMask type="string">0.0.0.0</SrcMask>
+						<SrcIP type="string">0.0.0.0</SrcIP>
+						<Protocol type="string" Writable="0"></Protocol>
+						<Enable type="boolean">0</Enable>
+						<Name type="string" Writable="0"></Name>
+					</i>
+				</Service>
+				<IPv6Service type="object" Writable="0" CurNode="IPv6ServiceNumberOfEntries">
+					<i type="object">
+						<ExternalPort type="unsignedInt">0</ExternalPort>
+						<InternalPort type="unsignedInt" Writable="0">0</InternalPort>
+						<SrcIP type="string"></SrcIP>
+						<Protocol type="string" Writable="0"></Protocol>
+						<Enable type="boolean">0</Enable>
+						<Name type="string" Writable="0"></Name>
+					</i>
+				</IPv6Service>
+			</i>
+		</RACL>
+		<LACL type="object" Writable="0" CurNode="LACLNumberOfEntries">
+			<i type="object">
+				<IPv6ServiceNumberOfEntries type="unsignedInt" Writable="0">0</IPv6ServiceNumberOfEntries>
+				<ServiceNumberOfEntries type="unsignedInt" Writable="0">0</ServiceNumberOfEntries>
+				<Cache_DeviceIP type="string" Writable="0"></Cache_DeviceIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string" Writable="0"></DevPath>
+				<Service type="object" Writable="0" CurNode="ServiceNumberOfEntries">
+					<i type="object">
+						<InternalPort type="unsignedInt" Writable="0">0</InternalPort>
+						<SrcMask type="string">0.0.0.0</SrcMask>
+						<SrcIP type="string">0.0.0.0</SrcIP>
+						<Protocol type="string" Writable="0"></Protocol>
+						<Enable type="boolean">1</Enable>
+						<Name type="string" Writable="0"></Name>
+					</i>
+				</Service>
+				<IPv6Service type="object" Writable="0" CurNode="IPv6ServiceNumberOfEntries">
+					<i type="object">
+						<InternalPort type="unsignedInt" Writable="0">0</InternalPort>
+						<SrcIP type="string"></SrcIP>
+						<Protocol type="string" Writable="0"></Protocol>
+						<Enable type="boolean">1</Enable>
+						<Name type="string" Writable="0"></Name>
+					</i>
+				</IPv6Service>
+			</i>
+		</LACL>
+	</X_TWSZ-COM_ACL>
+	<X_TWSZ-COM_IP_ACL type="object">
+		<ACLEnable type="boolean">0</ACLEnable>
+		<ACL type="object">
+			<i type="object">
+				<SrcIP type="string">0</SrcIP>
+			</i>
+		</ACL>
+	</X_TWSZ-COM_IP_ACL>
+	<X_TWSZ-COM_Logger type="object">
+		<RemoteLogger type="string(64)" Writable="1"></RemoteLogger>
+		<RemotePort type="unsignedInt" Writable="1">514</RemotePort>
+		<RemoteLogEnabled type="boolean" Writable="1"></RemoteLogEnabled>
+		<DebugLogFileSize type="unsignedInt" Writable="1"></DebugLogFileSize>
+		<DebugLogEnabled type="boolean" Writable="1"></DebugLogEnabled>
+		<LogClearTrigger type="boolean" Writable="1"></LogClearTrigger>
+		<LogUploadTrigger type="boolean" Writable="1"></LogUploadTrigger>
+		<LogTFTPServer type="string(64)" Writable="1"></LogTFTPServer>
+		<LoggerEnabled type="boolean" Writable="1"></LoggerEnabled>
+		<LogLevel type="object">
+			<DevinfoLogLevel type="string" Writable="1">Notice</DevinfoLogLevel>
+			<TftpupgLogLevel type="string" Writable="1">Notice</TftpupgLogLevel>
+			<UrlfilterLogLevel type="string" Writable="1">Notice</UrlfilterLogLevel>
+			<PortoffLogLevel type="string" Writable="1">Notice</PortoffLogLevel>
+			<LsvlanLogLevel type="string" Writable="1">Notice</LsvlanLogLevel>
+			<UpnpLogLevel type="string" Writable="1">Notice</UpnpLogLevel>
+			<Msg4udpLogLevel type="string" Writable="1">Notice</Msg4udpLogLevel>
+			<PtiLogLevel type="string" Writable="1">Notice</PtiLogLevel>
+			<FtpupgLogLevel type="string" Writable="1">Notice</FtpupgLogLevel>
+			<UpgcgiLogLevel type="string" Writable="1">Notice</UpgcgiLogLevel>
+			<LbtLogLevel type="string" Writable="1">Notice</LbtLogLevel>
+			<MonLogLevel type="string" Writable="1">Notice</MonLogLevel>
+			<TmLogLevel type="string" Writable="1">Notice</TmLogLevel>
+			<VdsldLogLevel type="string" Writable="1">Notice</VdsldLogLevel>
+			<UpgLogLevel type="string" Writable="1">Notice</UpgLogLevel>
+			<ElmLogLevel type="string" Writable="1">Notice</ElmLogLevel>
+			<PcLogLevel type="string" Writable="1">Notice</PcLogLevel>
+			<SnmpaLogLevel type="string" Writable="1">Notice</SnmpaLogLevel>
+			<Tr069_httpdLogLevel type="string" Writable="1">Notice</Tr069_httpdLogLevel>
+			<Tr069feLogLevel type="string" Writable="1">Notice</Tr069feLogLevel>
+			<CliLogLevel type="string" Writable="1">Notice</CliLogLevel>
+			<LnbLogLevel type="string" Writable="1">Notice</LnbLogLevel>
+			<WebLogLevel type="string" Writable="1">Notice</WebLogLevel>
+			<AclLogLevel type="string" Writable="1">Notice</AclLogLevel>
+			<WpsLogLevel type="string" Writable="1">Notice</WpsLogLevel>
+			<NatPrioLogLevel type="string" Writable="1">Notice</NatPrioLogLevel>
+			<FtpdLogLevel type="string" Writable="1">Notice</FtpdLogLevel>
+			<LogLogLevel type="string" Writable="1">Notice</LogLogLevel>
+			<Usb_massLogLevel type="string" Writable="1">Notice</Usb_massLogLevel>
+			<VlanLogLevel type="string" Writable="1">Notice</VlanLogLevel>
+			<SntpLogLevel type="string" Writable="1">Notice</SntpLogLevel>
+			<Dynamic_routingLogLevel type="string" Writable="1">Notice</Dynamic_routingLogLevel>
+			<WanLogLevel type="string" Writable="1">Notice</WanLogLevel>
+			<AlgLogLevel type="string" Writable="1">Notice</AlgLogLevel>
+			<DnsLogLevel type="string" Writable="1">Notice</DnsLogLevel>
+			<VdslLogLevel type="string" Writable="1">Notice</VdslLogLevel>
+			<Static_routingLogLevel type="string" Writable="1">Notice</Static_routingLogLevel>
+			<QosLogLevel type="string" Writable="1">Notice</QosLogLevel>
+			<SnmpcLogLevel type="string" Writable="1">Notice</SnmpcLogLevel>
+			<AntiAttackLogLevel type="string" Writable="1">Notice</AntiAttackLogLevel>
+			<FirewallLogLevel type="string" Writable="1">Notice</FirewallLogLevel>
+			<IpconnLogLevel type="string" Writable="1">Notice</IpconnLogLevel>
+			<TimerLogLevel type="string" Writable="1">Notice</TimerLogLevel>
+			<DhcpsLogLevel type="string" Writable="1">Notice</DhcpsLogLevel>
+			<DhcprLogLevel type="string" Writable="1">Notice</DhcprLogLevel>
+			<DgnLogLevel type="string" Writable="1">Notice</DgnLogLevel>
+			<Tr069beLogLevel type="string" Writable="1">Notice</Tr069beLogLevel>
+			<WlanLogLevel type="string" Writable="1">Notice</WlanLogLevel>
+			<PppoeLogLevel type="string" Writable="1">Notice</PppoeLogLevel>
+			<EthwanLogLevel type="string" Writable="1">Notice</EthwanLogLevel>
+			<EthlanLogLevel type="string" Writable="1">Notice</EthlanLogLevel>
+			<IptLogLevel type="string" Writable="1">Notice</IptLogLevel>
+			<LanLogLevel type="string" Writable="1">Notice</LanLogLevel>
+			<CmmLogLevel type="string" Writable="1">Notice</CmmLogLevel>
+			<Igmp_proxyLogLevel type="string" Writable="1">Notice</Igmp_proxyLogLevel>
+			<AuthLogLevel type="string" Writable="1">Notice</AuthLogLevel>
+			<CcpLogLevel type="string" Writable="1">Notice</CcpLogLevel>
+			<DefaultLogLevel type="string" Writable="1">Notice</DefaultLogLevel>
+		</LogLevel>
+	</X_TWSZ-COM_Logger>
+	<Services type="object" Writable="0">
+		<X_TWSZ-COM_ALGAbility type="object">
+			<AmandaEnabled Writable="1" type="boolean">1</AmandaEnabled>
+			<IRCEnabled Writable="1" type="boolean">1</IRCEnabled>
+			<IPSECEnabled Writable="1" type="boolean">1</IPSECEnabled>
+			<H323Enabled Writable="1" type="boolean">1</H323Enabled>
+			<SIPEnabled Writable="1" type="boolean">1</SIPEnabled>
+			<RTSPEnabled Writable="1" type="boolean">1</RTSPEnabled>
+			<PPTPEnabled Writable="1" type="boolean">1</PPTPEnabled>
+			<L2TPEnabled Writable="1" type="boolean">1</L2TPEnabled>
+			<TFTPEnabled Writable="1" type="boolean">1</TFTPEnabled>
+			<FTPEnabled Writable="1" type="boolean">1</FTPEnabled>
+		</X_TWSZ-COM_ALGAbility>
+	</Services>
+	<X_TWSZ-COM_IGMPProxy type="object" Writable="0">
+		<IGMPTableNumberOfEntries type="unsignedInt" Writable="0">0</IGMPTableNumberOfEntries>
+		<LQ_Count type="unsignedInt">3</LQ_Count>
+		<LQ_Interval type="unsignedInt">20</LQ_Interval>
+		<MQ_Count type="unsignedInt">3</MQ_Count>
+		<MQ_Response_Interval type="unsignedInt">20</MQ_Response_Interval>
+		<MQ_Interval type="unsignedInt">325</MQ_Interval>
+		<GQ_Response_Interval type="unsignedInt">20</GQ_Response_Interval>
+		<GQ_Interval type="unsignedInt">150</GQ_Interval>
+		<Enable_FastLeaving type="unsignedInt">0</Enable_FastLeaving>
+		<Enable_PassThrough type="unsignedInt">0</Enable_PassThrough>
+		<LANPathName type="string" Writable="1">InternetGatewayDevice.LANDevice.1</LANPathName>
+		<Enabled type="boolean" Writable="1">1</Enabled>
+		<IGMPTable type="object" MaxNode="IGMPTableNumberOfEntries" CurNode="IGMPTableNumberOfEntries">
+			<i type="object">
+				<State type="string"></State>
+				<Interface type="string"></Interface>
+				<GroupAddress type="string"></GroupAddress>
+			</i>
+		</IGMPTable>
+	</X_TWSZ-COM_IGMPProxy>
+	<X_TWSZ-COM_MLD type="object" Writable="0">
+		<Snooping type="object">
+			<Enable type="boolean">0</Enable>
+		</Snooping>
+		<Proxy type="object">
+			<AssociatedWANConnection type="string" Writable="1"></AssociatedWANConnection>
+			<Enable type="boolean">0</Enable>
+		</Proxy>
+	</X_TWSZ-COM_MLD>
+	<X_TWSZ-COM_QoS type="object" Writable="0">
+		<SynchronizedStatus type="boolean" Writable="0">0</SynchronizedStatus>
+		<DownClsNumOfEntries type="unsignedInt" Writable="0">0</DownClsNumOfEntries>
+		<UpClsNumOfEntries type="unsignedInt" Writable="0">0</UpClsNumOfEntries>
+		<AppNumberOfEntries type="unsignedInt" Writable="0">0</AppNumberOfEntries>
+		<ClassificationNumberOfEntries type="unsignedInt" Writable="0">0</ClassificationNumberOfEntries>
+		<QueueNumberOfEntries type="unsignedInt" Writable="0">12</QueueNumberOfEntries>
+		<InterfaceNumberOfEntries type="unsignedInt" Writable="0">2</InterfaceNumberOfEntries>
+		<MaxAppEntries type="unsignedInt" Wirtable="0">3</MaxAppEntries>
+		<MaxClassificationEntries type="unsignedInt" Writable="0">16</MaxClassificationEntries>
+		<MaxQueueEntries type="unsignedInt" Writable="0">12</MaxQueueEntries>
+		<MaxInterfaceEntries type="unsignedInt" Writable="0">2</MaxInterfaceEntries>
+		<Enable type="boolean" Writable="0">1</Enable>
+		<Interface type="object" MaxNode="MaxInterfaceEntries" CurNode="InterfaceNumberOfEntries" Writable="0">
+			<i type="object">
+				<InterfaceState type="boolean" NeedSave="0">1</InterfaceState>
+				<EnableCOSMark type="boolean">0</EnableCOSMark>
+				<EnableDSCPMark type="boolean">0</EnableDSCPMark>
+				<SchedulerType type="string">SP</SchedulerType>
+				<BurstSize type="unsignedInt">0</BurstSize>
+				<PeakRate type="unsignedInt">0</PeakRate>
+				<CommittedRate type="unsignedInt">0</CommittedRate>
+				<DownStreamShapingRate type="int">0</DownStreamShapingRate>
+				<UpStreamShapingRate type="int">0</UpStreamShapingRate>
+				<Attribute type="string" Writable="0"></Attribute>
+				<InterfaceName type="string" Writable="0"></InterfaceName>
+				<InterfacePath type="string" Writable="0"></InterfacePath>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</Interface>
+		<Queue type="object" MaxNode="MaxQueueEntries" CurNode="QueueNumberOfEntries" Writable="0">
+			<i type="object">
+				<DropAlgorithm type="string">DT</DropAlgorithm>
+				<QueueCAR type="unsignedInt">0</QueueCAR>
+				<QueuePrecedence type="unsignedInt">1</QueuePrecedence>
+				<EnableForceWeight type="boolean">1</EnableForceWeight>
+				<QueueWeight type="unsignedInt">0</QueueWeight>
+				<QueueLengthType type="string">packet</QueueLengthType>
+				<QueueLength type="unsignedInt">10</QueueLength>
+				<QueueInterface type="int">-1</QueueInterface>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</Queue>
+		<Classification type="object" MaxNode="MaxClassificationEntries" CurNode="ClassificationNumberOfEntries">
+			<i type="object">
+				<NfMark type="unsignedInt" NeedSave="0">0</NfMark>
+				<ClassResultState type="unsignedInt" NeedSave="0">0</ClassResultState>
+				<ClassQueue type="int">-1</ClassQueue>
+				<DestPortRangeMax type="int">-1</DestPortRangeMax>
+				<DestPort type="int">-1</DestPort>
+				<SourcePortRangeMax type="int">-1</SourcePortRangeMax>
+				<SourcePort type="int">-1</SourcePort>
+				<Protocol type="int">-1</Protocol>
+				<TrafficClassMark type="int">-1</TrafficClassMark>
+				<TrafficClassCheck type="int">-1</TrafficClassCheck>
+				<TOSCheck type="int">-1</TOSCheck>
+				<DSCPMark type="int">-1</DSCPMark>
+				<DSCPCheck type="int">-1</DSCPCheck>
+				<FlowLabelMark type="int">-1</FlowLabelMark>
+				<FlowLabelCheck type="int">-1</FlowLabelCheck>
+				<IPLengthMax type="int">-1</IPLengthMax>
+				<IPLengthMin type="int">-1</IPLengthMin>
+				<DestPrefixLength type="int">-1</DestPrefixLength>
+				<DestMask type="string"></DestMask>
+				<DestIPMax type="string"></DestIPMax>
+				<DestIP type="string"></DestIP>
+				<SourcePrefixLength type="int">-1</SourcePrefixLength>
+				<SourceMask type="string"></SourceMask>
+				<SourceIPMax type="string"></SourceIPMax>
+				<SourceIP type="string"></SourceIP>
+				<VLANIDCheck type="int">-1</VLANIDCheck>
+				<EthernetPriorityMark type="int">-1</EthernetPriorityMark>
+				<EthernetPriorityCheck type="int">-1</EthernetPriorityCheck>
+				<Ethertype type="int">-1</Ethertype>
+				<DestMACMask type="string"></DestMACMask>
+				<DestMACAddress type="string"></DestMACAddress>
+				<SourceMACMask type="string"></SourceMACMask>
+				<SourceMACAddress type="string"></SourceMACAddress>
+				<EgressInterface type="string"></EgressInterface>
+				<ClassInterface type="string"></ClassInterface>
+				<IpProtocolType type="string">IPv4</IpProtocolType>
+				<Direction type="string"></Direction>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</Classification>
+		<App type="object" MaxNode="MaxAppEntries" CurNode="AppNumberOfEntries">
+			<i type="object">
+				<AppResultState type="unsignedInt" NeedSave="0">0</AppResultState>
+				<AppRuleState type="boolean" NeedSave="0">0</AppRuleState>
+				<COSMark type="int">-1</COSMark>
+				<DSCPMark type="int">-1</DSCPMark>
+				<AppQueue type="int">-1</AppQueue>
+				<AppName type="string"></AppName>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</App>
+	</X_TWSZ-COM_QoS>
+	<QueueManagement type="object" Writable="0">
+		<AvailableAppList type="string(1024)" Writable="0"></AvailableAppList>
+		<DefaultEthernetPriorityMark type="int[-2:]" Writable="1"></DefaultEthernetPriorityMark>
+		<DefaultDSCPMark type="int[-2:]" Writable="1"></DefaultDSCPMark>
+		<DefaultQueue type="unsignedInt" Writable="1">0</DefaultQueue>
+		<DefaultPolicer type="int[-1:]" Writable="1"></DefaultPolicer>
+		<DefaultTrafficClass type="int[-1:]" Writable="1"></DefaultTrafficClass>
+		<DefaultForwardingPolicy type="unsignedInt" Writable="1">0</DefaultForwardingPolicy>
+		<QueueStatsNumberOfEntries type="unsignedInt" Writable="0">12</QueueStatsNumberOfEntries>
+		<QueueNumberOfEntries type="unsignedInt" Writable="0">12</QueueNumberOfEntries>
+		<MaxQueueEntries type="unsignedInt" Writable="0">2</MaxQueueEntries>
+		<PolicerNumberOfEntries type="unsignedInt" Writable="0">0</PolicerNumberOfEntries>
+		<MaxPolicerEntries type="unsignedInt" Writable="0">0</MaxPolicerEntries>
+		<FlowNumberOfEntries type="unsignedInt" Writable="0">0</FlowNumberOfEntries>
+		<MaxFlowEntries type="unsignedInt" Writable="0">0</MaxFlowEntries>
+		<AppNumberOfEntries type="unsignedInt" Writable="0">0</AppNumberOfEntries>
+		<MaxAppEntries type="unsignedInt" Wirtable="0">3</MaxAppEntries>
+		<ClassificationNumberOfEntries type="unsignedInt" Writable="0">0</ClassificationNumberOfEntries>
+		<MaxClassificationEntries type="unsignedInt" Writable="0">16</MaxClassificationEntries>
+		<MaxQueues type="unsignedInt" Writable="0">0</MaxQueues>
+		<Enable type="boolean" Writable="1">1</Enable>
+		<Classification type="object" MaxNode="MaxClassificationEntries" CurNode="ClassificationNumberOfEntries" Writable="1">
+			<i type="object">
+				<X_TWSZ-COM_NfMark type="unsignedInt" NeedSave="0">0</X_TWSZ-COM_NfMark>
+				<X_TWSZ-COM_ClassResultState type="unsignedInt" NeedSave="0">0</X_TWSZ-COM_ClassResultState>
+				<ClassApp type="int[-1:]" Writable="1">-1</ClassApp>
+				<ClassQueue type="int[-1:]" Writable="1">-1</ClassQueue>
+				<ClassPolicer type="int[-1:]" Writable="1">-1</ClassPolicer>
+				<TrafficClass type="int[-1:]" Writable="1">-1</TrafficClass>
+				<X_TWSZ-COM_TrafficClassCheck type="int">-1</X_TWSZ-COM_TrafficClassCheck>
+				<ForwardingPolicy type="unsignedInt" Writable="1">0</ForwardingPolicy>
+				<VLANIDExclude type="boolean" Writable="1">0</VLANIDExclude>
+				<VLANIDCheck type="int[-1:]" Writable="1">-1</VLANIDCheck>
+				<OutOfBandInfo type="int[-1:]" Writable="1">-1</OutOfBandInfo>
+				<EthernetPriorityMark type="int[-2:]" Writable="1">-1</EthernetPriorityMark>
+				<EthernetPriorityExclude type="boolean" Writable="1">0</EthernetPriorityExclude>
+				<EthernetPriorityCheck type="int[-1:]" Writable="1">-1</EthernetPriorityCheck>
+				<DSCPMark type="int[-2:]" Writable="1">-1</DSCPMark>
+				<DSCPExclude type="boolean" Writable="1">0</DSCPExclude>
+				<DSCPCheck type="int[-1:]" Writable="1">-1</DSCPCheck>
+				<IPLengthExclude type="boolean" Writable="1">0</IPLengthExclude>
+				<TCPACKExclude type="boolean" Writable="1">0</TCPACKExclude>
+				<TCPACK type="boolean" Writable="1">0</TCPACK>
+				<DestVendorSpecificInfoMode type="string" Writable="1">Exact</DestVendorSpecificInfoMode>
+				<DestVendorSpecificInfoSubOption type="int[0:255]" Writable="1">0</DestVendorSpecificInfoSubOption>
+				<DestVendorSpecificInfoEnterprise type="unsignedInt" Writable="1">0</DestVendorSpecificInfoEnterprise>
+				<DestVendorSpecificInfoExclude type="boolean" Writable="1">0</DestVendorSpecificInfoExclude>
+				<DestVendorSpecificInfo type="string(256)" Writable="1"></DestVendorSpecificInfo>
+				<SourceVendorSpecificInfoMode type="string" Writable="1">Exact</SourceVendorSpecificInfoMode>
+				<SourceVendorSpecificInfoSubOption type="int[0:255]" Writable="1"></SourceVendorSpecificInfoSubOption>
+				<SourceVendorSpecificInfoEnterprise type="unsignedInt" Writable="1">0</SourceVendorSpecificInfoEnterprise>
+				<SourceVendorSpecificInfoExclude type="boolean" Writable="1">0</SourceVendorSpecificInfoExclude>
+				<SourceVendorSpecificInfo type="string(256)" Writable="1"></SourceVendorSpecificInfo>
+				<DestUserClassIDExclude type="boolean" Writable="1">0</DestUserClassIDExclude>
+				<DestUserClassID type="string(256)" Writable="1"></DestUserClassID>
+				<SourceUserClassIDExclude type="boolean" Writable="1">0</SourceUserClassIDExclude>
+				<SourceUserClassID type="string(256)" Writable="1"></SourceUserClassID>
+				<DestClientIDExclude type="boolean" Writable="1">0</DestClientIDExclude>
+				<DestClientID type="string(256)" Writable="1"></DestClientID>
+				<SourceClientIDExclude type="boolean" Writable="1">0</SourceClientIDExclude>
+				<SourceClientID type="string(256)" Writable="1"></SourceClientID>
+				<DestVendorClassIDMode type="string" Writable="1">Exact</DestVendorClassIDMode>
+				<DestVendorClassIDExclude type="boolean" Writable="1">0</DestVendorClassIDExclude>
+				<DestVendorClassID type="string(256)" Writable="1"></DestVendorClassID>
+				<SourceVendorClassIDMode type="string" Writable="1">Exact</SourceVendorClassIDMode>
+				<SourceVendorClassIDExclude type="boolean" Writable="1">0</SourceVendorClassIDExclude>
+				<SourceVendorClassID type="string(256)" Writable="1"></SourceVendorClassID>
+				<SNAPOUIExclude type="boolean" Writable="1">0</SNAPOUIExclude>
+				<SNAPOUI type="int[-1:]" Writable="1">-1</SNAPOUI>
+				<LLCControlExclude type="boolean" Writable="1">0</LLCControlExclude>
+				<LLCControl type="int[-1:]" Writable="1">-1</LLCControl>
+				<DSAPExclude type="boolean" Writable="1">0</DSAPExclude>
+				<DSAP type="int[-1:]" Writable="1">-1</DSAP>
+				<SSAPExclude type="boolean" Writable="1">0</SSAPExclude>
+				<SSAP type="int[-1:]" Writable="1">-1</SSAP>
+				<EthertypeExclude type="boolean" Writable="1">0</EthertypeExclude>
+				<Ethertype type="int[-1:]" Writable="1">-1</Ethertype>
+				<DestMACExclude type="boolean" Writable="1">0</DestMACExclude>
+				<DestMACMask type="string" Writable="1"></DestMACMask>
+				<DestMACAddress type="string" Writable="1"></DestMACAddress>
+				<SourceMACExclude type="boolean" Writable="1">0</SourceMACExclude>
+				<SourceMACMask type="string" Writable="1"></SourceMACMask>
+				<SourceMACAddress type="string" Writable="1"></SourceMACAddress>
+				<SourcePortExclude type="boolean" Writable="1">0</SourcePortExclude>
+				<SourcePortRangeMax type="int[-1:]" Writable="1">-1</SourcePortRangeMax>
+				<SourcePort type="int[-1:]" Writable="1">-1</SourcePort>
+				<DestPortExclude type="boolean" Writable="1">0</DestPortExclude>
+				<DestPortRangeMax type="int[-1]" Writable="1">-1</DestPortRangeMax>
+				<DestPort type="int[-1]" Writable="1">-1</DestPort>
+				<X_TWSZ-COM_IpProtocolType type="string">IPv4</X_TWSZ-COM_IpProtocolType>
+				<ProtocolExclude type="boolean" Writable="1">0</ProtocolExclude>
+				<Protocol type="int[-1:]" Writable="1">-1</Protocol>
+				<TrafficClassMark type="int">-1</TrafficClassMark>
+				<TrafficClassCheck type="int">-1</TrafficClassCheck>
+				<FlowLabelMark type="int">-1</FlowLabelMark>
+				<FlowLabelCheck type="int">-1</FlowLabelCheck>
+				<DestPrefixLength type="int">-1</DestPrefixLength>
+				<SourcePrefixLength type="int">-1</SourcePrefixLength>
+				<IPLengthMax type="int">-1</IPLengthMax>
+				<IPLengthMin type="int">-1</IPLengthMin>
+				<SourceIPExclude type="boolean" Writable="1">0</SourceIPExclude>
+				<SourceMask type="string" Writable="1"></SourceMask>
+				<SourceIP type="string" Writable="1"></SourceIP>
+				<DestIPExclude type="boolean" Writable="1">0</DestIPExclude>
+				<DestMask type="string" Writable="1"></DestMask>
+				<DestIP type="string" Writable="1"></DestIP>
+				<ClassInterface type="string(256)" Writable="1"></ClassInterface>
+				<ClassificationOrder type="unsignedInt[1:]" Writable="1"></ClassificationOrder>
+				<ClassificationStatus type="string" Writable="0">Disabled</ClassificationStatus>
+				<ClassificationEnable type="boolean" Writable="1">0</ClassificationEnable>
+				<ClassificationKey type="unsignedInt" Writable="0"></ClassificationKey>
+			</i>
+		</Classification>
+		<App type="object" MaxNode="MaxAppEntries" CurNode="AppNumberOfEntries" Writable="1">
+			<i type="object">
+				<X_TWSZ-COM_AppResultState type="unsignedInt" NeedSave="0">0</X_TWSZ-COM_AppResultState>
+				<X_TWSZ-COM_AppRuleState type="boolean" NeedSave="0">0</X_TWSZ-COM_AppRuleState>
+				<AppDefaultEthernetPriorityMark type="int[-2:]" Writable="1">-1</AppDefaultEthernetPriorityMark>
+				<AppDefaultDSCPMark type="int[-2:]" Writable="1">-1</AppDefaultDSCPMark>
+				<AppDefaultQueue type="int[-1:]" Writable="1">-1</AppDefaultQueue>
+				<AppDefaultPolicer type="int[-1:]" Writable="1">-1</AppDefaultPolicer>
+				<AppDefaultTrafficClass type="int[-1:]" Writable="1">-1</AppDefaultTrafficClass>
+				<AppDefaultForwardingPolicy type="unsignedInt" Writable="1">0</AppDefaultForwardingPolicy>
+				<AppName type="string(64)" Writable="1"></AppName>
+				<ProtocolIdentifier type="string(256)" Writable="1"></ProtocolIdentifier>
+				<AppStatus type="string" Writable="0">Disabled</AppStatus>
+				<AppEnable type="boolean" Writable="1">0</AppEnable>
+				<AppKey type="unsignedInt" Writable="0"></AppKey>
+			</i>
+		</App>
+		<Flow type="object" MaxNode="MaxFlowEntries" CurNode="FlowNumberOfEntries" Writable="1">
+			<i type="object">
+				<FlowEthernetPriorityMark type="int[-2:]" Writable="1">-1</FlowEthernetPriorityMark>
+				<FlowDSCPMark type="int[-2:]" Writable="1">-1</FlowDSCPMark>
+				<FlowQueue type="int[-1:]" Writable="1">-1</FlowQueue>
+				<FlowPolicer type="int[-1:]" Writable="1">-1</FlowPolicer>
+				<FlowTrafficClass type="int[-1:]" Writable="1">-1</FlowTrafficClass>
+				<FlowForwardingPolicy type="unsignedInt" Writable="1">0</FlowForwardingPolicy>
+				<AppIdentifier type="int[-1:]" Writable="1">-1</AppIdentifier>
+				<FlowName type="string(64)" Writable="1"></FlowName>
+				<FlowTypeParameters type="string(256)" Writable="1"></FlowTypeParameters>
+				<FlowType type="string(256)" Writable="1"></FlowType>
+				<FlowStatus type="string" Writable="0">Disabled</FlowStatus>
+				<FlowEnable type="boolean" Writable="1">0</FlowEnable>
+				<FlowKey type="unsignedInt" Writable="0"></FlowKey>
+			</i>
+		</Flow>
+		<Policer type="object" MaxNode="MaxPolicerEntries" CurNode="PolicerNumberOfEntries" Writable="1">
+			<i type="object">
+				<NonConformingCountedBytes type="unsignedInt" Writable="0">0</NonConformingCountedBytes>
+				<NonConformingCountedPackets type="unsignedInt" Writable="0">0</NonConformingCountedPackets>
+				<PartiallyConformingCountedBytes type="unsignedInt" Writable="0">0</PartiallyConformingCountedBytes>
+				<PartiallyConformingCountedPackets type="unsignedInt" Writable="0">0</PartiallyConformingCountedPackets>
+				<ConformingCountedBytes type="unsignedInt" Writable="0">0</ConformingCountedBytes>
+				<ConformingCountedPackets type="unsignedInt" Writable="0">0</ConformingCountedPackets>
+				<TotalCountedBytes type="unsignedInt" Writable="0">0</TotalCountedBytes>
+				<TotalCountedPackets type="unsignedInt" Writable="0">0</TotalCountedPackets>
+				<CountedBytes type="unsignedInt" Writable="0">0</CountedBytes>
+				<CountedPackets type="unsignedInt" Writable="0">0</CountedPackets>
+				<NonConformingAction type="string" Writable="1">Drop</NonConformingAction>
+				<PartialConformingAction type="string" Writable="1">Drop</PartialConformingAction>
+				<ConformingAction type="string" Writable="1">Null</ConformingAction>
+				<PossibleMeterTypes type="string" Writable="0"></PossibleMeterTypes>
+				<MeterType type="string" Writable="1">Simple-Token-Bucket</MeterType>
+				<PeakBurstSize type="unsignedInt" Writable="1">0</PeakBurstSize>
+				<PeakRate type="unsignedInt" Writable="1">0</PeakRate>
+				<ExcessBurstSize type="unsignedInt" Writable="1">0</ExcessBurstSize>
+				<CommittedBurstSize type="unsignedInt" Writable="1">0</CommittedBurstSize>
+				<CommittedRate type="unsignedInt" Writable="1">0</CommittedRate>
+				<PolicerStatus type="string" Writable="0">Disabled</PolicerStatus>
+				<PolicerEnable type="boolean" Writable="1">0</PolicerEnable>
+				<PolicerKey type="unsignedInt" Writable="0"></PolicerKey>
+			</i>
+		</Policer>
+		<Queue type="object" MaxNode="MaxQueueEntries" CurNode="QueueNumberOfEntries" Writable="1">
+			<i type="object">
+				<X_TWSZ-COM_EnableCOSMark type="boolean">0</X_TWSZ-COM_EnableCOSMark>
+				<X_TWSZ-COM_EnableDSCPMark type="boolean">0</X_TWSZ-COM_EnableDSCPMark>
+				<X_TWSZ-COM_PeakRate type="unsignedInt">0</X_TWSZ-COM_PeakRate>
+				<ShapingBurstSize type="unsignedInt" Writable="1"></ShapingBurstSize>
+				<ShapingRate type="int[-1:]" Writable="1">-1</ShapingRate>
+				<SchedulerAlgorithm type="string" Writable="1">SP</SchedulerAlgorithm>
+				<DropAlgorithm type="string" Writable="1">DT</DropAlgorithm>
+				<REDPercentage type="unsignedInt[0:100]" Writable="1">0</REDPercentage>
+				<REDThreshold type="unsignedInt[0:100]" Writable="1">0</REDThreshold>
+				<X_TWSZ-COM_QueueCAR type="unsignedInt">0</X_TWSZ-COM_QueueCAR>
+				<QueuePrecedence type="unsignedInt[1:]" Writable="1">4</QueuePrecedence>
+				<QueueWeight type="unsignedInt" Writable="1">0</QueueWeight>
+				<X_TWSZ-COM_EnableForceWeight type="boolean">1</X_TWSZ-COM_EnableForceWeight>
+				<X_TWSZ-COM_QueueLengthType type="string">packet</X_TWSZ-COM_QueueLengthType>
+				<QueueBufferLength type="unsignedInt" Writable="0">5</QueueBufferLength>
+				<QueueInterface type="string(256)" Writable="1"></QueueInterface>
+				<TrafficClasses type="string(256)" Writable="1"></TrafficClasses>
+				<QueueStatus type="string" Writable="0">Disabled</QueueStatus>
+				<QueueEnable type="boolean" Writable="1">0</QueueEnable>
+				<QueueKey type="unsignedInt" Writable="0"></QueueKey>
+			</i>
+		</Queue>
+		<QueueStats type="object" MaxNode="MaxQueueEntries" CurNode="QueueStatsNumberOfEntries" Writable="1">
+			<i type="object">
+				<QueueOccupancyPercentage type="unsignedInt[0:100]" Writable="0">0</QueueOccupancyPercentage>
+				<QueueOccupancyPackets type="unsignedInt" Writable="0">0</QueueOccupancyPackets>
+				<DroppedBytes type="unsignedInt" Writable="0">0</DroppedBytes>
+				<DroppedPackets type="unsignedInt" Writable="0">0</DroppedPackets>
+				<OutputBytes type="unsignedInt" Writable="0">0</OutputBytes>
+				<OutputPackets type="unsignedInt" Writable="0">0</OutputPackets>
+				<Interface type="unsignedInt" Writable="1"></Interface>
+				<Queue type="unsignedInt" Writable="0">0</Queue>
+				<Status type="string" Writable="0">Disabled</Status>
+				<Enable type="boolean" Writable="1">0</Enable>
+			</i>
+		</QueueStats>
+	</QueueManagement>
+	<Layer3Forwarding type="object">
+		<MAXForwardNumberOfEntries type="unsignedInt" Writable="0">16</MAXForwardNumberOfEntries>
+		<ForwardNumberOfEntries type="unsignedInt" Writable="0"></ForwardNumberOfEntries>
+		<DefaultConnectionService type="string(256)"></DefaultConnectionService>
+		<Forwarding type="object" MaxNode="MAXForwardNumberOfEntries" CurNode="ForwardNumberOfEntries">
+			<i type="object">
+				<StaticRoute type="boolean" Writable="0">1</StaticRoute>
+				<X_TWSZ-COM_ErrorInfo type="string" Writable="0">NULL</X_TWSZ-COM_ErrorInfo>
+				<ForwardingMetric type="unsignedInt">16</ForwardingMetric>
+				<ForwardingPolicy type="int[-1:]"></ForwardingPolicy>
+				<Interface type="string"></Interface>
+				<GatewayIPAddress type="string"></GatewayIPAddress>
+				<SourceSubnetMask type="string"></SourceSubnetMask>
+				<SourceIPAddress type="string"></SourceIPAddress>
+				<Type type="string">Host</Type>
+				<DestSubnetMask type="string"></DestSubnetMask>
+				<DestIPAddress type="string"></DestIPAddress>
+				<Status type="string" Writable="0">Disabled</Status>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</Forwarding>
+	</Layer3Forwarding>
+	<X_TWSZ-COM_RouteInfo type="object">
+		<i type="object">
+			<Interface type="string"></Interface>
+			<ForwardingMetric type="string"></ForwardingMetric>
+			<Ref type="string"></Ref>
+			<Flags type="string"></Flags>
+			<GatewayIPAddress type="string"></GatewayIPAddress>
+			<DestSubnetMask type="string"></DestSubnetMask>
+			<DestIPAddress type="string"></DestIPAddress>
+		</i>
+	</X_TWSZ-COM_RouteInfo>
+	<X_TWSZ-COM_DynamicRouting type="object" Writable="0">
+		<ForwardNumberOfEntries type="unsignedInt" Writable="0">1</ForwardNumberOfEntries>
+		<Enable type="boolean" Writable="0">0</Enable>
+		<Forwarding type="object">
+			<i type="object">
+				<Operation type="unsignedInt" Writable="0">0</Operation>
+				<Version type="unsignedInt" Writable="0">0</Version>
+				<InterfaceName type="string" Writable="0">InternetGatewayDevice.LANDevice.1.</InterfaceName>
+				<Enable type="unsignedInt" Writable="0">1</Enable>
+			</i>
+		</Forwarding>
+	</X_TWSZ-COM_DynamicRouting>
+	<X_TWSZ-COM_Authentication type="object" Writable="0">
+		<X_TWSZ-COM_UserAdminPassword_FLAG type="unsignedInt" Writable="1">0</X_TWSZ-COM_UserAdminPassword_FLAG>
+		<UserNumberOfEntries type="unsignedInt" Writable="0">0</UserNumberOfEntries>
+		<MaxUserEntries type="unsignedInt" Writable="0">0</MaxUserEntries>
+		<SessionTimeout type="unsignedInt">300</SessionTimeout>
+		<UserList type="object" Writable="0" MaxNode="MaxUserEntries" CurNode="UserNumberOfEntries">
+			<i type="object">
+				<Level type="unsignedInt" Writable="0"></Level>
+				<Password type="string" Writable="1"></Password>
+				<UserName type="string" Writable="1"></UserName>
+			</i>
+		</UserList>
+	</X_TWSZ-COM_Authentication>
+	<X_TWSZ-COM_Firewall type="object">
+		<LanPortBlackFilterNumberOfEntries type="unsignedInt" Writable="0">0</LanPortBlackFilterNumberOfEntries>
+		<LanWhiteFilterNumberOfEntries type="unsignedInt" Writable="0">0</LanWhiteFilterNumberOfEntries>
+		<LanBlackFilterNumberOfEntries type="unsignedInt" Writable="0">0</LanBlackFilterNumberOfEntries>
+		<WanWhiteFilterNumberOfEntries type="unsignedInt" Writable="0">0</WanWhiteFilterNumberOfEntries>
+		<WanBlackFilterNumberOfEntries type="unsignedInt" Writable="0">0</WanBlackFilterNumberOfEntries>
+		<MaxFilterNumberOfEntries type="unsignedInt" Writable="0">32</MaxFilterNumberOfEntries>
+		<CurrentWANFilterTable type="unsignedInt">4</CurrentWANFilterTable>
+		<CurrentLANFilterTable type="unsignedInt">2</CurrentLANFilterTable>
+		<SecurityLevel type="unsignedInt">1</SecurityLevel>
+		<IPFilterEnable type="boolean">1</IPFilterEnable>
+		<SPIEnable type="boolean">0</SPIEnable>
+		<WanBlackFilter type="object" CurNode="WanBlackFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<SchedulePath type="string">Always</SchedulePath>
+				<DestPortType type="string"></DestPortType>
+				<SrcPortType type="string"></SrcPortType>
+				<DestEndIP type="string"></DestEndIP>
+				<DestStartIP type="string"></DestStartIP>
+				<SrcEndIP type="string"></SrcEndIP>
+				<SrcStartIP type="string"></SrcStartIP>
+				<DestIPType type="string"></DestIPType>
+				<SrcIPType type="string"></SrcIPType>
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstMask type="string"></DstMask>
+				<SrcMask type="string"></SrcMask>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</WanBlackFilter>
+		<LanPortBlackFilter type="object" CurNode="LanPortBlackFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<SchedulePath type="string">Always</SchedulePath>
+				<DestPortType type="string"></DestPortType>
+				<SrcPortType type="string"></SrcPortType>
+				<DestEndIP type="string"></DestEndIP>
+				<DestStartIP type="string"></DestStartIP>
+				<SrcEndIP type="string"></SrcEndIP>
+				<SrcStartIP type="string"></SrcStartIP>
+				<DestIPType type="string"></DestIPType>
+				<SrcIPType type="string"></SrcIPType>
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstMask type="string"></DstMask>
+				<SrcMask type="string"></SrcMask>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</LanPortBlackFilter>
+		<WanWhiteFilter type="object" CurNode="WanWhiteFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<SchedulePath type="string">Always</SchedulePath>
+				<DestPortType type="string"></DestPortType>
+				<SrcPortType type="string"></SrcPortType>
+				<DestEndIP type="string"></DestEndIP>
+				<DestStartIP type="string"></DestStartIP>
+				<SrcEndIP type="string"></SrcEndIP>
+				<SrcStartIP type="string"></SrcStartIP>
+				<DestIPType type="string"></DestIPType>
+				<SrcIPType type="string"></SrcIPType>
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstMask type="string"></DstMask>
+				<SrcMask type="string"></SrcMask>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</WanWhiteFilter>
+		<LanBlackFilter type="object" CurNode="LanBlackFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<SchedulePath type="string">Always</SchedulePath>
+				<DestPortType type="string"></DestPortType>
+				<SrcPortType type="string"></SrcPortType>
+				<DestEndIP type="string"></DestEndIP>
+				<DestStartIP type="string"></DestStartIP>
+				<SrcEndIP type="string"></SrcEndIP>
+				<SrcStartIP type="string"></SrcStartIP>
+				<DestIPType type="string"></DestIPType>
+				<SrcIPType type="string"></SrcIPType>
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstMask type="string"></DstMask>
+				<SrcMask type="string"></SrcMask>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</LanBlackFilter>
+		<LanWhiteFilter type="object" CurNode="LanWhiteFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<SchedulePath type="string">Always</SchedulePath>
+				<DestPortType type="string"></DestPortType>
+				<SrcPortType type="string"></SrcPortType>
+				<DestEndIP type="string"></DestEndIP>
+				<DestStartIP type="string"></DestStartIP>
+				<SrcEndIP type="string"></SrcEndIP>
+				<SrcStartIP type="string"></SrcStartIP>
+				<DestIPType type="string"></DestIPType>
+				<SrcIPType type="string"></SrcIPType>
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstMask type="string"></DstMask>
+				<SrcMask type="string"></SrcMask>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</LanWhiteFilter>
+	</X_TWSZ-COM_Firewall>
+	<X_TWSZ-COM_IP6Firewall type="object">
+		<LanWhiteFilterNumberOfEntries type="unsignedInt" Writable="0">0</LanWhiteFilterNumberOfEntries>
+		<LanBlackFilterNumberOfEntries type="unsignedInt" Writable="0">0</LanBlackFilterNumberOfEntries>
+		<WanWhiteFilterNumberOfEntries type="unsignedInt" Writable="0">0</WanWhiteFilterNumberOfEntries>
+		<WanBlackFilterNumberOfEntries type="unsignedInt" Writable="0">0</WanBlackFilterNumberOfEntries>
+		<MaxFilterNumberOfEntries type="unsignedInt" Writable="0">20</MaxFilterNumberOfEntries>
+		<CurrentWANFilterTable type="unsignedInt">3</CurrentWANFilterTable>
+		<CurrentLANFilterTable type="unsignedInt">2</CurrentLANFilterTable>
+		<SecurityLevel type="unsignedInt">1</SecurityLevel>
+		<IPFilterEnable type="boolean">1</IPFilterEnable>
+		<WanBlackFilter type="object" CurNode="WanBlackFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstPrefixLen type="string"></DstPrefixLen>
+				<SrcPrefixLen type="string"></SrcPrefixLen>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</WanBlackFilter>
+		<WanWhiteFilter type="object" CurNode="WanWhiteFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstPrefixLen type="string"></DstPrefixLen>
+				<SrcPrefixLen type="string"></SrcPrefixLen>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</WanWhiteFilter>
+		<LanBlackFilter type="object" CurNode="LanBlackFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstPrefixLen type="string"></DstPrefixLen>
+				<SrcPrefixLen type="string"></SrcPrefixLen>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</LanBlackFilter>
+		<LanWhiteFilter type="object" CurNode="LanWhiteFilterNumberOfEntries" MaxNode="MaxFilterNumberOfEntries">
+			<i type="object">
+				<Enable type="boolean">1</Enable>
+				<Description type="string"></Description>
+				<DstPrefixLen type="string"></DstPrefixLen>
+				<SrcPrefixLen type="string"></SrcPrefixLen>
+				<Protocol type="string"></Protocol>
+				<DestPort type="string"></DestPort>
+				<SrcPort type="string"></SrcPort>
+				<DestIP type="string"></DestIP>
+				<SrcIP type="string"></SrcIP>
+				<Cache_DeviceName type="string" Writable="0"></Cache_DeviceName>
+				<DevPath type="string"></DevPath>
+			</i>
+		</LanWhiteFilter>
+	</X_TWSZ-COM_IP6Firewall>
+	<X_TWSZ-COM_AntiAttack type="object">
+		<AntiLogEnable type="boolean">0</AntiLogEnable>
+		<AntiDosEnable type="boolean">1</AntiDosEnable>
+		<AntiDos type="object">
+			<AntiIPLandEnable type="boolean">1</AntiIPLandEnable>
+			<AntiEchoCargenEnable type="boolean">1</AntiEchoCargenEnable>
+			<AntiFraggleEnable type="boolean">1</AntiFraggleEnable>
+			<IgnrPortScanEnable type="boolean">1</IgnrPortScanEnable>
+			<IcmpEchoIgnrBcastEnable type="boolean">1</IcmpEchoIgnrBcastEnable>
+			<SynMaxConnections type="unsignedInt">50</SynMaxConnections>
+			<SynCookieEnable type="boolean">1</SynCookieEnable>
+		</AntiDos>
+		<AntiScan type="object">
+			<AntiScanForAllSetFinUrgPshEnable type="boolean">1</AntiScanForAllSetFinUrgPshEnable>
+			<AntiScanForAllSetFinEnable type="boolean">1</AntiScanForAllSetFinEnable>
+			<AntiScanForAllSetSynRstAckFinUrgEnable type="boolean">1</AntiScanForAllSetSynRstAckFinUrgEnable>
+			<AntiScanSetAllEnable type="boolean">1</AntiScanSetAllEnable>
+			<AntiScanUnsetAllEnable type="boolean">1</AntiScanUnsetAllEnable>
+			<AntiScanUnAckSetUrgEnable type="boolean">1</AntiScanUnAckSetUrgEnable>
+			<AntiScanUnAckSetPshEnable type="boolean">1</AntiScanUnAckSetPshEnable>
+			<AntiScanUnAckSetFinEnable type="boolean">1</AntiScanUnAckSetFinEnable>
+			<AntiScanSetFinRstEnable type="boolean">1</AntiScanSetFinRstEnable>
+			<AntiScanSetSynRstEnable type="boolean">1</AntiScanSetSynRstEnable>
+			<AntiScanSetSynFinEnable type="boolean">1</AntiScanSetSynFinEnable>
+		</AntiScan>
+	</X_TWSZ-COM_AntiAttack>
+	<Time type="object">
+		<X_TWSZ-COM_DateTime type="dateTime">2000-01-01T00:00:00</X_TWSZ-COM_DateTime>
+		<DaylightSavingsEnd type="dateTime">2036-02-05T02:00:00</DaylightSavingsEnd>
+		<DaylightSavingsStart type="dateTime">2000-03-08T02:00:00</DaylightSavingsStart>
+		<DaylightSavingsUsed type="boolean">0</DaylightSavingsUsed>
+		<LocalTimeZoneName type="string(64)">CCT</LocalTimeZoneName>
+		<LocalTimeZone type="string(6)">-08:00</LocalTimeZone>
+		<CurrentLocalTime type="dateTime" Writable="0">2001-01-01T00:00:00</CurrentLocalTime>
+		<NTPServer2 type="string(64)">192.168.1.10</NTPServer2>
+		<NTPServer1 type="string(64)">192.168.2.10</NTPServer1>
+		<X_TWSZ-COM_RetryInterval type="unsignedInt">10</X_TWSZ-COM_RetryInterval>
+		<X_TWSZ-COM_UpdateInterval type="unsignedInt">1</X_TWSZ-COM_UpdateInterval>
+		<X_TWSZ-COM_Status type="string" Writable="0">Unsynchronized</X_TWSZ-COM_Status>
+		<X_TWSZ-COM_Enable type="boolean">0</X_TWSZ-COM_Enable>
+		<X_TWSZ-COM_Type type="string">NtpServer</X_TWSZ-COM_Type>
+	</Time>
+	<DeviceInfo type="object">
+		<VendorConfigFileNumberOfEntries type="unsignedInt" Writable="0"></VendorConfigFileNumberOfEntries>
+		<DeviceLog type="string(32k)" Writable="0"></DeviceLog>
+		<FirstUseDate type="dateTime" Writable="0"></FirstUseDate>
+		<UpTime type="unsignedInt" Writable="0"></UpTime>
+		<ProvisioningCode type="string(64)" Writable="0" Notification="2"></ProvisioningCode>
+		<SpecVersion type="string(16)" Writable="0"></SpecVersion>
+		<AdditionalSoftwareVersion type="string(64)" Writable="0"></AdditionalSoftwareVersion>
+		<AdditionalHardwareVersion type="string(64)" Writable="0"></AdditionalHardwareVersion>
+		<EnabledOptions type="string(1024)" Writable="0"></EnabledOptions>
+		<ModemFirmwareVersion type="string(64)" Writable="0">1.0.0</ModemFirmwareVersion>
+		<SoftwareVersion type="string(64)" Writable="0" Notification="2">TBS-R2B01</SoftwareVersion>
+		<HardwareVersion type="string(64)" Writable="0">Unknown</HardwareVersion>
+		<SerialNumber type="string(64)" Writable="0">001EE3010203</SerialNumber>
+		<ProductClass type="string(64)" Writable="0">IGD</ProductClass>
+		<Description type="string(256)" Writable="0">Tongwei Broadband System</Description>
+		<X_TWSZ-COM_FactoryMode type="string" Writable="0">default_settings</X_TWSZ-COM_FactoryMode>
+		<X_TWSZ-COM_DeviceDomainNameLabel type="string(64)" Writable="0">homestation</X_TWSZ-COM_DeviceDomainNameLabel>
+		<ModelName type="string(64)" Writable="0">TBS</ModelName>
+		<ManufacturerOUI type="string(6)" Writable="0">00E0A6</ManufacturerOUI>
+		<Manufacturer type="string(64)" Writable="0">TongWei</Manufacturer>
+		<VendorConfigFile type="object" Writable="0">
+			<i type="object">
+				<Description type="string(256)" Writable="0"></Description>
+				<Date type="dateTime" Writable="0"></Date>
+				<Version type="string(15)" Writable="0"></Version>
+				<Name type="string(64)" Writable="0"></Name>
+			</i>
+		</VendorConfigFile>
+		<X_TWSZ-COM_Restore type="object">
+			<Enable Writable="1" type="boolean">0</Enable>
+		</X_TWSZ-COM_Restore>
+	</DeviceInfo>
+	<X_TWSZ-COM_URL_Filter type="object">
+		<FilterMode type="string">Deny</FilterMode>
+		<Enable type="boolean">1</Enable>
+		<BlackListEntryNumber type="unsignedInt" Writable="0">0</BlackListEntryNumber>
+		<MaxBlackListEntryNumber type="unsignedInt" Writable="0">32</MaxBlackListEntryNumber>
+		<WhiteListEntryNumber type="unsignedInt" Writable="0">0</WhiteListEntryNumber>
+		<MaxWhiteListEntryNumber type="unsignedInt" Writable="0">32</MaxWhiteListEntryNumber>
+		<WhiteList type="object" MaxNode="MaxWhiteListEntryNumber" CurNode="WhiteListEntryNumber">
+			<i type="object">
+				<Days type="string">Sun,Mon,Tue,Wed,Thu,Fri,Sat</Days>
+				<EndTime type="string">23:59</EndTime>
+				<StartTime type="string">00:00</StartTime>
+				<URL type="string">www.134124234234white.com</URL>
+			</i>
+		</WhiteList>
+		<BlackList type="object" MaxNode="MaxBlackListEntryNumber" CurNode="BlackListEntryNumber">
+			<i type="object">
+				<EndTime type="string">23:59</EndTime>
+				<StartTime type="string">00:00</StartTime>
+				<EnableAllTimes type="boolean">1</EnableAllTimes>
+				<Days type="string">Sun,Mon,Tue,Wed,Thu,Fri,Sat,</Days>
+				<EnableAllDays type="boolean">1</EnableAllDays>
+				<SchedulePath type="string">Always</SchedulePath>
+				<ScheduleMode type="string">Select</ScheduleMode>
+				<URL type="string">www.34786735842black.com</URL>
+			</i>
+		</BlackList>
+	</X_TWSZ-COM_URL_Filter>
+	<X_TWSZ-COM_MAC_Filter type="object">
+		<FilterMode type="string">Deny</FilterMode>
+		<Enable type="boolean">0</Enable>
+		<BlackListEntryNumber type="unsignedInt" Writable="0">0</BlackListEntryNumber>
+		<MaxBlackListEntryNumber type="unsignedInt" Writable="0">20</MaxBlackListEntryNumber>
+		<WhiteListEntryNumber type="unsignedInt" Writable="0">0</WhiteListEntryNumber>
+		<MaxWhiteListEntryNumber type="unsignedInt" Writable="0">20</MaxWhiteListEntryNumber>
+		<WhiteList type="object" MaxNode="MaxWhiteListEntryNumber" CurNode="WhiteListEntryNumber">
+			<i type="object">
+				<EndTime type="string">23:59</EndTime>
+				<StartTime type="string">00:00</StartTime>
+				<EnableAllTimes type="boolean">1</EnableAllTimes>
+				<Days type="string">Sun,Mon,Tue,Wed,Thu,Fri,Sat</Days>
+				<EnableAllDays type="boolean">1</EnableAllDays>
+				<SchedulePath type="string">Always</SchedulePath>
+				<ScheduleMode type="string">Select</ScheduleMode>
+				<MACAddress type="string">00:00:12:34:56:78</MACAddress>
+				<Description type="string">BlackList_1</Description>
+			</i>
+		</WhiteList>
+		<BlackList type="object" MaxNode="MaxBlackListEntryNumber" CurNode="BlackListEntryNumber">
+			<i type="object">
+				<EndTime type="string">23:59</EndTime>
+				<StartTime type="string">00:00</StartTime>
+				<EnableAllTimes type="boolean">1</EnableAllTimes>
+				<Days type="string">Sun,Mon,Tue,Wed,Thu,Fri,Sat</Days>
+				<EnableAllDays type="boolean">1</EnableAllDays>
+				<SchedulePath type="string">Always</SchedulePath>
+				<ScheduleMode type="string">Select</ScheduleMode>
+				<MACAddress type="string">00:00:12:34:56:78</MACAddress>
+				<Description type="string">BlackList_1</Description>
+			</i>
+		</BlackList>
+	</X_TWSZ-COM_MAC_Filter>
+	<X_TWSZ-COM_UPNP type="object" Writable="0">
+		<BlacklistNumberOfEntries type="unsignedInt" Writable="0">0</BlacklistNumberOfEntries>
+		<MaxBlacklistNumberOfEntries type="unsignedInt" Writable="0">20</MaxBlacklistNumberOfEntries>
+		<LANPathName type="string" Writable="1"></LANPathName>
+		<WANPathName type="string" Writable="1"></WANPathName>
+		<Enable type="boolean">0</Enable>
+		<Blacklist type="object" CurNode="BlacklistNumberOfEntries" MaxNode="MaxBlacklistNumberOfEntries">
+			<i type="object">
+				<SrcIP type="string">10.10.10.10</SrcIP>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</Blacklist>
+	</X_TWSZ-COM_UPNP>
+	<X_TWSZ-COM_Radio type="object">
+		<i type="object">
+			<AMPDU type="boolean" Writable="1">1</AMPDU>
+			<GuardInterval type="boolean">1</GuardInterval>
+			<X_TWSZ-COM_MIMO type="boolean">1</X_TWSZ-COM_MIMO>
+			<XR type="boolean" Stat="1">0</XR>
+			<FRAGLEN type="unsignedInt[256:2346]">2346</FRAGLEN>
+			<BSSRelay type="boolean" Stat="1">0</BSSRelay>
+			<X_TWSZ-COM_ChannelWidth type="string" Writable="1" Cache="1">0</X_TWSZ-COM_ChannelWidth>
+			<OperatingChannelBandwidth type="string" Writable="1" Cache="1">0</OperatingChannelBandwidth>
+			<DTIM type="unsignedInt[1:15]">10</DTIM>
+			<PowerSave type="boolean">0</PowerSave>
+			<RCSCTSThreshlod type="unsignedInt[1:2347]">2346</RCSCTSThreshlod>
+			<BeaconInterval type="unsignedInt[20:1000]">100</BeaconInterval>
+			<X_TWSZ-COM_APIsolate type="boolean">0</X_TWSZ-COM_APIsolate>
+			<X_TWSZ-COM_PreambleType type="boolean">0</X_TWSZ-COM_PreambleType>
+			<UAPSDSupported type="boolean">1</UAPSDSupported>
+			<WMMSupported type="boolean">1</WMMSupported>
+			<DistanceFromRoot type="unsignedInt" Stat="1">0</DistanceFromRoot>
+			<DeviceOperationMode type="string" Stat="1">InfrastructureAccessPoint</DeviceOperationMode>
+			<ChannelsInUse type="string(1024)" Writable="0" Stat="1"></ChannelsInUse>
+			<RegulatoryDomain type="string(3)">CN</RegulatoryDomain>
+			<LocationDescription type="string(4096)"></LocationDescription>
+			<AutoRateFallBackEnabled type="boolean">1</AutoRateFallBackEnabled>
+			<TransmitPower type="unsignedInt"></TransmitPower>
+			<TransmitPowerSupported type="string(64)" Writable="0"></TransmitPowerSupported>
+			<RadioEnabled type="boolean">1</RadioEnabled>
+			<BeaconAdvertisementEnabled type="boolean">1</BeaconAdvertisementEnabled>
+			<InsecureOOBAccessEnabled type="boolean" Stat="1">1</InsecureOOBAccessEnabled>
+			<PossibleDataTransmitRates type="string(256)" Writable="0" Stat="1"></PossibleDataTransmitRates>
+			<OperationalDataTransmitRates type="string(256)"></OperationalDataTransmitRates>
+			<BasicDataTransmitRates type="string(256)"></BasicDataTransmitRates>
+			<PossibleChannels type="string(1024)" Writable="0" Stat="1"></PossibleChannels>
+			<Standard type="string" Writable="0">b,g,n</Standard>
+			<AutoChannelEnable type="boolean">1</AutoChannelEnable>
+			<Channel type="unsignedInt[0:255]">0</Channel>
+			<Frequency type="string">0</Frequency>
+			<MaxBitRate type="string(4)">Auto</MaxBitRate>
+			<Name type="string(16)" Writable="0">ra0</Name>
+			<VendorString type="string(16)" Writable="0" Stat="1"></VendorString>
+			<Enable type="boolean">1</Enable>
+			<WDSConfiguration type="object">
+				<ApInfoNumberOfEntries type="unsignedInt" Writable="0" Stat="1"></ApInfoNumberOfEntries>
+				<Passphrase type="string(63)" Password="2"></Passphrase>
+				<AuthMode type="string">None</AuthMode>
+				<WEPKeyIndex type="unsignedInt[1:4]">1</WEPKeyIndex>
+				<WEPKey type="string(128)" Password="2"></WEPKey>
+				<EncryptionModes type="string"></EncryptionModes>
+				<BaseStationMACAddress type="string"></BaseStationMACAddress>
+				<UpdateRootApMacAddr type="string">0</UpdateRootApMacAddr>
+				<BtnConnect type="string">0</BtnConnect>
+				<BtnScanAp type="string">0</BtnScanAp>
+				<WDSMode type="string"></WDSMode>
+				<DisableGuestAccess type="boolean">1</DisableGuestAccess>
+				<Enable type="boolean">0</Enable>
+				<BaseStationAP type="object">
+					<BaseStationAPMACAddr type="string"></BaseStationAPMACAddr>
+					<BaseChannel type="unsignedInt[0:255]"></BaseChannel>
+					<BaseStationAPSSID type="string"></BaseStationAPSSID>
+				</BaseStationAP>
+				<BaseStation type="object">
+					<i type="object">
+						<Description type="string"></Description>
+						<MACAddress type="string"></MACAddress>
+					</i>
+				</BaseStation>
+				<ApInfo type="object" Writable="0">
+					<i type="object">
+						<WDSApSnRadio type="string"></WDSApSnRadio>
+						<WDSApBeanconInt type="unsignedInt[20:1000]"></WDSApBeanconInt>
+						<WDSApChannel type="unsignedInt[0:255]"></WDSApChannel>
+						<WDSApTxRate type="string(4)"></WDSApTxRate>
+						<WDSApBssid type="string"></WDSApBssid>
+						<WDSApSSID type="string"></WDSApSSID>
+					</i>
+				</ApInfo>
+			</WDSConfiguration>
+		</i>
+	</X_TWSZ-COM_Radio>
+	<X_TWSZ-COM_DDNS type="object">
+		<i type="object">
+			<DDNSState type="string" Writable="0" NeedSave="0">Unconfigure</DDNSState>
+			<Key type="string(64)">Key</Key>
+			<Email type="string(64)">Email</Email>
+			<DdnsHost type="string(256)">ns1.cammail.net</DdnsHost>
+			<CgiPath type="string(128)" Writable="0">/gnudip/cgi-bin/gdipupdt.cgi</CgiPath>
+			<Method type="string(16)" Writable="0">http</Method>
+			<Password type="string(64)">Pass</Password>
+			<Username type="string(64)">User</Username>
+			<WANInterfaceState type="string" Writable="0" NeedSave="0">Disconnected</WANInterfaceState>
+			<WANConnectionID type="string(256)"></WANConnectionID>
+			<Hostname type="string(64)">myhostname</Hostname>
+			<DDNSProvider type="string"></DDNSProvider>
+		</i>
+	</X_TWSZ-COM_DDNS>
+	<X_TWSZ-COM_USBDevice type="object" Writable="0">
+		<StorageSum type="unsignedInt" Writable="0" NeedSave="0">0</StorageSum>
+		<Storage type="object" NeedSave="0">
+			<i type="object">
+				<PartitionSum type="unsignedInt" Writable="0">0</PartitionSum>
+				<DiskSizeMB type="unsignedInt" Writable="0">0</DiskSizeMB>
+				<Model type="string" Writable="0"></Model>
+				<Vendor type="string" Writable="0"></Vendor>
+				<Partitions type="object" Writable="0">
+					<i type="object">
+						<CfgBackupFileExist type="boolean" Writable="0">0</CfgBackupFileExist>
+						<Mounted type="boolean" Writable="0">0</Mounted>
+						<MountPoint type="string" Writable="0"></MountPoint>
+						<PercentUsed type="int[0:100]" Writable="0">0</PercentUsed>
+						<PartUsedKB type="string" Writable="0"></PartUsedKB>
+						<FileSystem type="string" Writable="0"></FileSystem>
+						<SysID type="int[0:255]" Writable="0">0</SysID>
+						<PartSizeMB type="unsignedInt" Writable="0">0</PartSizeMB>
+						<Boot type="boolean" Writable="0"></Boot>
+						<SDName type="string" Writable="0"></SDName>
+					</i>
+				</Partitions>
+			</i>
+		</Storage>
+	</X_TWSZ-COM_USBDevice>
+	<TracerouteDiagnostics type="object">
+		<TracertResult type="string(65535)" Writable="0"></TracertResult>
+		<MaxTTL type="unsignedInt[1:100]"></MaxTTL>
+		<WaitTime type="unsignedInt[1:60]"></WaitTime>
+		<Host type="string(256)"></Host>
+		<Interface type="string(256)"></Interface>
+		<TracerouteState type="string"></TracerouteState>
+		<RouteHopsNumberOfEntries type="unsignedInt" Writable="0"></RouteHopsNumberOfEntries>
+		<ResponseTime type="unsignedInt" Writable="0"></ResponseTime>
+		<MaxHopCount type="unsignedInt[1:64]"></MaxHopCount>
+		<DSCP type="unsignedInt[0:63]"></DSCP>
+		<DataBlockSize type="unsignedInt[1:65535]"></DataBlockSize>
+		<Timeout type="unsignedInt[1:]"></Timeout>
+		<NumberOfTries type="unsignedInt[1:3]"></NumberOfTries>
+		<DiagnosticsState type="string"></DiagnosticsState>
+		<RouteHops type="object" CurNode="RouteHopsNumberOfEntries">
+			<i type="object">
+				<HopRTTimes type="string(16)"></HopRTTimes>
+				<HopErrorCode type="unsignedInt"></HopErrorCode>
+				<HopHostAddress type="string" Writable="0"></HopHostAddress>
+				<HopHost type="string(256)" Writable="0"></HopHost>
+			</i>
+		</RouteHops>
+	</TracerouteDiagnostics>
+	<X_TWSZ-COM_IPPD type="object" Writable="0">
+		<FWVer Writable="0" type="string"></FWVer>
+		<CMD Writable="0" type="string"></CMD>
+		<Model Writable="0" type="string"></Model>
+		<Manufacturer Writable="0" type="string"></Manufacturer>
+		<MakeModel Writable="0" type="string"></MakeModel>
+		<PrinterName Writable="1" type="string(16)">PrinterName</PrinterName>
+		<IppdEnable Writable="1" type="boolean">0</IppdEnable>
+	</X_TWSZ-COM_IPPD>
+	<X_TWSZ-COM_PortTrigger type="object">
+		<NumberOfEntries type="unsignedInt" Writable="0">0</NumberOfEntries>
+		<MaxNumberOfEntries type="unsignedInt" Writable="0">32</MaxNumberOfEntries>
+		<Timeout type="unsignedInt[1:9999]">20</Timeout>
+		<Enable type="boolean">1</Enable>
+		<TriggerList type="object" MaxIdx="0" CurNode="NumberOfEntries" MaxNode="MaxNumberOfEntries">
+			<i type="object">
+				<Description type="string">Rule_1</Description>
+				<OpenEndPort type="unsignedInt[1:65535]">0</OpenEndPort>
+				<OpenStartPort type="unsignedInt[1:65535]">0</OpenStartPort>
+				<OpenProtocol type="string">TCP</OpenProtocol>
+				<TriggerEndPort type="unsignedInt[1:65535]">0</TriggerEndPort>
+				<TriggerStartPort type="unsignedInt[1:65535]">0</TriggerStartPort>
+				<TriggerEndIP type="string">255.255.255.255</TriggerEndIP>
+				<TriggerStartIP type="string">0.0.0.0</TriggerStartIP>
+				<TriggerProtocol type="string">TCP</TriggerProtocol>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</TriggerList>
+	</X_TWSZ-COM_PortTrigger>
+	<X_TWSZ-COM_Diagnostics type="object">
+		<Interface type="string(256)"></Interface>
+		<DiagnosticsState type="string"></DiagnosticsState>
+		<Status type="object">
+			<IPPingPrimaryDNS type="string" Writable="0"></IPPingPrimaryDNS>
+			<IPPingGateway type="string" Writable="0"></IPPingGateway>
+			<ATMF4EndToEndLoopback type="string" Writable="0"></ATMF4EndToEndLoopback>
+			<ATMF4SegmentLoopback type="string" Writable="0"></ATMF4SegmentLoopback>
+			<ATMF5EndToEndLoopback type="string" Writable="0"></ATMF5EndToEndLoopback>
+			<ATMF5SegmentLoopback type="string" Writable="0"></ATMF5SegmentLoopback>
+			<ADSLSynchronization type="string" Writable="0"></ADSLSynchronization>
+		</Status>
+		<AutoPVCSearch type="object">
+			<LinkType type="string">PPPoE</LinkType>
+			<Encapsulation type="string">LLC</Encapsulation>
+			<Status type="string">0</Status>
+			<DefaultPVCList type="string" Writable="0">0/35,8/35,0/38,1/32,8/48,0/33,0/100,0/32,8/32,0/34</DefaultPVCList>
+			<FoundPVC type="string" Writable="0"></FoundPVC>
+			<SearchPVC type="string"></SearchPVC>
+			<Enable type="boolean">0</Enable>
+		</AutoPVCSearch>
+	</X_TWSZ-COM_Diagnostics>
+	<X_TWSZ-COM_SCHEDULES type="object">
+		<SchedNumberOfEntries type="unsignedInt" Writable="1">0</SchedNumberOfEntries>
+		<MaxSchedEntries type="unsignedInt" Writable="0">16</MaxSchedEntries>
+		<Enable type="boolean" Writable="0">1</Enable>
+		<SchedEntry type="object" MaxNode="MaxSchedEntries" CurNode="SchedNumberOfEntries">
+			<i type="object">
+				<EndTime type="String">23:59</EndTime>
+				<StartTime type="String">00:00</StartTime>
+				<EnableAllTimes type="boolean">1</EnableAllTimes>
+				<SelectDays type="string">Sun,Mon,Tue,Wed,Thu,Fri,Sat,</SelectDays>
+				<EnableAllDays type="boolean">1</EnableAllDays>
+				<SchedUsed type="unsignedInt">0</SchedUsed>
+				<SchedName type="string">sch_1</SchedName>
+				<Enable type="boolean">1</Enable>
+			</i>
+		</SchedEntry>
+	</X_TWSZ-COM_SCHEDULES>
+	<X_TWSZ-COM_TraditionalNAT type="object">
+		<TraditionalNATNumberOfEntries type="unsignedInt" Writable="1">0</TraditionalNATNumberOfEntries>
+		<MaxTraditionalNATEntries type="unsignedInt" Writable="0">16</MaxTraditionalNATEntries>
+		<Enable type="boolean" Writable="0">1</Enable>
+		<TraditionalNATEntry type="object" MaxNode="MaxTraditionalNATEntries" CurNode="TraditionalNATNumberOfEntries">
+			<i type="object">
+				<X_TWSZ-COM_EndExternalIP type="String(32)"></X_TWSZ-COM_EndExternalIP>
+				<X_TWSZ-COM_StartExternalIP type="String(32)"></X_TWSZ-COM_StartExternalIP>
+				<X_TWSZ-COM_ExternalIPType type="string(32)">SingleIP</X_TWSZ-COM_ExternalIPType>
+				<X_TWSZ-COM_EndInternalIP type="string(32)"></X_TWSZ-COM_EndInternalIP>
+				<X_TWSZ-COM_StartInternalIP type="string(32)"></X_TWSZ-COM_StartInternalIP>
+				<X_TWSZ-COM_InternalIPType type="string(32)">SingleIP</X_TWSZ-COM_InternalIPType>
+				<X_TWSZ-COM_EntryName type="string">NAT_1</X_TWSZ-COM_EntryName>
+				<X_TWSZ-COM_Enable type="boolean">1</X_TWSZ-COM_Enable>
+			</i>
+		</TraditionalNATEntry>
+	</X_TWSZ-COM_TraditionalNAT>
+	<X_TWSZ-COM_IPv6Enable type="object">
+		<Enable type="boolean">1</Enable>
+	</X_TWSZ-COM_IPv6Enable>
+	<X_TWSZ-COM_IPv6Layer3Forwarding type="object">
+		<ForwardNumberOfEntries type="unsignedInt" Writable="0">0</ForwardNumberOfEntries>
+		<MAXForwardNumberOfEntries type="unsignedInt" Writable="0">15</MAXForwardNumberOfEntries>
+		<DefaultConnectionService type="string"></DefaultConnectionService>
+		<IPv6Forwarding type="object" CurNode="ForwardNumberOfEntries" MaxNode="MAXForwardNumberOfEntries">
+			<i type="object">
+				<MTU type="int">1492</MTU>
+				<ForwardingMetric type="int">256</ForwardingMetric>
+				<Interface type="string"></Interface>
+				<GatewayIPv6Address type="string"></GatewayIPv6Address>
+				<SourcePrefixLength type="unsignedInt"></SourcePrefixLength>
+				<SourceIPv6Address type="string"></SourceIPv6Address>
+				<DestPrefixLength type="unsignedInt"></DestPrefixLength>
+				<DestIPv6Address type="string"></DestIPv6Address>
+				<Type type="string" Writable="0">Network</Type>
+				<Status type="string" Writable="0">Disabled</Status>
+				<Enable type="boolean">0</Enable>
+			</i>
+		</IPv6Forwarding>
+	</X_TWSZ-COM_IPv6Layer3Forwarding>
+	<X_TWSZ-COM_SystemState type="object">
+		<Mem type="object">
+			<MemTotalFree type="unsignedInt"></MemTotalFree>
+			<MemTotal type="unsignedInt"></MemTotal>
+		</Mem>
+		<CPU type="object">
+			<CPULoad type="unsignedInt"></CPULoad>
+		</CPU>
+		<NatSessionTable type="object">
+			<Used type="unsignedInt"></Used>
+			<Total type="unsignedInt"></Total>
+		</NatSessionTable>
+	</X_TWSZ-COM_SystemState>
+	<X_TWSZ-COM_DLNA type="object">
+		<Enable type="boolean">1</Enable>
+	</X_TWSZ-COM_DLNA>
+	<X_TWSZ-COM_IPTunnel type="object" CurNode="X_TWSZ-COM_IPTunnelNumberOfEntries">
+		<i type="object">
+			<MAX6in4TunnelNumberOfEntries type="unsignedInt" Writable="0">8</MAX6in4TunnelNumberOfEntries>
+			<MAX4in6TunnelNumberOfEntries type="unsignedInt" Writable="0">8</MAX4in6TunnelNumberOfEntries>
+			<6in4TunnelNumberOfEntries type="unsignedInt" Writable="0">0</6in4TunnelNumberOfEntries>
+			<4in6TunnelNumberOfEntries type="unsignedInt" Writable="0">0</4in6TunnelNumberOfEntries>
+			<AssociatedLanIfName type="string(256)"></AssociatedLanIfName>
+			<AssociatedWanIfName type="string(256)"></AssociatedWanIfName>
+			<Mode type="string"></Mode>
+			<TunnelCounter type="unsignedInt" Writable="0">0</TunnelCounter>
+			<TunnelName type="string"></TunnelName>
+			<Activated type="boolean">0</Activated>
+			<4in6Tunnel type="object" MaxNode="MAX4in6TunnelNumberOfEntries" CurNode="4in6TunnelNumberOfEntries">
+				<i type="object">
+					<Select type="boolean">0</Select>
+					<RemoteIpv6Address type="string(256)"></RemoteIpv6Address>
+					<Dynamic type="boolean">0</Dynamic>
+					<Mechanism type="string"></Mechanism>
+					<ConnStatus type="string" Writable="0">Disconnected</ConnStatus>
+				</i>
+			</4in6Tunnel>
+			<6in4Tunnel type="object" MaxNode="MAX6in4TunnelNumberOfEntries" CurNode="6in4TunnelNumberOfEntries">
+				<i type="object">
+					<Select type="boolean">0</Select>
+					<BorderRelayAddress type="string"></BorderRelayAddress>
+					<Prefix type="string"></Prefix>
+					<IPv4MaskLen type="unsignedInt">0</IPv4MaskLen>
+					<Dynamic type="boolean">0</Dynamic>
+					<Mechanism type="string"></Mechanism>
+					<ConnStatus type="string" Writable="0">Disconnected</ConnStatus>
+				</i>
+			</6in4Tunnel>
+		</i>
+	</X_TWSZ-COM_IPTunnel>
+</InternetGatewayDevice>

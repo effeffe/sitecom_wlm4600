@@ -1,0 +1,188 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="TUN001">IP Tunnel Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="TUN002">In this page, you can configure 4in6 and 6in4 tunnel</td>
+		</tr>
+	</table>
+	<div id="DIV_TB_IPTunnel">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN003">IP Tunnel Items</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" class="table2" id="tb_iptunnel">
+			<tr>
+				<th id="TUN004">Choose</th>
+				<th id="TUN005">Tunnel Name</th>
+				<th id="TUN006">Mode</th>
+				<th id="TUN007">WAN Interface</th>
+				<th id="TUN008">LAN Interface</th>
+				<th id="TUN009">Activated</th>
+				<th id="TUN010">Counter</th>
+				<th id="TUN011">Edit</th>
+				<th id="TUN012">Drop</th>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="TUN013" value="Add" onClick="uiAdd()">&nbsp;
+					<input type="button" id="TUN014" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+		<div id="DIV_Tunnellists" style="display:none; ">
+		<table width="900px" border="0" cellspacing="2" id="tb_dslite" style="display:none; ">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN015">DS-Lite Tunnel lists</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" class="table2" id="tb_4in6list" style="display:none; ">
+			<tr>
+				<th id="TUN016">Mechanism</th>
+				<th id="TUN017">Dynamic</th>
+				<th id="TUN018">RemoteIPv6Address</th>
+				<th id="TUN019">ConnStatus</th>
+				<th id="TUN020">Select</th>
+				<th id="TUN021">Edit</th>
+				<th id="TUN022">Drop</th>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="tb_6rdlist" style="display:none; ">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN055">6RD Tunnel lists</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" class="table2" id="tb_6in4list" style="display:none; ">
+			<tr>
+				<th id="TUN023">Mechanism</th>
+				<th id="TUN024">Dynamic</th>
+				<th id="TUN025">IPv4MaskLen</th>
+				<th id="TUN026">Prefix</th>
+				<th id="TUN027">BorderRelayAddress</th>
+				<th id="TUN028">ConnStatus</th>
+				<th id="TUN029">Select</th>
+				<th id="TUN030">Edit</th>
+				<th id="TUN031">Drop</th>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="TUN032" value="Add" onClick="uiListAdd()">&nbsp;
+					<input type="button" id="TUN033" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+		</div>
+	</div>
+	<div id="DIV_IPTunnel" style="display:none; ">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN034">Add IP Tunnel Items</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN035">Tunnel Name : </td>
+				<td ><input type="text" id="INPUT_TunnelName" /></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN036">Tunnel Mode : </td>
+				<td ><select id="SEL_Mode" size="1" onChange="onChgMode(this.value)">
+						<option value="4in6">4in6</option>
+						<option value="6in4">6in4</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN037">WAN Connection : </td>
+				<td ><select id="SEL_WAN" size="1"></select></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN038">LAN Connection : </td>
+				<td ><select id="SEL_LAN" size="1"></select></td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="TUN039" value="Save" onClick="uiSubmit()">&nbsp;
+					<input type="button" id="TUN040" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="DIV_6in4IPTunnel" style="display:none; ">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN041">Add IPv6 Rapid Deployment List</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN042">Mechanism : </td>
+				<td ><select id="SEL_6in4Mechanism">
+					<option value="Ipv6RapidDeployment">Ipv6RapidDeployment</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN043">Dynamic : </td>
+				<td ><select id="SEL_6in4Dynamic">
+					<option value="0">0</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN044">IPv4MaskLen : </td>
+				<td ><input type="text" id="INPUT_6in4MaskLen" /></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN045">Prefix : </td>
+				<td ><input type="text" id="INPUT_6in4Prefix" /></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN046">BorderRelayAddress : </td>
+				<td ><input type="text" id="INPUT_6in4BDRAddress" /></td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="TUN047" value="Save" onClick="ui6in4Submit()">&nbsp;
+					<input type="button" id="TUN048" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="DIV_4in6IPTunnel" style="display:none; ">
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="highlight" colspan="3" id="TUN049">Add DS-Lite IPv4 Over IPv6 Tunnel List</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN050">Mechanism : </td>
+				<td ><select id="SEL_4in6DualStackLite">
+					<option value="DualStackLite">DualStackLite</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN051">Dynamic : </td>
+				<td ><select id="SEL_4in6Dynamic">
+					<option value="0">0</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="TUN052">RemoteIPv6Address : </td>
+				<td ><input type="text" id="INPUT_4in6IPv6Address" /></td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="TUN053" value="Save" onClick="ui4in6Submit()">&nbsp;
+					<input type="button" id="TUN054" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

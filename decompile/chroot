@@ -1,0 +1,3 @@
+binwalk -eM WLM-4600\ 1.40.img
+
+chroot ./squashfs-root qemu-mips-static /bin/sh

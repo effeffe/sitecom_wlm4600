@@ -1,0 +1,15 @@
+#!/bin/sh
+
+cd /
+mount -t proc null /proc
+mount -t tmpfs tmpfs /var
+mount -t sysfs none /sys
+#mount -t jffs2 /dev/mtdblock3 /usr/local/ct 
+tar xf /etc/var.tar
+
+mount -t tmpfs tmpfs /mnt
+mount -t usbfs none /proc/bus/usb
+mount -t tmpfs tmpfs /dev
+mkdir -p /var/run/usb
+mkdir -p /dev/pts
+mount -t devpts devpts /dev/pts

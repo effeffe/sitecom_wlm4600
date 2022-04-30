@@ -1,0 +1,184 @@
+
+<div class="blockquote">
+    <div>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="2SEC001">Wireless Security Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="2SEC002">This page allows you to change security settings.</td>
+		</tr>
+		<tr>
+				<td class="background" style="width:25%; " id="2SEC003">Wireless SSID : </td>
+				<td>
+				<select id="SEL_ssid" onChange="selectSSID()">
+				</select>
+				</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC004">Authentication Type : </td>
+			<td>
+				<select id="SEL_AuthType"  onChange="ctrlAuthType()">
+				</select>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<!-- WPA -->
+	<div id="wpa">
+	<p class="emphasize" id="span_wpa_title">WPA</p>
+	<div>
+	<table  width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC005">WPA Mode : </td>
+			<td>
+				<select id="SEL_WpaMode" onchange="onChgWapMode()">
+					<option value="PSKAuthentication">Personal</option>
+                    <option value="EAPAuthentication">Enterprise</option>
+				</select>
+			</td>
+		</tr
+		><tr>
+			<td class="background" style="width:25%; " id="2SEC006">Encryption : </td>
+			<td>
+				<select id="SEL_EncryptionMode" size="1" >
+					<option value="TKIPEncryption" >TKIP  </option>
+					<option value="AESEncryption" >AES </option>
+					<option value="TKIPandAESEncryption" >AES+TKIP</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC007">Group Key Update Interval : </td>
+			<td>
+				<input id="TE_GroupKey" type="text" maxlength="10" > 
+				<span id="2SEC008">(60 - 65535)</span>
+			</td>
+		</tr>
+		
+	</table>
+	</div>
+	<div id="prekey">
+    <table  width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC009">Pre-Shared Key : </td>
+			<td>
+				<input  id="TE_PreShareKey" type="text"  maxlength="64" size="48" onChange="checkShareKeyLength(this.value)" > 
+				<span id="2SEC010">(8-63 characters or 64 Hex strings)</span>
+			</td>
+		</tr>
+	</table>
+	</div>
+	
+	<!-- EAP (802.1x) -->
+	<div id="eap" >
+	<table width="900px" border="0" cellspacing="2">
+	    <tr>
+			<td class="emphasize" colspan="3" id="2SEC011">EAP (802.1x)</td>
+		</tr
+	    ><tr>
+			 <td class="background" style="width:25%; " id="2SEC012">RADIUS server IP Address : </td>
+			 <td>
+				   <input id="TE_RadiusIpAddr" type="text">
+			 </td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:25%; " id="2SEC013">RADIUS server Port : </td>
+			 <td>
+				   <input id="TE_RadiusPort" type="text" >
+				   <span id="2SEC026">(1 - 65535)</span>
+			 </td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:26%; " id="2SEC014">RADIUS server Shared Secret: </td>
+			 <td>
+				   <input id="TE_RadiusSharedSec" type="text"  maxlength="64"  onChange="checkRadiusSharedSecretLength(this.value)">
+				   <span id="2SEC027">(8-63 characters or 64 Hex strings)</span>
+			 </td>
+		</tr>           
+	</table>
+	</div>
+	</div>
+	<!-- WEP -->
+	<div id="wep">
+	<table  width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="2SEC015">WEP</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC016">Encryption Strength : </td>
+			<td>
+				<select id="SEL_WepIndex" size="1" onchange="onChgWepLen()">
+					<option value="40-bit">64 bit</option>
+                    <option value="104-bit">128 bit</option>
+                </select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC017">Choose WEP Key : </td>
+			<td>
+				<select id="SEL_WepKey" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC018">WEP Key Format : </td>
+			<td>
+				<select id="SEL_WepKeyFt">
+                    <option value="0">ASCII (5 characters)</option>
+                    <option value="1">HEX (10 characters)</option>
+                </select>
+			</td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:25%; " id="2SEC019">Key#1 : </td>
+			 <td>
+				   <input id="TE_WepKey1" type="text" maxlength="10">
+			 </td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:25%; " id="2SEC020">Key#2 : </td>
+			 <td>
+				   <input id="TE_WepKey2" type="text" maxlength="10">
+			 </td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:25%; " id="2SEC021">Key#3 : </td>
+			 <td>
+				   <input id="TE_WepKey3" type="text" maxlength="10">
+			 </td>
+		</tr>
+		<tr>
+			 <td class="background" style="width:25%; " id="2SEC022">Key#4 : </td>
+			 <td>
+				   <input id="TE_WepKey4" type="text" maxlength="10">
+			 </td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2SEC023">Authentication : </td>
+			<td>
+				<select id="SEL_auth" >
+                    <option value="None">Open</option>
+                    <option value="SharedAuthentication">Share Key</option>
+                </select>
+			</td>
+		</tr>
+		
+	</table>
+	</div>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="2SEC024" value="Submit" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="2SEC025" value="Refresh" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>
+
+

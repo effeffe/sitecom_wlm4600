@@ -1,0 +1,102 @@
+﻿
+<div class="blockquote">
+
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="FW015">Automatic Firmware Upgrade Setting</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="FW016">On this option you can set enable/disable the automatic firmware upgrade function</td>
+		</tr>
+
+	</table>
+    <table width="900px" border="0" cellspacing="2">
+        <tr>
+			<td class="background" style="width:25%; "><span  id="FW003">Automatic upgrade :</span></td>
+            <td>
+				<input type="radio" id="RAD_Enable" name="RAD_Switch" value="1"><label for="RAD_Enable" id="FW004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_Disable" name="RAD_Switch" value="0"><label for="RAD_Disable" id="FW005">Disable</label>
+			</td>
+		</tr>
+    </table>
+<form id="uiAutoUpgrade" method="post" action="webproc" onSubmit="return setAutoUpgrade();">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="submit" id="FW017" value="Save" >
+				<input type="button" id="FW018" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</form>
+<form name="firmForm" method="post" action="webupg" enctype="multipart/form-data" onSubmit="return upFirmwareProgress();">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="FW001">Firmware upgrade</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="FW002">On this option you can upgrade the routers firmware to a newere version (when available)</td>
+		</tr>
+
+	</table>
+
+	
+    <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="background"  id="FW006">New Firmware Location :</td>
+			<td><input type="file" name="firmware" id="firmware"  maxlength="128" size="30" ></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FW007">Clear Config :</td>
+			<td><input type="checkbox" name="clearConfig" id="clearConfig" /></td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<!--  必须有 name="btn" value="Upgrade Firmware" 否则升级失败 -->
+			<td style="text-align:right" colspan="2">
+				<input type="submit" name="btn" id="FW008"  value="Upgrade Firmware" >
+			</td>
+		</tr>
+	</table>
+	</form>
+	<form name="BackupForm"  method="post" action="webupg">
+		<table width="900px" cellspacing="2" border="0">
+			<tr>
+				<td class="background" style="width:25%"  id="FW009">Backup Config : </td>
+				<td>				
+					<input type="submit" id="FW010" value="Backup" />
+					<input type="hidden" id="name" name="name" value="downloadConfigCompress" />				
+				</td>
+			</tr>
+			<tr>
+				<td style="height:15px" colspan="4"></td>
+			</tr>
+		</table>
+	</form>
+	<form name="confForm1"  method="post" action="webupg" enctype="multipart/form-data" onSubmit="return upConfigProgress();">
+		<table width="900px" cellspacing="2" border="0">
+			<tr>
+				<td class="background" style="width:25%"  id="FW012">Config File : </td>
+				<td>
+					<input type="file" name="configCompress" id="config" maxlength="128" size="30" />
+					<input type="hidden" name="updateConfig" value="update">
+				</td>
+			</tr>
+			<tr>
+				<td style="height:15px" colspan="4"></td>
+			</tr>
+			<tr>
+				<td style="text-align:right" colspan="2">
+					<input type="submit" id="FW013"  value="Upgrade Config" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<table width="900px" cellspacing="2" border="0" id="tb_config">
+		<tr>
+			<td colspan="4" id="FW014">This might take several minutes, don't power off the router during upgrade. The router will restart after the upgrade.</td>
+		</tr>
+	</table>
+</div>

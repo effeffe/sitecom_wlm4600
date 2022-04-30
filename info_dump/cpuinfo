@@ -1,0 +1,57 @@
+system type		: Ralink RT63365 SOC
+processor		: 0
+cpu model		: MIPS 34Kc V5.5
+BogoMIPS		: 465.30
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 64
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0048, 0x0a60, 0x0268]
+ASEs implemented	: mips16 dsp mt
+shadow register sets	: 1
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+
+processor		: 1
+cpu model		: (null) V5.5
+BogoMIPS		: 348.97
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 64
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0048, 0x0a60, 0x0268]
+ASEs implemented	: mips16 dsp mt
+shadow register sets	: 1
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+
+processor		: 2
+cpu model		: (null) V5.5
+BogoMIPS		: 348.97
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 64
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0048, 0x0a60, 0x0268]
+ASEs implemented	: mips16 dsp mt
+shadow register sets	: 1
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+
+processor		: 3
+cpu model		: (null) V5.5
+BogoMIPS		: 348.97
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 64
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0048, 0x0a60, 0x0268]
+ASEs implemented	: mips16 dsp mt
+shadow register sets	: 1
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available
+

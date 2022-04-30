@@ -1,0 +1,168 @@
+﻿<div class="blockquote">
+<!--  
+  <table width="900px" border="0" cellspacing="2" id="ta_wizard_0" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="WIZ001">Wizard</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="WIZ002">The Setup Wizard will guide you step by step through a basic configuration procedure</td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right"><input type="button" id="WIZ024" value="Next" onClick="uiNext_0()"></td>
+		</tr>
+	</table>
+-->
+	<table width="900px" border="0" cellspacing="2" id="ta_wizard_1" >
+		<tr>
+			<td class="emphasize" colspan="3" id="WIZ003">Automatic scanning PVC</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="WIZ004">Click the “Start Scan” button to automatically start scanning your ADSL configuration settings, or click “Skip Scan” to select your ADSL settings manually.</td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+<!--		<input type="button" id="WIZ007" value="Previous" onClick="uiPrevious_1()">&nbsp; -->
+				<input type="button" id="WIZ008" value="Start Scan" onClick="uiStartScann();">
+                <input type="button" id="WIZ025" value="Skip Scan" onClick="skipAutoPVCScan();">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="ta_wizard_2" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="WIZ009">Select your country and ISP</td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr id="scanFail" style="display:none">
+			<td style="height:15px" colspan="4" align= "center"><span id="WIZ026" style="color:#FF0000" >Scan PVC Failed! please select your country and ISP</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; text-align:right;" ><span id="WIZ010">Country : </span></td>
+			<td><select id="SEL_country" size="1" onChange="onChgCountry(this.value);"></select></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; text-align:right;"><span id="WIZ011">ISP : </span></td>
+			<td><select id="SEL_isp" size="1"></select></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="WIZ012" value="Previous" onClick="uiPrevious_2()">&nbsp;
+				<input type="button" id="WIZ013" value="Next" onClick="uiNext_2()">
+			</td>
+		</tr>
+	</table>
+		<table width="900px" border="0" cellspacing="2" id="ta_wizard_3_ip" style="display:none; ">
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<td class="highlight" colspan="4" id="WIZ028">IP Settings</td>
+		</tr>
+		
+		<tr id="tr_ipv4addr">
+			<td class="background" style="width:25%; " id="WIZ029">IPv4 Address : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4IPAddress" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ030">Subnet Mask : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4Mask" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ031">Gateway : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4GW" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ032">Primary DNS :</td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_v4Pridns">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ033">Secondary DNS : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_v4Secdns">
+			</td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="WIZ034" value="Previous" onClick="uiPrevious_3()">&nbsp;
+				<input type="button" id="WIZ035" value="Finish" onClick="uiFinish()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="ta_wizard_3_ppp" style="display:none; ">
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<td class="highlight" colspan="4" id="WIZ015">PPP Settings</td>
+		</tr>
+		<tr id="scanSuccess" style="display:none">
+			<td></td>
+			<td style="height:15px" colspan="4">
+				<span id="WIZ027">Result of PVC scan is:</span>
+				<span id="pvcResult"></span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ016">Username : </td>
+			<td><input type="text" id="INPUT_Username" maxlength="64" size="18"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="WIZ017">Password : </td>
+			<td>
+				<input type="password" id="INPUT_Password" maxlength="64" size="18">
+			</td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="WIZ018" value="Previous" onClick="uiPrevious_3()">&nbsp;
+				<input type="button" id="WIZ019" value="Finish" onClick="uiFinish()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="ta_wizard_4" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="WIZ022">Quick Start Completed </td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="3"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><span id="WIZ020">Changes saved </span></td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="3"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="right"><input type="button" id="WIZ021" value="Close" onClick="uiClose()"></td>
+		</tr>
+	</table>
+</div>
+<style type="text/css">
+.black_overlay{ position: absolute; top: 0%; left: 0%; width: 100%; height: 100%; background-color:black; z-index:1001; -moz-opacity: 0.08; opacity:.20; /* for mozilla */ filter: alpha(opacity=20); /* for IE */ }
+.white_content { position: absolute; top: 225px; left: 40%; width: 20%; height: 115; padding: 16px; text-align:center; border: 1px solid #BBD2DB; background-color: #BBD2DB; z-index:1002; overflow: auto; }
+</style>
+<div id="DIV_Scann" style="display:none; ">
+	<div id="light" class="white_content">
+		<img src="/html/skin/indicator_medium.gif" />
+		<span style="display:block; font:12px Tahoma;" id="WIZ023">Scanning...</span>
+	</div>
+	<div id="fade" class="black_overlay"></div>
+</div>

@@ -1,0 +1,94 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="2"  id="4FIL001">IPv4 Filter Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="4FIL025">Use this page to configure a filter that allows or blocks IPv4 network traffic that matches a specified address or protocol.(WARNING: If you enabled SPI, all traffic initiated from WAN will be blocked. Excluding REMOTE ACL INPUT.)</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="4FIL002">Enable IP Filter : </td>
+			<td>
+				<input type="checkbox"  id="CHE_ipfilter" name="CHE_ipfilter">
+			</td>
+		</tr>
+        <tr>
+			<td class="background" style="width:25%; " id="4FIL026">Enable SPI : </td>
+			<td>
+				<input type="checkbox"  id="INPUT_SPI" name="INPUT_SPI">
+            </td>  
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="4FIL003">Security Level : </td>
+			<td>
+				<select id="SEL_SecurLevel"  size="1" onChange="uiOnload(this.value)">
+					<option value="3" id="lang_high">High</option>
+					<option value="2" id="lang_middle">Middle</option>
+					<option value="1" id="lang_low">Low</option>
+				</select>
+			</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="4FIL004">Filter Model</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="4FIL005">WAN &#8594; LAN : </td>
+			<td>
+				<input type="radio" id="RAD_wanTolan_white" name="RAD_wanTolan" value="1" onclick="createTable()">
+				<label for="RAD_wanTolan_white" id="4FIL006">White </label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_wanTolan_black" name="RAD_wanTolan" value="2" onclick="createTable()">
+				<label for="RAD_wanTolan_black" id="4FIL007">Black</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="4FIL008">LAN &#8594; WAN : </td>
+			<td>
+				<input type="radio" id="RAD_lanTowan_white" name="RAD_lanTowan" value="1" onclick="createTable()">
+				<label for="RAD_lanTowan_white" id="4FIL009">White </label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_lanTowan_black" name="RAD_lanTowan" value="2" onclick="createTable()">
+				<label for="RAD_lanTowan_black" id="4FIL010">Black</label>
+			</td>
+		</tr>
+     </table> 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="4FIL011" value="Submit" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="4FIL012" value="Refresh" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="4FIL013">Add IP filter rules : </td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="4FIL014">Choose : </td>
+			<td>
+				<select name="SEL_direct" id="SEL_direct" onChange="createTable()">
+					<option value="1">WAN &#8594; LAN</option>
+					<option value="2">LAN &#8594; WAN</option>
+				</select> 
+				<input type="button" id="4FIL015" name="add" value="Add a rule" onClick="uiAddRule()">
+			</td>
+		</tr>
+		<tr></tr>
+     </table> 
+	<table class="table2" width="900px" border="0" cellspacing="2" id="TA_ipfilter_List">
+		<tr>
+			<th id="4FIL016" width="5%" align="center">#</th>
+			<th id="4FIL017" width="15%" align="center">Enable</th>
+			<th id="4FIL018" width="15%" align="center">IP/Port(source)</th>
+			<th id="4FIL019" width="15%" align="center">IP/Port(destination)</th>
+			<th id="4FIL020" width="15%" align="center">Protocol</th>
+			<th id="4FIL021" width="15%" align="center">Description</th>
+			<th id="4FIL022" width="15%" align="center">Device Name</th>
+			<th id="4FIL023" width="5%" align="center">Edit</th>
+			<th id="4FIL024" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+</div>
+

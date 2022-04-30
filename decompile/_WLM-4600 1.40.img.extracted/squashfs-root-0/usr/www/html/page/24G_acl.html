@@ -1,0 +1,98 @@
+﻿
+<div class="blockquote">
+	<div>
+		<table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td class="emphasize" colspan="3" id="2ACL001">Wireless Access Control</td>
+			</tr>
+			<tr>
+				<td colspan="4" id="2ACL002">If you choose 'Allowed Listed', only those clients whose wireless MAC addresses are in the access control list will be able to connect to your Access Point. When 'Deny Listed' is selected, these wireless clients on the list will not be able to connect the Access Point.</td>
+			</tr>
+			<tr>
+				<td style="height:10px"></td>
+			</tr>
+			 <tr>
+				<td class="background" style="width:25%; " id="2ACL003">Wireless SSID : </td>
+				<td>
+				<select id="SEL_ssid" onchange="onSsidChange();">
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="2ACL004">Active : </td>
+				<td>
+					<input type="radio" id="RAD_EnWlAcl" name="RAD_EnWlAcl" value="1" onClick="onClkWlAcl(this.value)" >
+					<label for="RAD_EnWlAcl" id="2ACL005">Enable</label>&nbsp;&nbsp;
+					<input type="radio" id="RAD_DisWlAcl" name="RAD_EnWlAcl"  value="0"  onClick="onClkWlAcl(this.value)">
+					<label for="RAD_DisWlAcl" id="2ACL006">Disable</label>
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="2ACL007">Actions : </td>
+				<td>
+					<select id="SEL_AcsCtrlMode" size="1">
+						<option value="Whitelist">Allow</option>
+						<option value="Blacklist">Deny</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="gobalsubmit">
+		<table width="900px" border="0" cellspacing="2" >
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="2ACL008" value="Submit" onClick="uiSubmit()">&nbsp;
+					<input type="button" id="2ACL009" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div >
+	    <div class="highlight"  colspan="4" id="2ACL010">Wlan Filter list</div>
+		<table  class="table2" width="900px" border="0" cellspacing="2" id="MacFilterList">
+			<tr>
+				<th  style="width:25%; "  id="2ACL011"  align="center">Mac</th>
+				<th  style="width:25%; "  id="2ACL012"  align="center">Comment</th>
+				<th  style="width:20%; "  id="2ACL013"  align="center">Edit</th>
+				<th  style="width:20%; "  id="2ACL014"  align="center">Drop</th>
+			</tr>
+		 </table>
+		 <br />
+		 <table width="900px" border="0" cellspacing="2">
+			<tr>
+				<td colspan="2" align="center">
+					<input type="button" id="Add" onClick="uiAdd()" value="Add" >
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="incMacFilter">
+		<!-- Incoming Mac filter -->
+		<table width="900px" border="0" cellspacing="2" >
+			<tr>
+				<td class="highlight"  colspan="4" id="2ACL015">Incoming Mac Filter</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="2ACL016">MAC Address : </td>
+				<td>
+					<input type="text" id="TE_MacAddr" maxlength="20" size="20">
+				</td>
+			</tr>
+			<tr>
+				<td class="background" style="width:25%; " id="2ACL017">comment : </td>
+				<td>
+					<input type="text" id="TE_comment" maxlength="20" size="20">
+				</td>
+			</tr>
+		</table>
+		<table width="900px" border="0" cellspacing="2" id="tb_addbutton"> 
+			<tr>
+				<td colspan="2" align="right">
+					<input type="button" id="2ACL018" value="Apply" onClick="uiApply()">&nbsp;
+					<input type="button" id="2ACL019" value="Cancel" onClick="uiPageRefresh()">
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>

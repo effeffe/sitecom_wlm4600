@@ -1,0 +1,92 @@
+﻿<div class="topbar">
+	<ul id="topbartabs">
+		<!--  Home  -->
+		<?if eq `$var:menu` `home`
+		`
+			<li class="<?if eq `Hom_status` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=home&var:page=Hom_status"><span id="SUBM001">Status</span></a></li>
+			<li class="<?if eq `Hom_statistics` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=home&var:page=Hom_statistics" ><span id="SUBM002">Statistics</span></a></li>
+			<li class="<?if eq `Hom_dhcplist` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=home&var:page=Hom_dhcplist" ><span id="SUBM003">DHCP List</span></a></li>
+			<li class="<?if eq `Hom_diagnostics` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=home&var:page=Hom_diagnostics" ><span id="SUBM004">Diagnostics</span></a></li>
+		`?>
+		<!--  Wiazrd  -->
+		<?if eq `$var:menu` `wizard`
+		`
+		`?>
+		<!--  Basic Settings  -->
+		<?if eq `$var:menu` `basic`
+		`
+			<li class="<?if eq `Bas_lan` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=basic&var:page=Bas_lan"><span id="SUBM006">LAN Settings</span></a></li>
+			<li class="<?if eq `Bas_dhcp` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=basic&var:page=Bas_dhcp" ><span id="SUBM007">DHCP Settings</span></a></li>
+			<li class="<?if eq `Bas_wansum` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=basic&var:page=Bas_wansum" ><span id="SUBM008">WAN Settings</span></a></li>
+		`?>
+		<!--  2.4G Settings  -->
+		<?if eq `$var:menu` `24gwlan`
+		`<!--当Wireless Basic Settings页面Access Point选择Disable后要屏蔽其他的Wireless Settings页面，故加入id;majiangying 2112/10/19-->
+			<li id="24G_basic" class="<?if eq `24G_basic` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_basic" ><span id="SUBM009">Wireless Settings</span></a></li>
+			<li id="24G_security" class="<?if eq `24G_security` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_security" ><span id="SUBM010">Security Settings</span></a></li>
+			<li id="24G_acl" class="<?if eq `24G_acl` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_acl" ><span id="SUBM011">Wireless ACL</span></a></li>
+			<li id="24G_advanced" class="<?if eq `24G_advanced` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_advanced" ><span id="SUBM012">Advanced Wireless</span></a></li>
+			<li id="24G_wds" class="<?if eq `24G_wds` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_wds" ><span id="SUBM013">Wireless WDS</span></a></li>
+			<li id="24G_wps" class="<?if eq `24G_wps` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=24gwlan&var:page=24G_wps" ><span id="SUBM014">Wireless WPS</span></a></li>
+		`?>
+		<!--  5G Settings  -->
+		<?if eq `$var:menu` `5gwlan`
+		`
+			<li class="<?if eq `5G_basic` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_basic" ><span id="SUBM015">Wireless Settings</span></a></li>
+			<li id="5G_security" class="<?if eq `5G_security` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_security" ><span id="SUBM016">Security Settings</span></a></li>
+			<li id="5G_acl" class="<?if eq `5G_acl` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_acl" ><span id="SUBM017">Wireless ACL</span></a></li>
+			<li id="5G_advanced" class="<?if eq `5G_advanced` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_advanced" ><span id="SUBM018">Advanced Wireless</span></a></li>
+			<li id="5G_wds" class="<?if eq `5G_wds` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_wds" ><span id="SUBM052">Wireless WDS</span></a></li>
+			<li id="5G_wps" class="<?if eq `5G_wps` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=5gwlan&var:page=5G_wps" ><span id="SUBM053">Wireless WPS</span></a></li>                                                       
+		`?>
+		<!--  Advanced Settings  -->
+		<?if eq `$var:menu` `advanced`
+		`
+            <li class="<?if eq `Adv_dns` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_dns" ><span id="SUBM048">DNS</span></a></li>
+            <li class="<?if eq `Adv_adslset` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_adslset" ><span id="SUBM050">ADSL Setting</span></a></li>
+			<li class="<?if eq `Adv_qos` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_qos" ><span id="SUBM019">QoS</span></a></li>
+			<li class="<?if eq `Adv_upnp` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_upnp" ><span id="SUBM020">UPnP</span></a></li>
+			<li class="<?if eq `Adv_routing` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_routing" ><span id="SUBM021">Routing</span></a></li>
+			<!--
+			<li class="<?if eq `Adv_snmp` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_snmp" ><span id="SUBM022">SNMP</span></a></li>
+			-->
+			<li class="<?if eq `Adv_ddns` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_ddns" ><span id="SUBM023">DDNS</span></a></li>
+			<li class="<?if eq `Adv_mld` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_mld" ><span id="SUBM024">MLD</span></a></li>
+			<li class="<?if eq `Adv_alg` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_alg" ><span id="SUBM025">ALG</span></a></li>
+			<li class="<?if eq `Adv_iptunnel` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_iptunnel" ><span id="SUBM026">IP Tunnel</span></a></li>
+			<li class="<?if eq `Adv_tr69` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_tr69" ><span id="SUBM028">TR-69</span></a></li>
+<? if neq '<?get :InternetGatewayDevice.DeviceInfo.ProductClass ?>' 'WLM-2600\/v1001' 
+`
+            <li class="<?if eq `Adv_samba` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_samba" ><span id="SUBM029">USB Port</span></a></li>
+            <li class="<?if eq `Adv_dlna` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=advanced&var:page=Adv_dlna" ><span id="SUBM051">DLNA</span></a></li>
+		`?>
+		`?>
+		<!--  Firewall Settings  -->
+		<?if eq `$var:menu` `firewall`
+		`
+			<li class="<?if eq `Fir_acl` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_acl" ><span id="SUBM031">ACL</span></a></li>
+			<li class="<?if eq `Fir_ipv4filter` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_ipv4filter" ><span id="SUBM033">IPv4 Filter</span></a></li>
+			<li class="<?if eq `Fir_ipv6filter` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_ipv6filter" ><span id="SUBM034">IPv6 Filter</span></a></li>
+			<li class="<?if eq `Fir_urlfilter` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_urlfilter" ><span id="SUBM035">URL Filter</span></a></li>
+			<li class="<?if eq `Fir_macfilter` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_macfilter" ><span id="SUBM036">MAC Filter</span></a></li>
+			<li class="<?if eq `Fir_dmz` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_dmz" ><span id="SUBM037">DMZ</span></a></li>
+			<li class="<?if eq `Fir_dos` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_dos" ><span id="SUBM038">DoS</span></a></li>
+			<li class="<?if eq `Fir_virtual` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Fir_virtual" ><span id="SUBM039">Virtual Server</span></a></li>
+			<li class="<?if eq `Adv_pt` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=firewall&var:page=Adv_pt" ><span id="SUBM027">Port Triggering</span></a></li>
+		`?>
+		<!--  Toolbox Settings  -->
+		<?if eq `$var:menu` `toolbox`
+		`
+<? if neq '<?get :InternetGatewayDevice.DeviceInfo.ProductClass ?>' 'WLM-2600\/v1001' 
+`
+			<li class="<?if eq `Too_sitecom` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_sitecom" ><span id="SUBM040">Sitecom Cloud Security</span></a></li>
+`?>
+			<li class="<?if eq `Too_password` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_password" ><span id="SUBM041">Password</span></a></li>
+			<li class="<?if eq `Too_ping` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_ping" ><span id="SUBM047">Ping</span></a></li>
+			<li class="<?if eq `Too_time` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_time" ><span id="SUBM043">Time Settings</span></a></li>
+			<li class="<?if eq `Too_firmware` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_firmware" ><span id="SUBM044">Firmware</span></a></li>
+			<li class="<?if eq `Too_reboot` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_reboot" ><span id="SUBM045">Reboot</span></a></li>
+			<li class="<?if eq `Too_log` $var:page `actief`?>"><a href="/cgi-bin/webproc?getpage=html/index.html&var:menu=toolbox&var:page=Too_log" ><span id="SUBM046">System Log</span></a></li>
+		`?>
+	</ul>
+</div>

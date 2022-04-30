@@ -1,0 +1,82 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BLAN001">LAN Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="BLAN002">This page is used to configure the LAN interface of ADSL Router. Here you may change the settings for IP addresses, subnet mask, etc.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN003">IP Address : </td>
+			<td >
+				<input type="text" id="INPUT_IPAddress" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN004">Subnet Mask : </td>
+			<td >
+				<input type="text" id="INPUT_Mask" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN005">Alias IP Address : </td>
+			<td >
+				<input type="text" id="INPUT_AliasIPAddress" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN006">Alias IP Subnet Mask : </td>
+			<td >
+				<input type="text" id="INPUT_AliasMask" maxlength="15" size="15">
+			</td>
+		</tr>		
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN007">IGMP Snooping : </td>
+			<td>
+				<input type="radio" id="RAD_IGMPEnable" name="RAD_IGMP" value="1">
+				<label for="RAD_IGMPEnable" id="BLAN008">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_IGMPDisable" name="RAD_IGMP" value="0">
+				<label for="RAD_IGMPDisable" id="BLAN009">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN010">Dynamic Route : </td>
+			<td>
+				<select size="1" id="SEL_Route" onChange="onChgRoute(this.value)">
+					<option value="Off">OFF</option>
+					<option value="RIPv1">RIP1</option>
+					<option value="RIPv2">RIP2</option>
+				</select>
+				<span id="BLAN011">Direction</span>&nbsp;
+				<select size="1" id="SEL_Direction">
+					<option value="Both">Both</option>
+					<option value="In_only">IN Only</option>
+					<option value="Out_only">OUT Only</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BLAN012">IPv6 Address</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BLAN013">IPv6 Address : </td>
+			<td >
+				<input type="text"  maxlength="39" size="39" id="INPUT_IPv6Address">
+				<font size="+1">&nbsp;<span>/</span>&nbsp;
+					<input type="text" maxlength="3" size="3" id="INPUT_Prefix">
+				</font>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="BLAN014" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="BLAN015" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

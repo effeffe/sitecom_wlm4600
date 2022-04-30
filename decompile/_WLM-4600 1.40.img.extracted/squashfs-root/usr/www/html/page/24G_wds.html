@@ -1,0 +1,81 @@
+﻿
+<div class="blockquote">
+    <div> 
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="2WDS001">Wireless WDS Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="2WDS002">This page is used to configure the parameters for the Wireless WDS.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2WDS003">WDS Mode : </td>
+			<td>
+				<input type="radio" id="RAD_activated" name="RAD_activated" value="1" onClick="disWds()"><label for="RAD_activated" id="2WDS004">Activated</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisActivated" name="RAD_activated" value="0" onClick="disWds()" ><label for="RAD_DisActivated" id="2WDS005">Disactivated</label>
+			</td>
+		</tr>
+	</table>
+	</div>
+	<div id="wds_config">
+	<div id="wds_encryption"> 
+	<table  width="900px" border="0" cellspacing="2">
+	    <tr>
+			<td class="background" style="width:25%; " id="2WDS006">WDS Encryption Type : </td>
+			<td>
+				<select id="SEL_Encryption">
+				    <option value="TKIPEncryption">TKIP</option>
+                    <option value="AESEncryption">AES</option>
+				</select>&nbsp;
+			</td>
+		</tr>
+	    <tr>
+			<td class="background" style="width:25%; " id="2WDS007">WDS Key : </td>
+			<td>
+				<input type="text" id="TE_WdsKey" maxlength="64" size="48" onChange="checkShareKeyLength(this.value)">(8-63 characters or 64 Hex string)
+			</td>
+		</tr>
+	</table>
+	</div>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="2WDS008">Wireless MAC Address</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2WDS009">WDS Peer Mac #1 :</td>
+			<td>
+				<input type="text" id="TE_WdsMac_1" maxlength="20" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2WDS010">WDS Peer Mac #2 :</td>
+			<td>
+				<input type="text" id="TE_WdsMac_2" maxlength="20" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2WDS011">WDS Peer Mac #3 :</td>
+			<td>
+				<input type="text" id="TE_WdsMac_3" maxlength="20" size="20">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="2WDS012">WDS Peer Mac #4 :</td>
+			<td>
+				<input type="text" id="TE_WdsMac_4" maxlength="20" size="20">
+			</td>
+		</tr>
+		
+	</table>
+	</div>
+	<div>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="2WDS013" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="2WDS014" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<div>
+</div>

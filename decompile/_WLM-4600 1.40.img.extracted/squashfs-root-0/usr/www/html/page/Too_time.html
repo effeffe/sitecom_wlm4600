@@ -1,0 +1,135 @@
+﻿
+<div class="blockquote" id="NTPServerAuto">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="4" id="TIME001">Time Zone Setting</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="TIME002" >You can maintain the system time by synchronizing with a public time server over the Internet.</td>
+		</tr>
+		<!--tr>
+			<td class="highlight" colspan="4" id="lang_desenable">Automatically synchronize with Internet time servers</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_enable">Enable : </td>
+			<td><input type="checkbox" id="CHB_Enable" /></td>
+		</tr-->
+		<tr>
+			<td class="background" style="width:25%; " id="TIME003">Current Time : </td>
+			<td>&nbsp;<span id="timeShow">N/A (Can't find NTP server)</span></td>
+		</tr>
+		<tr>
+			<td class="highlight" colspan="4" id="TIME005">Time Synchronization</td>
+		</tr>
+		<tr>
+			<td class="background" rowspan="3" style="width:25%;" id="TIME006">Synchronize time with :</td>
+			<td>
+			    <input type="radio" id="RAD_NTPAuto" name="RAD_Time"  value="NtpServer" onClick="onClkSynchron(this.value);" checked=""><label for="RAD_NTPAuto" id="TIME007">NTP Server automatically</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			    <input type="radio" id="RAD_PCClock" name="RAD_Time"  value="PCClock" onClick="onClkSynchron(this.value);"><label for="RAD_PCClock" id="TIME008">PC 's Clock</label>
+			</td>
+		</tr>		
+		<tr>
+			<td>
+			    <input type="radio" id="RAD_manually" name="RAD_Time" value="Manually" onClick="onClkSynchron(this.value);"><label for="RAD_manually" id="TIME009">Manually</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_ntpserver">
+		<tr>
+			<td class="background" style="width:25%; " id="TIME010">NTP time server : </td>
+			<td>&nbsp;
+				<input type="text" id="INPUT_NTPServer" size="24" />
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TIME011">Time Zone Select :</td>
+			<td>&nbsp;
+				<select id="SEL_TimeZone" style="font-size:11px; width:350px;">
+					<option value='-12:00' selected>(GMT-12:00) International Date Line West</option>
+					<option value='-11:00'>(GMT-11:00) Midway Island</option>
+					<option value='-10:00'>(GMT-10:00) Hawaii</option>
+					<option value='-09:00'>(GMT-09:00) Alaska</option>
+					<option value='-08:00'>(GMT-08:00) Pacific Time (US, Canada), Tijuana</option>
+					<option value='-07:00'>(GMT-07:00) Arizona; Mountain Time (US, Canada)</option>
+					<option value='-06:00'>(GMT-06:00) Central America; Central Time (US, Canada)</option>
+					<option value='-05:00'>(GMT-05:00) Eastern Time (US, Canada)</option>
+					<option value='-04:00'>(GMT-04:00) Atlantic Time (Canada)</option>
+					<option value='-03:00'>(GMT-03:00) Brasilia; Buenos Aires; Greenland</option>
+					<option value='-02:00'>(GMT-02:00) Mid-Atlantic</option>
+					<option value='-01:00'>(GMT-01:00) Cape Vade</option>
+					<option value='+00:00'>(GMT) Greenwhich Mean Time: Dublin, Lisbon, London; Casablanca</option>
+					<option value='+01:00'>(GMT+01:00) Amsterdam, Berlin, Rome, Stockholm, Vienna, Paris</option>
+					<option value='+02:00'>(GMT+02:00) Athens, Istanbul, Cairo, Harare, Jerusalem</option>
+					<option value='+03:00'>(GMT+03:00) Baghdad, Kuwait, Riyadh, Moscow</option>
+					<option value='+04:00'>(GMT+04:00) Muscat</option>
+					<option value='+05:00'>(GMT+05:00) Islamabad, Karachi</option>
+					<option value='+05:30'>(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+					<option value='+06:00'>(GMT+06:00) Dhaka</option>
+					<option value='+07:00'>(GMT+07:00) Bangkok, Hanoi, Jakartha</option>
+					<option value='+08:00'>(GMT+08:00) Beijing, Hong Kong</option>
+					<option value='+09:00'>(GMT+09:00) Tokyo, Seoul</option>
+					<option value='+10:00'>(GMT+10:00) Brisbane, Sydney</option>
+					<option value='+11:00'>(GMT+11:00) Magadan, Solomon Islands</option>
+					<option value='+12:00'>(GMT+12:00) Auckland, Wellington, Fiji</option>
+				</select>
+			</td>
+		</tr>		
+		<tr>
+			<td class="highlight" colspan="4" id="TIME012">Automatically adjust clock for daylight saving changes</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TIME013">Enable : </td>
+			<td ><input type="checkbox" id="CHB_AutoEnable" onclick="uiclkDaylight()" /></td>
+		</tr>
+		<tr id = "dlstart">
+			<td class="background" style="width:25%;" id="TIME020">Start time :</td>
+			<td>		
+				<input type="text" id="INPUT_dlsMonth" 	size="5" maxlength="2">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_dlsDay" 	size="5" maxlength="2">&nbsp;<span>-</span>
+				<input type="text" id="INPUT_dlsYear" 	size="5" maxlength="4">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_dlsHour" 	size="5" maxlength="2">&nbsp;<span>:</span>
+				<input type="text" id="INPUT_dlsMinute" size="5" maxlength="2">&nbsp;<span id="TIME021">(Month/Date/Year-Hour:Minute)</span>
+			<td>
+		</tr>
+		<tr id = "dlend">
+			<td class="background" style="width:25%;" id="TIME022">End time :</td>
+			<td>	
+				<input type="text" id="INPUT_dleMonth" 	size="5" maxlength="2">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_dleDay" 	size="5" maxlength="2">&nbsp;<span>-</span>
+				<input type="text" id="INPUT_dleYear" 	size="5" maxlength="4">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_dleHour" 	size="5" maxlength="2">&nbsp;<span>:</span>
+				<input type="text" id="INPUT_dleMinute" size="5" maxlength="2">&nbsp;<span id="TIME023">(Month/Date/Year-Hour:Minute)</span>
+			<td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_manualtime" style="display:none; ">
+		<tr>
+			<td class="background" style="width:25%; " id="TIME014">Date :</td>
+			<td>&nbsp;
+				<input type="text" id="INPUT_Month" size="5" maxlength="2">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_Date" size="5" maxlength="2">&nbsp;<span>/</span>
+				<input type="text" id="INPUT_Year" size="5" maxlength="4">&nbsp;<span id="TIME015">(Month/Date/Year)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TIME016">Time :</td>
+			<td>&nbsp;
+				<input type="text" id="INPUT_Hour" size="5" maxlength="2">&nbsp;<span>:</span>
+				<input type="text" id="INPUT_Min" size="5" maxlength="2">&nbsp;<span>:</span>
+				<input type="text" id="INPUT_Sec" size="5" maxlength="2">&nbsp;<span id="TIME017">(hour:min:sec)</span>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="TIME018" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="TIME019" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>	
+</div>

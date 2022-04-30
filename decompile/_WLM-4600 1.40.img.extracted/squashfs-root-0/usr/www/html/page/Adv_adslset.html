@@ -1,0 +1,43 @@
+﻿<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+        <tr>
+			<td class="emphasize" colspan="4" id="DSLS001">ADSL Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="DSLS002">This page is used to configure the ADSL settings of your ADSL router.
+					You need to disable DSL before you change the ADSL mode. </td>
+		</tr>
+        <tr>
+            <td class="background" style="width:25%; " id="DSLS003">DSL Mode:</td>
+            <td><select id="SELECT_DSLMode">
+					<option value="MultiMode">Auto Sync-Up</option>
+                    <option value="ADSL2+">ADSL2+</option>
+                    <option value="G.dmt.bis">ADSL2</option>
+                    <option value="G.dmt">G.DMT</option>
+                    <option value="T1.413">T1.413</option>
+                    <option value="G.lite">G.lite</option>							
+            </select></td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="DSLS004">ADSL Type:</td>
+            <td><select id="SELECT_ADSLType">
+                    <option value="Annex_A">ANNEX A</option>
+  <? if eq '<?get :InternetGatewayDevice.DeviceInfo.ProductClass ?>' 'WLM-4601\/v1001' 
+`			
+			<option value="Annex_B">ANNEX B</option>
+`?>		                  
+										
+										<option value="Annex_I">ANNEX I</option>
+										<option value="Annex_A,Annex_L">ANNEX A/L</option>
+										<option value="Annex_M">ANNEX M</option>
+                    <option value="Annex_J">ANNEX J</option>
+					<option value="Annex_A,Annex_I,Annex_J,Annex_L,Annex_M">ANNEX A/I/L/M/J</option>
+            </select></td>
+        </tr>
+        <tr>
+			<td colspan="2" align="right">
+				<input type="button" name="submit" id="submit" value="Apply" onclick="uiSubmit()">
+			</td>
+		</tr>
+    </table>
+</div>	

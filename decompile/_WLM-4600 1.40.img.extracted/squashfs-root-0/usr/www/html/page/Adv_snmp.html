@@ -1,0 +1,66 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="SNMP001">SNMP Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="SNMP002">This page is used to configure the SNMP protocol.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP003">SNMP : </td>
+			<td>
+				<input type="radio" id="RAD_EnSnmp" name="RAD_snmp" value="1" onclick="doSnmpActive()">
+				<label for="RAD_EnSnmp" id="SNMP004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisSnmp" name="RAD_snmp" value="0" onclick="doSnmpActive()">
+				<label for="RAD_DisSnmp" id="SNMP005">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP006">Read Community : </td>
+			<td>
+				<input type="text" maxlength="15" size="30" id="TE_ReadComm">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP007">Set Community : </td>
+			<td>
+				<input type="text" maxlength="15" size="30" id="TE_SetComm">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP008">Trap Manager IP : </td>
+			<td>
+				<input type="text" maxlength="15" size="30" id="TE_TrapIp">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP009">Trap Community : </td>
+			<td>
+				<input type="text" maxlength="15" size="30" id="TE_TrapComm">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="SNMP010">Trap Version : </td>
+			<td>
+				<select size="1" id="SEL_TrapVersion">
+					<option value='1'>V1</option>
+					<option value='2'>V2c</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="SNMP011" value="Save" onClick="uiSubmit()">
+				<input type="button" id="SNMP012" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

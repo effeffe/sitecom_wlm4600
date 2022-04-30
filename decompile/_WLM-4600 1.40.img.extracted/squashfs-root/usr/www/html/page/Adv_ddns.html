@@ -1,0 +1,116 @@
+﻿
+<div class="blockquote">
+	<div id="DIV_DdnsList">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="DDNS001">Dynamic DNS Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="DDNS002">This page is used to configure the Dynamic DNS.</td>
+		</tr>
+	</table>
+	<table class="table2" width="900px" border="0" cellspacing="2" id="TA_Ddns_List">
+		<tr>
+			<th id="DDNS003" width="5%" align="center">#</th>
+			<th id="DDNS004" width="15%" align="center">Hostname</th>
+			<th id="DDNS005" width="15%" align="center">Username</th>
+			<th id="DDNS006" width="15%" align="center">Service</th>
+			<th id="DDNS007" width="15%" align="center">Interface</th>
+			<th id="DDNS008" width="5%" align="center">Edit</th>
+			<th id="DDNS009" width="5%" align="center">Drop</th>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr><td colspan="2" align="right"></td></tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="DDNS010" value="Add" onClick="uiAddDdns()">
+			</td>
+		</tr>
+	</table>
+	</div>
+
+	<table width="900px" border="0" cellspacing="2" id="TA_AddDdns" style="display:none">
+		<tr>
+			<td class="background" style="width:25%; " id="DDNS011">DDNS provider : </td>
+			<td>
+				<select id="SEL_DdnsProvider"  size="1" onChange="chooseDDNSProvider()"></select>
+			</td>
+		</tr>
+
+		<tr id="TR_hostname">
+			<td class="background" style="width:25%; " id="DDNS012">Hostname : </td>
+			<td>
+				<input type="text" id="TE_hostname" maxlength="63" size="32" >
+			</td>
+		</tr>
+	
+		<tr>
+			<td class="background" style="width:25%; " id="DDNS013">Interface : </td>
+			<td>
+				<select id="SEL_interface"  size="1"></select>
+			</td>
+		</tr>
+
+		<tr id="DynDNS.org" style="display:none"> <!-- DynDNS.org 3322.org  www.oray.cn block -->
+			<td class="background" style="width:25%; " id="DDNS014">Username : </td>
+			<td>
+				<input type="text" id="TE_username" maxlength="31" size="32" >
+			</td>
+		</tr>
+		<tr id="DynDNS.org_2" style="display:none">
+			<td class="background" style="width:25%; " id="DDNS015">Password : </td>
+			<td>
+				<input type="password" id="TE_password" maxlength="31" size="32" >
+			</td>
+		</tr>
+
+		<tr id="freedns.afraid.org" style="display:none"> <!-- freedns.afraid.org block -->
+			<td class="background" style="width:25%; " id="DDNS016">Hashkey : </td>
+			<td>
+				<input type="text" id="TE_hashkey" maxlength="63" size="64" >
+			</td>
+		</tr>
+
+		<tr id="TZO" style="display:none"><!-- TZO block -->
+			<td class="background" style="width:25%; " id="DDNS017">Email : </td>
+			<td>
+				<input type="text" id="TE_email" maxlength="31" size="32" >
+			</td>
+		</tr>
+		<tr id="TZO_2" style="display:none">
+			<td class="background" style="width:25%; " id="DDNS018">Key : </td>
+			<td>
+				<input type="password" id="TE_key" maxlength="31" size="32" >
+			</td>
+		</tr>
+
+		<tr id="GnuDIP" style="display:none"><!-- GnuDIP block-->
+			<td class="background" style="width:25%; " id="DDNS019">DDNS Server : </td>
+			<td>
+				<input type="text" id="TE_DdnsServer" maxlength="31" size="32" >
+			</td>
+		</tr>
+		<tr id="GnuDIP_2" style="display:none">
+			<td class="background" style="width:25%; " id="DDNS020">Username : </td>
+			<td>
+				<input type="text" id="TE_UsernameGnudip" maxlength="31" size="32" >
+			</td>
+		</tr>
+		<tr id="GnuDIP_3" style="display:none">
+			<td class="background" style="width:25%; " id="DDNS021">Password : </td>
+			<td>
+				<input type="password" id="TE_PasswordGnudip" maxlength="31" size="32" >
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="TA_AddDdns_2" style="display:none">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="DDNS022" value="Apply" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="DDNS023" value="Back" onClick="uiBack()">&nbsp;
+				<input type="button" id="DDNS024" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

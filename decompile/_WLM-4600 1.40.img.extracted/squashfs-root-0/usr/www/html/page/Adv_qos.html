@@ -1,0 +1,106 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="QOS001">Quality of Service</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="QOS002">Configuration of classification table for IP QoS.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS003">QoS : </td>
+			<td>
+				<input type="radio" id="RAD_EnQos" name="RAD_qos" value="1" onClick="onClkEnable();" />
+				<label for="RAD_EnQos" id="QOS004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisQos" name="RAD_qos" value="0" onClick="onClkEnable();" checked/>
+				<label for="RAD_DisQos" id="QOS005">Disable</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_queue">
+		<tr>
+			<td class="highlight" colspan="3" id="QOS006">QoS Queue</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS007">Direction : </td>
+			<td>
+				<input type="radio" id="RAD_Uplink" name="RAD_direct" value="Uplink" onClick="onClkUpDonwlink()" checked/>
+				<label for="RAD_Uplink" id="QOS008">Uplink(LAN -> WAN)</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_Downstream" name="RAD_direct" value="Downlink" onClick="onClkUpDonwlink()"/>
+				<label for="RAD_Downstream" id="QOS009">Downstream(WAN -> LAN)</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS010">Queue Enable : </td>
+			<td>
+				<input type="radio" id="RAD_EnqQeue" name="RAD_queue" value="1" />
+				<label for="RAD_EnqQeue" id="QOS011">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisQueue" name="RAD_queue" value="0"/>
+				<label for="RAD_DisQueue" id="QOS012">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS013">Bandwidth : </td>
+			<td>
+				<input type="text" id="INPUT_ShapingRate" size="10" />&nbsp;Kbps&nbsp;<span id="QOS014" style="color:#FF0000 ">(0 means no limit bandwidth)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS015">Discipline : </td>
+			<td>
+				<input type="radio" id="RAD_WRR" name="RAD_Discip" value="WRR" onClick="onClkDisclip()"/>
+				<label for="RAD_WRR" id="QOS016">WRR </label>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" id="RAD_StrictPrio" name="RAD_Discip" value="SP" onClick="onClkDisclip()" />
+				<label for="RAD_StrictPrio" id="QOS017">Strict Priority</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS018">WRR weight : </td>
+			<td>&nbsp;
+				<span id="QOS019">Highest:</span><input type="text" id="INPUT_Hightest" maxlength="2" size="2">&nbsp;
+				<span id="QOS020">High:</span><input type="text" id="INPUT_High" maxlength="2" size="2">&nbsp;
+				<span id="QOS021">Medium:</span><input type="text" id="INPUT_Medium" maxlength="2" size="2">&nbsp;
+				<span id="QOS022">Low:</span><input type="text" id="INPUT_Low" maxlength="2" size="2">&nbsp;
+				<span id="QOS023">(all sum should be less or equal than 100)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS024">Enable DSCP ReMark : </td>
+			<td><input type="checkbox" id="CHB_DSCPMark" /></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOS025">Enable 802.1p ReMark : </td>
+			<td><input type="checkbox" id="CHB_8021pMark" /></td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="QOS026" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="QOS027" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_qosrule">
+		<tr>
+			<td class="highlight" colspan="3" id="QOS028">QoS Classification Rules</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="ta_qosrules" class="table2">
+		<tr>
+			<th  style="width:5%; "  id="QOS029">#</th>
+			<th  style="width:8%; "  id="QOS030">Enable</th>
+			<th  style="width:55%; "  id="QOS031">Rule</th>
+			<th  style="width:20%; "  id="QOS032">Action</th>
+			<th  style="width:6%; "  id="QOS033">Edit</th>
+			<th  style="width:6%; "  id="QOS034">Drop</th>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_addbutton">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="QOS035" value="Add Rule" onClick="uiAdd()">
+			</td>
+		</tr>
+	</table>
+</div>

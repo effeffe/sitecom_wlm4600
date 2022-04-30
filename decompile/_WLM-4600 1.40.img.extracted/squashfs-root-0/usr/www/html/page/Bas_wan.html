@@ -1,0 +1,428 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN001">WAN Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="BWAN002">This page is used to configure basic WAN settings like ADSL and DNS Settings.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN003">Status : </td>
+			<td>
+				<input type="radio" id="RAD_EnPvc" name="RAD_Status" value="1">
+				<label for="RAD_EnPvc" id="BWAN004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisPvc" name="RAD_Status" value="0">
+				<label for="RAD_DisPvc" id="BWAN005">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN006">VPI : </td>
+			<td>
+				<input type="text" id="INPUT_VPI" maxlength="3" size="5">&nbsp;<span id="lang_VpiRange">(range: 0-255)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN007">VCI : </td>
+			<td>
+				<input type="text" id="INPUT_VCI" maxlength="5" size="5">&nbsp;<span id="lang_VciRange">(range: 32-65535)</span>
+			</td>
+		</tr>
+	</table>
+	<!--  QoS  -->
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN008">QoS</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN009">ATM QoS : </td>
+			<td>
+				<select id="SEL_ATMQoS" size="1" onChange="onChgQoSGrey(this.value)">
+					<option value="UBR">ubr</option>
+					<option value="CBR">cbr</option>
+					<option value="VBR-rt">rt-vbr</option>
+					<option value="VBR-nrt">nrt-vbr</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN010">PCR : </td>
+			<td>
+				<input type="text" id="INPUT_PCR" size="5">&nbsp;<span id="BWAN012">cells/second</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN013">SCR : </td>
+			<td>
+				<input type="text" id="INPUT_SCR" size="5">&nbsp;<span id="BWAN014">cells/second</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN015">MBS : </td>
+			<td>
+				<input type="text" id="INPUT_MBS" size="5">&nbsp;<span id="BWAN016">cells</span>
+			</td>
+		</tr>
+	</table><!--  QoS end  -->
+	<!--  Ipversion  -->
+	<table width="900px" border="0" cellspacing="2" id="tb_ipversion">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN017">IPv4/IPv6</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN018">IP Version : </td>
+			<td>
+				<select id="SEL_IPVersion" size="1" onChange="onChgProto(this.value)">
+					<option value="IPv4" selected>IPv4</option>
+					<option value="IPv6">IPv6</option>
+					<option value="IPv4_6">IPv4/IPv6</option>
+				</select>
+			</td>
+		</tr>
+	</table><!--  Ipversion end  -->
+	<!--  ISP  -->
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN019">Encapsulation</td>
+		</tr>
+		<tr>
+			<td class="background" rowspan="6" style="width:25%" id="BWAN020">ISP : </td>
+			<td>
+				<input type="radio" id="RAD_DHCP" name="RAD_ISPType" value="DHCP" checked onClick="onClkISP(this.value)">
+				<label for="RAD_DHCP" id="BWAN021">Dynamic IP Address</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_Static" name="RAD_ISPType" value="Static" onClick="onClkISP(this.value)">
+				<label for="RAD_Static" id="BWAN022">Static IP Address</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_IPoA" name="RAD_ISPType" value="IPoA" onClick="onClkISP(this.value)">
+				<label for="RAD_IPoA" id="BWAN023">IPoA</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_PPPoE" name="RAD_ISPType" value="PPPoE" onClick="onClkISP(this.value)">
+				<label for="RAD_PPPoE" id="BWAN024">PPPoE</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_PPPoA" name="RAD_ISPType" value="PPPoA" onClick="onClkISP(this.value)">
+				<label for="RAD_PPPoA" id="BWAN025">PPPoA</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="radio" id="RAD_Bridge" name="RAD_ISPType" value="Bridge" onClick="onClkISP(this.value)">
+				<label for="RAD_Bridge" id="BWAN026">Bridge Mode</label>
+			</td>
+		</tr>
+	</table><!--  ISP end  -->
+	<!--  ISP bt  -->
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_dhcp">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN027">Dynamic IP</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_static" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN028">Static IP</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_ipoa" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN029">IPoA</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_pppoe" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN030">PPPoE</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_pppoa" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN031">PPPoA</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_bridge" style="display:none; ">
+		<tr>
+			<td class="emphasize" colspan="3" id="BWAN032">Bridge Mode</td>
+		</tr>
+	</table><!--  ISP bt end  -->
+	<!--  IP common -->
+	<table width="900px" border="0" cellspacing="2" id="tb_bt_ipcommon">
+		<tr>
+			<td class="highlight" colspan="3" id="BWAN033">IP Common Options</td>
+		</tr>
+		<tr id="tr_service">
+			<td class="background" style="width:25%; " id="BWAN034">Service Type : </td>
+			<td>
+				<select id="SEL_Servicetype" size="1">
+					<option value="Internet">Internet</option>
+					<option value="TR069">TR069</option>
+					<option value="Internet_TR069">Internet_TR069</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN035">Encapsulation : </td>
+			<td>
+				<select id="SEL_IPEncap" size="1">
+					<option value="LLC">1483 Routed IP LLC</option>
+					<option value="VCMUX">1483 Routed IP VC-Mux</option>
+				</select>
+			</td>
+		</tr>
+		<tr id="tr_vlanid">
+			<td class="background" style="width:25%; " id="BWAN036">802.1Q VLAN ID : </td>
+			<td>
+				<input type="text" id="INPUT_VLanID" size="5" onChange="setServiceName()">&nbsp;<span id="BWAN038">(0 = disable, 1 - 4094)</span>
+			</td>
+		</tr>
+		<tr id="tr_priority">
+			<td class="background" style="width:25%; " id="BWAN037">Priority : </td>
+			<td>
+				<input type="text" id="INPUT_Priority" size="5">&nbsp;<span id="BWAN039">(0 - 7)</span>
+			</td>
+		</tr>
+		<tr id="tr_nat">
+			<td class="background" style="width:25%; " id="BWAN040">NAT : </td>
+			<td>
+				<select id="SEL_Nat" size="1">
+					<option value="1" selected>Enable</option>
+					<option value="0">Disable</option>
+				</select>
+			</td>
+		</tr>
+		<tr id="tr_dyroute">
+			<td class="background" style="width:25%; " id="BWAN041">Dynamic Route : </td>
+			<td>
+				<select size="1" id="SEL_RouteProto">
+					<option value="Off">OFF</option>
+					<option value="RIPv1">RIP1</option>
+					<option value="RIPv2">RIP2</option>
+				</select>
+				<span id="BWAN042">Direction</span>&nbsp;
+				<select size="1" id="SEL_Direction">
+					<option value="Both">Both</option>
+					<option value="In_only">IN Only</option>
+					<option value="Out_only">OUT Only</option>
+				</select>
+			</td>
+		</tr>
+		<tr id="tr_igmp">
+			<td class="background" style="width:25%; " id="BWAN043">IGMP Proxy : </td>
+			<td>
+				<input type="radio" id="RAD_EnIgmpProxy" name="RAD_IgmpProxy" value="1">
+				<label for="RAD_EnIgmpProxy" id="BWAN044">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisIgmpProxy" name="RAD_IgmpProxy" value="0" checked>
+				<label for="RAD_DisIgmpProxy" id="BWAN045">Disable</label>
+			</td>
+		</tr>
+		<tr id="tr_servername">
+			<td class="background" style="width:25%; " id="BWAN046">Service Name : </td>
+			<td>
+				<input type="text" id="INPUT_ServiceName" size="25" disabled>
+			</td>
+		</tr>
+	</table><!--  IP common end  -->
+	<!--  Connection setting  -->
+	<table width="900px" border="0" cellspacing="2" id="tb_connection" style="display:none; ">
+		<tr>
+			<td class="highlight" colspan="3" id="BWAN047">Connection Setting</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN048">Username : </td>
+			<td>
+				<input type="text" id="INPUT_Username" maxlength="64" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN049">Password : </td>
+			<td>
+				<input type="password" id="INPUT_Password" maxlength="64" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN050">Confirm Password : </td>
+			<td>
+				<input type="password" id="INPUT_cfPassword" maxlength="64" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN051">Connection : </td>
+			<td>
+				<input type="radio" id="RAD_AlwaysOn" name="RAD_ConnOndemand" value="AlwaysOn" checked onClick="onClkIdleTime(this.value)">
+				<label for="RAD_AlwaysOn" id="BWAN052">Always On (Recommended)</label>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:25%; " > </td>
+			<td>
+				<input type="radio" id="RAD_OnDemand" name="RAD_ConnOndemand" value="OnDemand" onClick="onClkIdleTime(this.value)">
+				<label for="RAD_OnDemand" id="BWAN053">Connect on Demand(Close if idle for</label>
+				<input type="text" id="INPUT_Minute" maxlength="3" size="5" disabled>
+				<span id="BWAN054">seconds</span>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:25%; " > </td>
+			<td>
+				<input type="radio" id="RAD_Manual" name="RAD_ConnOndemand" value="Manual" onClick="onClkIdleTime(this.value)">
+				<label for="RAD_Manual" id="BWAN055">Connect Manually</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN056">TCP MRU Option : </td>
+			<td>
+				<input type="text" id="INPUT_MRU" maxlength="4" size="5">&nbsp;
+				<span id="BWAN057">(576 ~ 1492)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN058">TCP MTU Option : </td>
+			<td>
+				<input type="text" id="INPUT_MTU" maxlength="4" size="5">&nbsp;
+				<span id="BWAN059">(576 ~ 1492)</span>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN060">Get IP Address : </td>
+			<td>
+				<input type="radio" id="RAD_GetStaticMode" name="RAD_GetIPMode" value="Static" onClick="onClkGetIPMode(this.value)">
+				<label for="RAD_GetStaticMode" id="BWAN061">Static</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_GetDHCPMode" name="RAD_GetIPMode" value="DHCP" onClick="onClkGetIPMode(this.value)" checked>
+				<label for="RAD_GetDHCPMode" id="BWAN062">Dynamic</label>
+			</td>
+		</tr>
+		<tr id="tr_pppaddr" style="display:none; ">
+			<td class="background" style="width:25%; " id="BWAN063">Static Address : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_PPPIPAddress" size="15">
+			</td>
+		</tr>
+		<tr id="tr_predelegat" style="display:none; ">
+			<td class="background" style="width:25%; " id="BWAN064">Prefix Delegation : </td>
+			<td>
+				<input type="checkbox" id="CHB_PreDele">
+			</td>
+		</tr>
+	</table><!--  Connection setting end  -->
+	<!--  IPv4 option  -->
+	<table width="900px" border="0" cellspacing="2" id="tb_ipv4option">
+		<tr>
+			<td class="highlight" colspan="3" id="BWAN065">IPv4 Options</td>
+		</tr>
+		<tr id="tr_ipv4addr">
+			<td class="background" style="width:25%; " id="BWAN066">IPv4 Address : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4IPAddress" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN067">Subnet Mask : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4Mask" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN068">Gateway : </td>
+			<td>
+				<input type="text" maxlength="15" id="INPUT_v4GW" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN069">Primary DNS :</td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_v4Pridns">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN070">Secondary DNS : </td>
+			<td>
+				<input type="text" maxlength="15" size="15" id="INPUT_v4Secdns">
+			</td>
+		</tr>
+	</table><!--  Ipv4 option end-->
+	<!--  IPv6 option  -->
+	<table width="900px" border="0" cellspacing="2" id="tb_ipv6option">
+		<tr>
+			<td class="highlight" colspan="3" id="BWAN071">IPv6 Options</td>
+		</tr>
+        <tr>
+			<td class="background" style="width:25%; " id="BWAN076">Prefix Delegation :</td>
+			<td>
+				<input type="checkbox" id="INPUT_v6delegation" onclick="onClkPrefix()">
+			</td>
+		</tr>
+    </table>
+    <table width="900px" border="0" cellspacing="2" id="tb_ipv6iana">
+        <tr>
+			<td class="background" style="width:25%; " id="BWAN083">IANA Only :</td>
+			<td>
+				<input type="checkbox" id="INPUT_v6iana">
+			</td>
+		</tr>
+    </table>
+    <table width="900px" border="0" cellspacing="2" id="tb_ipv6IpSetting" style="display:none;" >
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN072">IPv6 Address : </td>
+			<td>
+				<input type="text" maxlength="39" size="39" id="INPUT_v6IPAddress">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN073">IPv6 Address Length : </td>
+			<td >
+				<input type="text" maxlength="3" size="3" id="INPUT_ipv6AddrLength">
+			</td>
+			<!--td class="background" style="width:25%; " id="lang_ipv6addrprelen">Address Prefix/Length : </td>
+			<td >
+				<input type="text"  maxlength="39" size="39" id="INPUT_ipv6AddrPrefix">
+				<font size="+1">&nbsp;<span>/</span>&nbsp;
+				<input type="text" maxlength="3" size="3" id="INPUT_ipv6AddrLength">
+				</font>
+			</td-->
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN074">Gateway : </td>
+			<td>
+				<input type="text" id="INPUT_v6GW" size="39">
+			</td>
+		</tr>
+		<tr id = "ipv6Prefix">
+			<td class="background" style="width:25%; " id="BWAN075">IPv6 Prefix/Length : </td>
+			<td >
+				<input type="text" maxlength="39" size="39" id="INPUT_ipv6Prefix">
+				<font size="+1">&nbsp;<span>/</span>&nbsp;
+				<input type="text" maxlength="3" size="3" id="INPUT_ipv6Length">
+				</font>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN077">Primary DNS :</td>
+			<td>
+				<input type="text" maxlength="39" size="39" id="INPUT_v6Pridns">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="BWAN078">Secondary DNS : </td>
+			<td>
+				<input type="text" maxlength="39" size="39" id="INPUT_v6Secdns">
+			</td>
+		</tr>
+	</table><!--  IPv6 option end-->
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="BWAN079" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="BWAN080" value="Back" onClick="uiBack()">
+			</td>
+		</tr>
+	</table>
+</div>

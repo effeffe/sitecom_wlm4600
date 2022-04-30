@@ -1,0 +1,44 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="2" id="ACL001">ACL Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="ACL002">This page is used to configure the IP Address for Access Control List. If ACL is enabled, only these IP address that in the ACL Table can access CPE. Here you can add/delete IP Address.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="ACL003">Interface :</td>
+			<td>
+				<select id="SEL_connection" onChange="onChgIntf(this)">
+					<option></option>   
+				</select>
+			</td>
+		</tr>
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		 <tr>
+			 <td class="emphasize" id="ACL004" colspan='2'>ACL Table</td> 
+		 </tr>
+	 </table>
+ 	<table class="table2" width="900px" border="0" id="lang_AclTab" cellspacing="2">
+		 <tr>
+			 <th  id="ACL005">Service</th>
+			 <th  id="ACL006">Enable</th>
+			 <th  id="ACL007">Source IP Address</th>
+			 <th  id="ACL008">Source Mask Address</th>
+			 <th  id="ACL009">Protocol</th>
+			 <th  id="ACL010">Destination Port</th>
+		 </tr>
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="ACL011" value="Apply" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="ACL012" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

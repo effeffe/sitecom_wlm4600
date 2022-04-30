@@ -1,0 +1,350 @@
+﻿
+<div class="blockquote" id=IPMACFilter>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="lang_bt_basic">Filter</td>
+		</tr>
+		<tr>
+			<td colspan="4">Entries in this table are used to restrict certain types of data packets from your local network to Internet through the Gateway. Use of such filters can be helpful in securing or restricting your local network.</td>
+		</tr>
+		<tr>
+			<td class="highlight" id="lang_FilterType">Filter Type</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_FilterSel">Filter Type Selection : </td>
+			<td class="tabdata">
+				<select id="SEL_FilterSel">
+				    <option  >IP/MAC Filter</option>
+					<option >Application Filter</option>
+					<option >URL Filter</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="highlight" id="lang_RuleType">Rule Type</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_RuleSel">Rule Type Selection :  </td>
+			<td class="tabdata">
+				<select id="SEL_RuleSel">
+				    <option selected="" value="Black" >Black List</option>
+					<option value="White">White List</option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="highlight" colspan="2" id="lang_FilterEdit">IP/MAC Filter Rule Editing</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="lang_index">IP/MAC Filter Rule Index : </td>
+			<td class="tabdata">
+				<select id="SEL_index">
+				    <option selected="" value="0">1 </option>
+                    <option value="1">2 </option>
+                    <option value="2">3 </option>
+                    <option value="3">4 </option>
+                    <option value="4">5 </option>
+                    <option value="5">6 </option>
+                    <option value="6">7 </option>
+                    <option value="7">8 </option>
+                    <option value="8">9 </option>
+                    <option value="9">10 </option>
+                    <option value="10">11 </option>
+                    <option value="11">12 </option>
+                    <option value="12">13 </option>
+                    <option value="13">14 </option>
+                    <option value="14">15 </option>
+                    <option value="15">16 </option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="lang_active">Active : </td>
+			<td>
+				<input type="radio" id="RAD_enable" name="RAD_enable"><label for="RAD_enable" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_disable" name="RAD_enable"><label for="RAD_disable" id="lang_disable">Disable</label>
+			</td>
+		</tr>
+	</table>
+		
+	<span id="div_whitemac" style="display: block;">
+		     <table width="900px" cellspacing="2" border="0" style="margin-top:-2px">
+			     <tbody>
+				     <tr>
+                         <td class="background" style="width:25%" id="lang_interface">Interface : </td>
+						 <td class="tabdata">
+						     <select size="1" id="SEL_interface">
+							     <option>PVC0 </option>
+                                 <option>PVC1 </option>
+                                 <option>PVC2 </option>
+                                 <option>PVC3 </option>
+                                 <option>PVC4 </option>
+                                 <option>PVC5 </option>
+                                 <option>PVC6 </option>
+                                 <option>PVC7 </option>
+                                 <option>LAN </option>   
+						       </select>
+							</td>
+						</tr> 
+						<tr>
+                         <td class="background" style="width:25%" id="lang_direction">Direction : </td>
+						 <td class="tabdata">
+						     <select size="1" id="SEL_direction">
+							     <option>Both </option>
+                                 <option>Incoming </option>
+                                 <option>Outgoing </option>
+							   </select>
+						  </td>
+						</tr>         
+		         </tbody>
+             </table>
+	</span>
+	<table width="900px" cellspacing="2" border="0" style="margin-top:-2px">
+        <tbody>
+            <tr>
+			    <td class="background" style="width:25%" id="lang_rule">Rule Type : </td>
+				<td class="tabdata">
+                    <select size="1" onchange="doChangeRuleType()" id="SEL_RuleType">
+                        <option value="IP">IP </option>
+                        <option value="MAC">MAC </option>
+                    </select>
+                 </td>
+			</tr>
+			<tr>
+			    <td class="background" style="width:25%" id="lang_SrcIp">Source IP : </td>
+                 <td class="tabdata">
+                        <input type="TEXT"  value="0.0.0.0"  id="TE_SrcIP"  size="15" maxlength="15" onblur="blockMask(0);">(0.0.0.0 for all)
+                 </td>	
+		   	</tr>    
+            <tr>
+			    <td class="background" style="width:25%" id="SrcMask">Subnet Mask : </td> 
+                <td class="tabdata">
+                    <input type="TEXT"  value="0.0.0.0" name="TE_SrcMask" size="15" maxlength="15">
+                </td>
+			</tr>
+			<tr>
+			    <td class="background" style="width:25%" id="SrcPort">Port Number : </td>
+                <td class="tabdata">
+                    <input type="TEXT"  value="0" id="TE_SrcPort" size="8" maxlength="7">(0 for all)
+                </td>	
+		    </tr>
+            <tr>
+			    <td class="background" style="width:25%"  id="DstIp">Destination IP : </td>
+                <td class="tabdata">
+                    <input  type="TEXT"   value="0.0.0.0" id="TE_DstIP"  size="15" maxlength="15" onblur="blockMask(1);">(0.0.0.0 for all)
+                </td>
+			</tr>
+            <tr>
+			    <td class="background" style="width:25%"  id="DstMask">Subnet Mask : </td>
+                <td class="tabdata">
+                    <input  type="TEXT"   value="0.0.0.0"  id="TE_DstMask"  size="15" maxlength="15">
+                </td>
+			</tr>
+            <tr>
+			    <td class="background" style="width:25%" id="DstPort">Port Number : </td>
+                <td class="tabdata">
+                    <input  type="TEXT"   value="0" id="TE_DstPort" size="8" maxlength="7">(0 for all)
+                </td>			    
+			</tr>
+            <tr>
+			    <td class="background" style="width:25%" id="protocol">Protocol : </td>
+				<td class="tabdata">
+                    <select size="1"  id="SEL_protocol">
+                        <option>TCP </option>
+                        <option>UDP </option>
+                        <option>ICMP </option>
+                    </select>
+                 </td>    
+			</tr>
+        </tbody>
+     </table>
+	 
+	 <table width="900px" cellspacing="2" border="0">
+         <tbody>
+             <tr>
+			     <td class="highlight"  colspan="4" id="lang_list">IP / MAC Filter Listing</td>
+             </tr>
+			 <tr>
+                 <th width="5%" align="center" id="lang_th_sign">#</th>
+                 <th width="10%" align="center" id="lang_th_active">Active</th>
+                 <th width="10%" align="center" id="lang_th_interface">Interface</th>
+                 <th width="15%" align="center" id="lang_th_direction">Direction</th>   
+                 <th width="10%" align="center" id="lang_th_SrcAddrMask">Source Address/Mask</th>
+                 <th width="10%" align="center" id="lang_th_DstAddrMask">Destination Address/Mask</th>
+                 <th width="10%" align="center" id="lang_th_MacAddr">MAC Address</th>
+                 <th width="10%" align="center" id="lang_th_SrcPort">Src Port</th>
+                 <th width="5%" align="center"  id="lang_th_DstPort">Dst Port</th>
+			     <th width="15%" align="center" id="lang_th_protocol">Protocol</th>
+             </tr>
+		  </tbody>
+     </table> 
+	 
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="lang_set" value="Set" onClick="uiSet()">&nbsp;
+				<input type="button" id="lang_delete" value="Delete" onClick="uiDelete()">
+				<input type="button" id="lang_cancel" value="Cancel" onClick="uiCancel()">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="blockquote" id="AppFilter">
+    <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="lang_bt_basic">Filter</td>
+		</tr> 
+		<tr>
+			<td class="highlight" id="lang_FilterType">Filter Type</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_FilterSel">Filter Type Selection : </td>
+			<td class="tabdata">
+				<select id="SEL_FilterSel">
+				    <option  >IP/MAC Filter</option>
+					<option >Application Filter</option>
+					<option >URL Filter</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+            <td class="highlight"  id="lang_AppFilterEdit">Application Filter Editing</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_AppFilter">Application Filter : </td>
+			<td>
+				<input type="radio" id="RAD_AppFilterEnable" name="AppFilterEnable"><label for="RAD_AppFilterEnable" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_AppFilterDisable" name="AppFilterEnable"><label for="RAD_AppFilterDisable" id="lang_disable">Disable</label>
+			</td>
+        </tr> 
+		<tr>
+			<td class="background" style="width:25%; " id="lang_icq">ICQ : </td>
+			<td>
+				<input type="radio" id="RAD_IcqAllow" name="RAD_IcqAllow"><label for="RAD_IcqAllow" id="lang_allow">Allow</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_IcqDeny" name="RAD_IcqAllow"><label for="RAD_IcqDeny" id="lang_deny">Deny</label>
+			</td>
+        </tr> 
+		<tr>
+			<td class="background" style="width:25%; " id="lang_msn">MSN : </td>
+			<td>
+				<input type="radio" id="RAD_MsnAllow" name="RAD_MsnAllow"><label for="RAD_MsnAllow" id="lang_allow">Allow</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_MsnDeny" name="RAD_MsnAllow"><label for="RAD_MsnDeny" id="lang_deny">Deny</label>
+			</td>
+        </tr> 
+		<tr>
+			<td class="background" style="width:25%; " id="lang_ymsg">YMSG : </td>
+			<td>
+				<input type="radio" id="RAD_YmsgAllow" name="RAD_YmsgAllow"><label for="RAD_YmsgAllow" id="lang_allow">Allow</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_YmsgDeny" name="RAD_YmsgAllow"><label for="RAD_YmsgDeny" id="lang_deny">Deny</label>
+			</td>
+        </tr> 
+		
+		<tr>
+			<td class="background" style="width:25%; " id="lang_AudioVideo">Real Audio/Video : </td>
+			<td>
+				<input type="radio" id="RAD_AudioVideoAllow" name="RAD_AudioVideogAllow"><label for="RAD_AudioVideoAllow" id="lang_allow">Allow</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_AudioVideoDeny" name="RAD_AudioVideoAllow"><label for="RAD_AudioVideoDeny" id="lang_deny">Deny</label>
+			</td>
+        </tr> 
+		  
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="lang_save"  value="Save" onClick="uiSave()">&nbsp;
+				<input type="button" id="lang_cancel" value="Cancel" onClick="uiCancel()">
+			</td>
+		</tr>
+	</table>
+</div>
+
+<div class="blockquote" id="UrlFilter">
+    <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="lang_bt_basic">Filter</td>
+		</tr> 
+		<tr>
+			<td class="highlight" id="lang_FilterType">Filter Type</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_FilterSel">Filter Type Selection : </td>
+			<td class="tabdata">
+				<select id="SEL_FilterSel">
+				    <option  >IP/MAC Filter</option>
+					<option >Application Filter</option>
+					<option >URL Filter</option>
+				</select>
+			</td>
+		</tr>
+		
+		<tr>
+            <td class="highlight"  id="lang_UrlFilterEdit">URL Filter Editing</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_UrlActive">Active : </td>
+			<td>
+				<input type="radio" id="RAD_UrlActiveEnable" name="RAD_UrlActiveEnable"><label for="RAD_UrlActiveEnable" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_UrlActiveDisable" name="RAD_UrlActiveEnable"><label for="RAD_UrlActiveDisable" id="lang_disable">Disable</label>
+			</td>
+        </tr> 
+		<tr>
+			<td class="background" style="width:25%; " id="lang_UrlIndex">URL Index : </td>
+			<td class="tabdata">
+				<select id="SEL_UrlIndex">
+				    <option value="0" selected="">1 </option>
+                    <option value="1">2 </option>
+                    <option value="2">3 </option>
+                    <option value="3">4 </option>
+                    <option value="4">5 </option>
+                    <option value="5">6 </option>
+                    <option value="6">7 </option>
+                    <option value="7">8 </option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="lang_IndivActive">Individual active : </td>
+			<td>
+				<input type="radio" id="RAD_IndivActiveEnable" name="RAD_IndivActiveEnable"><label for="RAD_IndivActiveEnable" id="lang_enable">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_IndivActiveDisable" name="RAD_IndivActiveEnable"><label for="RAD_IndivActiveDisable" id="lang_disable">Disable</label>
+			</td>
+        </tr> 
+		
+		<tr>
+			<td class="background" style="width:25%" id="UrlHost">URL(host) : </td>
+             <td class="tabdata">
+                 <input  type="TEXT"   id="TE_UrlHost"  value=""  size="48" maxlength="48">
+             </td>	
+		 </tr>		
+    </table>
+	
+	<table width="900px" cellspacing="2" border="0">
+         <tbody>
+             <tr>
+			     <td class="highlight"  colspan="4" id="lang_UrlFilterList">URL Filter Listing</td>
+             </tr>
+			 <tr>
+                 <th width="10%" align="center" id="lang_th_index">Index</th>
+                 <th width="45%" align="center" id="lang_th_active">Active</th>
+                 <th width="45%" align="center" id="lang_th_url">URL</th>             
+             </tr>
+		  </tbody>
+     </table> 
+	 
+	  
+	 <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="lang_save" value="Save" onClick="uiSave()">&nbsp;
+				<input type="button" id="lang_delete" value="Delete" onClick="uiDelete()">
+				<input type="button" id="lang_cancel" value="Cancel" onClick="uiCancel()">
+			</td>
+		</tr>
+	</table>
+</div>
+

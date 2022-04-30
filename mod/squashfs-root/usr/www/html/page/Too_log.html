@@ -1,0 +1,48 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" id="LOG001">System Log</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="LOG002">If the log mode is enabled, the system will begin to log all the selected events.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="LOG003">Enable Log : </td>
+			<td >
+				<input type="checkbox" id="CHB_Enable" />
+			</td>
+		</tr>
+		<tr><td style="height:15px" colspan="4"></td></tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="LOG004" value="Save" onClick="uiSubmit()" />&nbsp;
+				<input type="button" id="LOG005" value="Cancel" onClick="uiPageRefresh()" />
+			</td>
+		</tr>
+		<tr><td style="height:15px" colspan="4"></td></tr>
+	</table>	
+	<table width="900px" cellspacing="2" border="0" id="tb_logview" style="display:none; ">
+		<tr>
+			<td class="tabdata" align="center">
+				<textarea name="textarea" cols="98" rows="17" id="INPUT_LogText" readonly></textarea>
+			</td>
+		</tr>
+		<tr><td style="height:15px" colspan="4"></td></tr>
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="LOG006" value="Refresh" onClick="uiPageRefresh()" />&nbsp;
+				<input type="button" id="LOG007" value="Clear" onClick="uiClear()" />&nbsp;
+				<input type="button" id="LOG008" value="Save Log" onClick="uiSave()" />
+			</td>
+		</tr>
+	</table>
+	<form name="uiShowLog" id="uiShowLog" method="post" action="webupg">
+		<input type="hidden" name="name" value="ShowSysEvtLogFile" />
+	</form>
+	<form name="uiDownloadLog" id="uiDownloadLog" method="post" action="/cgi-bin/webupg">
+		<input type="hidden" name="name" value="downloadSysEvtLogFile"/>
+	</form>
+</div>

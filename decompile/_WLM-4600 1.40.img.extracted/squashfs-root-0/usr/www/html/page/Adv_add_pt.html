@@ -1,0 +1,107 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize"  id="PTA001" colspan="4">Port Triggering - Services</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA002">Service Name : </td>
+			<td>
+				<input type="text" name="TE_ServiceName" id="TE_ServiceName" maxlength="32" size="16">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA003">Service User : </td>
+			<td>
+				<select id="SEL_ServiceUser" onchange="ServiceUser_Onchange();" size="1">
+					<option value="Any" id="PTA004">Any</option>
+					<option value="Single address" id="PTA005">Single address</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>
+				<input type='text' id="TE_IpAddr_1" maxlength=3 style="width:30px"  onfocus="this.select();" onkeyup="IPKeyUp(event,this);" onkeydown="return IPKeyDown(event, this)" />.
+				<input type='text' id="TE_IpAddr_2" maxlength=3 style="width:30px" onfocus="this.select();" onkeyup="IPKeyUp(event,this);" onkeydown="return IPKeyDown(event, this)" />.
+				<input type='text' id="TE_IpAddr_3" maxlength=3 style="width:30px" onfocus="this.select();" onkeyup="IPKeyUp(event,this);" onkeydown="return IPKeyDown(event, this)" />.
+				<input type='text' id="TE_IpAddr_4" maxlength=3 style="width:30px"  onfocus="this.select();" onkeyup="IPKeyUp(event,this);" onkeydown="return IPKeyDown(event, this)" />&nbsp;
+				<input type="button" id="BUT_searchIP" value="Search IP Address" onClick="onClickSearchIP()">
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="PTA006">Service Type : </td>
+			<td>
+				<select id="SEL_ServiceType" size="1">
+					<option value="TCP" selected="selected">TCP</option>
+					<option value="UDP" >UDP</option>
+					<option value="TCP/UDP">TCP/UDP</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA007">Triggering Start Port : </td>
+			<td>
+				<input type="text" id="TE_PortStart" maxlength="5" size="16">(1~65535)
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA008">Triggering End Port : </td>
+			<td>
+				<input type="text" id="TE_PortEnd" maxlength="5" size="16">(1~65535)
+			</td>
+		</tr>
+		<tr>
+			<td class="emphasize"></td>
+		</tr>
+		<tr>
+			<td class="emphasize"  id="PTA009" colspan="4">Required Inbound Connection</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA010">Connection Type : </td>
+			<td>
+				<select id="SEL_ConnType" size="1">
+					<option value="TCP" >TCP</option>
+					<option value="UDP" >UDP</option>
+					<option value="TCP/UDP" selected="selected">TCP/UDP</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA011">Starting Port : </td>
+			<td>
+				<input type="text" id="TE_OpenPortStart" maxlength="5" size="16">(1~65535)
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="PTA012">Ending Port : </td>
+			<td>
+				<input type="text" id="TE_OpenPortEnd" maxlength="5" size="16">(1~65535)
+			</td>
+		</tr>
+     </table> 
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="PTA013" value="Apply" onClick="uiSubmit();"/>
+				<input type="button" id ="PTA014" value="Cancel" onClick="uiCancel()" />
+			</td>
+		</tr>
+		<tr><td colspan="2" align="right"></td></tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="TA_lanip" style="display:none; ">
+		<tr>
+			<th id="PTA015" width="5%" align="center">NO.</th>
+			<th id="PTA016" width="15%" align="center">IP Address</th>
+			<th id="PTA017" width="15%" align="center">Host Name</th>
+			<th id="PTA018" width="15%" align="center">Choice</th>
+		</tr>
+	</table>
+</div>
+
+
+
+
+
+

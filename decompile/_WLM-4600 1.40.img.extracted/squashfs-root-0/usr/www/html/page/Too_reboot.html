@@ -1,0 +1,51 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" id="RBT001">System Restart</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="RBT002">This page is used to apply changes to system memory and reboot the router, or reset to factory defaults.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="RBT003">System Restart with : </td>
+			<td>
+				<input type="radio" id="RAD_CurSet" name="RAD_Restart" value="1" onClick="onClkStart(this.value)" checked><label for="RAD_CurSet" id="RBT004">Current Settings</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_FacSet" name="RAD_Restart" value="0" onClick="onClkStart(this.value)"><label for="RAD_FacSet" id="RBT005">Factory Default Settings</label>
+			</td>
+		</tr>
+		<tr>
+			<td style="height:15px" colspan="4"></td>
+		</tr>
+	</table>	
+	<table width="900px" border="0" cellspacing="2" id="tb_currestart" style="display: ">
+		<tr>
+			<td colspan="2" align="right">
+				<form name="reboot" id="reboot" method="post" action="webproc">
+					<input type="submit" id="RBT006" name="reboot" value="RESTART" />
+					<input type="hidden" name="obj-action" value="reboot" />
+					<input type="hidden" name="var:noredirect" value="1" />
+					<input type="hidden" name="var:menu" value="toolbox" />
+					<input type="hidden" name="var:page" value="Too_reboot" />
+					<input type="hidden" name="var:errorpage" value="Too_reboot" />
+					<input type="hidden" name="getpage" value="html/page/restarting.html" />					
+				</form>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="tb_facrestart" style="display:none; ">
+		<tr>
+			<td colspan="2" align="right">
+				<form name="restore" id="restore" method="post" action="webproc">
+					<input type="submit" id="RBT007" name="restore" value="RESTART">
+					<input type="hidden" name="obj-action" value="recover" />
+					<input type="hidden" name="var:noredirect" value="1" />
+					<input type="hidden" name="var:menu" value="toolbox" />
+					<input type="hidden" name="var:page" value="Too_reboot" />
+					<input type="hidden" name="var:errorpage" value="Too_reboot" />
+					<input type="hidden" name="getpage" value="html/page/restarting.html" />
+				</form>
+			</td>
+		</tr>
+	</table>
+</div>

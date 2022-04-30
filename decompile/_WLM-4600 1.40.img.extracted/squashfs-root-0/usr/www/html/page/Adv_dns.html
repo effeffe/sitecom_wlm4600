@@ -1,0 +1,58 @@
+﻿<div class="blockquote">
+    <table width="900px" border="0" cellspacing="2">
+    	<tr>
+			<td class="emphasize" colspan="3" id="ADNS001">DNS</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="ADNS002">DNS Server Configuration.</td>
+		</tr>
+        <tr>
+			<td class="background" style="width:25%; " id="ADNS003">WAN Connection : </td>
+			<td>
+				<select id="selectConnectionName" name="selectConnectionName" onChange="onChangeSelected();"></select>
+			</td>
+		</tr>
+    </table>
+    <table width="900px" border="0" cellspacing="2" id="IPv4_DNS_Setting">
+        <tr>
+			<td class="background" style="width:25%; " id="ADNS004">IPv4 static DNS: </td>
+			<td>
+				<input type="checkbox" id="IPv4DNSModeManual" name="IPv4DNSOverrideAllowed" value="1" onclick="ClickIPv4DNSMode()">
+				<label for="IPv4DNSModeManual" id="ADNS006">Enabled</label>
+			</td>
+        <tr>
+            <td class="background" style="width:25%; " id="ADNS007">Preferred DNS server :</td>
+            <td><input type="text" maxlength=15 id="INPUT_IPv4_DNS1" value=""></td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="ADNS008">Alternate DNS server :</td>
+            <td><input type="text" maxlength=15 id="INPUT_IPv4_DNS2" value=""></td>
+		</tr>    
+    </table>
+    <table width="900px" border="0" cellspacing="2" id="IPv6_DNS_Setting">
+        <tr>
+			<td class="background" style="width:25%; " id="ADNS009">IPv6 static DNS: </td>
+			<td>
+				<input type="checkbox" id="IPv6DNSModeManual" name="IPv6DNSOverrideAllowed" value="1" onclick="ClickIPv6DNSMode()">
+				<label for="IPv6DNSModeManual" id="ADNS011">Enabled</label>
+			</td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="ADNS012">Preferred DNS server :</td>
+            <td><input type="text" maxlength=39 id="INPUT_IPv6_DNS1" value=""></td>
+        </tr>
+        <tr>
+            <td class="background" style="width:25%; " id="ADNS013">Alternate DNS server :</td>
+            <td><input type="text" maxlength=39 id="INPUT_IPv6_DNS2" value=""></td>
+		</tr>    
+    </table>
+    <table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="submit" name="submit" id="ADNS014" value="Apply" onClick="uiSubmit()">
+				<input type="button" name="refresh" id="ADNS015" value="Cancel" onClick="uiPageRefresh()">	
+			</td>
+		</tr>
+	</table>
+</div> 
+				     			  

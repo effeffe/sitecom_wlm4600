@@ -1,0 +1,95 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="TR69001">CWMP Setup</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="TR69002">This page is used to configure TR-069.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69003">CWMP : </td>
+			<td>
+				<input type="radio" id="RAD_CwmpEnable" name="RAD_CwmpEnable" value="1" onclick="doCwmpActive(1)">
+				<label for="RAD_CwmpEnable" id="TR69004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_CwmpDisable" name="RAD_CwmpEnable" value="0" onclick="doCwmpActive(0)">
+				<label for="RAD_CwmpDisable" id="TR69005">Disable</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="TA_tr069">
+		<tr>
+			<td class="highlight" id="TR69006">ACS Login Information</td>
+		</tr>
+		
+		<tr>
+			<td class="background" style="width:25%; " id="TR69007">URL :</td>
+			<td>
+				<input type="text"  id="TE_url" maxlength="256" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69008">Username :</td>
+			<td>
+				<input type="text"  id="TE_AcsUsername" maxlength="256" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69009">Password :</td>
+			<td>
+				<input type="password"  id="TE_AcsPassword" maxlength="256" size="32">
+			</td>
+		</tr>
+		
+		<tr>
+			<td class="highlight" colspan="2" id="TR69010">Connection Request Information</td>
+		</tr>
+		
+		
+		<tr>
+			<td class="background" style="width:25%; " id="TR69011">Connection Request Authentication :</td>
+			<td>
+				<input type="checkbox"  id="CHE_auth" name="CHE_auth" onclick="enableAuth()">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69012">Username :</td>
+			<td>
+				<input type="text"  id="TE_ConnectUsername" maxlength="256" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69013">Password :</td>
+			<td>
+				<input type="password"  id="TE_ConnectPassword" maxlength="256" size="32">
+			</td>
+		</tr>
+		<tr>
+			<td class="highlight"  id="TR69014">Periodic Inform Config</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="TR69015">Periodic Inform : </td>
+			<td>
+				<input type="radio" id="RAD_InformEnable" name="RAD_InformEnable" value="1" onClick="doInformActive(1)">
+				<label for="RAD_InformEnable" id="TR69016">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_InformDisable" name="RAD_InformEnable" value="0" onClick="doInformActive(0)">
+				<label for="RAD_InformDisable" id="TR69017">Disable</label>
+			</td>
+		</tr>
+		<tr id="TR_interval">
+			<td class="background" style="width:25%; " id="TR69018">Interval :</td>
+			<td>
+				<input type="text"  id="TE_interval" maxlength="10" size="10">(10-4294967295)
+			</td>
+		</tr>	
+	</table>
+	
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" style="text-align:right" >
+				<input type="button" id="TR69019" value="Apply" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="TR69020" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

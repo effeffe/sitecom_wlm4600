@@ -1,0 +1,5 @@
+Availability of source code
+
+This product contains open source software, including software licensed under the GNU General Public License (GPL) v2/v3 and/or the Lesser/Library General Public License (LGPL) v2/2.1/3 as specified in the “Licensing Information” available above. As per the license terms of these licenses Sitecom Europe B.V. offers to send you the source code for the open source components in this product on a CD/DVD for up to three years after support for this product has stopped for a charge of EUR 10. Please note that the source code of the firmware might already be on the support CD/DVD that is shipped with your product.
+
+To get a copy of the software, please send an e-mail to gpl-request@sitecom.com or write to Sitecom Europe B.V., P.O. Box 12040, 3004GA Rotterdam, The Netherlands. Please specify the device type and version number when contacting us to ensure smooth handling of your request. For your convenience you may also find the source code for the latest supported firmware version on the product’s website during the time the product is supported. If you cannot find the source code for the relevant firmware please contact us.

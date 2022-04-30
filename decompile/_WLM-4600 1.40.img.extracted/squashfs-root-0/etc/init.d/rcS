@@ -1,0 +1,98 @@
+#!/bin/sh
+
+. /etc/functions.sh
+echo "@@@@@@@Welcome to TBS System@@@@@@@"
+
+echo "load tccicmd driver"
+insmod /lib/modules/driver/tccicmd.ko
+
+echo "load sel driver"
+insmod /lib/modules/driver/module_sel.ko
+
+echo "load raeth driver"
+insmod /lib/modules/driver/raeth.ko
+
+echo "load tc3162 atm driver"
+insmod /lib/modules/driver/tc3162l2sar.ko
+
+echo "load tc3162 dmt driver"
+insmod /lib/modules/driver/tc3162_dmt.ko
+
+#Binding sar to VPE 2. shnwind add.for RT65168/RT63365/RT63368
+#echo 4 >/proc/irq/23/smp_affinity
+
+
+###set environment variable
+source /etc/init.d/env.rc
+
+###mount filesystem
+/etc/init.d/filesystem.rc
+
+
+
+if [ -x /etc/init.d/mkdev.rc ]; then
+  /etc/init.d/mkdev.rc
+fi
+
+###install usb driver
+if [ -x /etc/init.d/usb.rc ]; then
+  /etc/init.d/usb.rc
+fi
+
+load_modules /etc/modules.d/*
+
+
+###install wlan driver
+if [ -x /etc/init.d/wlan.rc ]; then
+  /etc/init.d/wlan.rc
+fi
+
+###install product driver
+if [ -x /etc/init.d/product.rc ]; then
+  /etc/init.d/product.rc
+fi
+
+###install btn driver
+if [ -x /etc/init.d/btn.rc ]; then
+  /etc/init.d/btn.rc
+fi
+
+
+###install led driver
+if [ -x /etc/init.d/led.rc ]; then
+  /etc/init.d/led.rc
+fi
+
+###install dsl driver
+if [ -x /etc/init.d/dsl.rc ]; then
+  /etc/init.d/dsl.rc
+  wan adsl close
+fi
+
+###enable reboot when kernel panic
+echo 1 >  /proc/sys/kernel/panic
+
+###config network
+ifconfig lo 127.0.0.1 up
+echo 1 > /proc/sys/net/ipv4/ip_forward
+/etc/init.d/network.rc
+
+
+echo "load wifi rt5392ap driver"
+flash_test -read wlan_cfg -f /var/RT30xxEEPROM.bin
+insmod /lib/modules/rt5392ap.ko
+
+###start daemon
+/etc/init.d/daemon.rc
+
+
+###load usb other module after late logic ###
+###hotplug remount usb story device after system reboot###
+insmod /lib/modules/2.6.36/kernel/drivers/usb/host/ehci-hcd.ko
+insmod /lib/modules/2.6.36/kernel/drivers/usb/host/ohci-hcd.ko
+
+
+###Others
+if [ -x /etc/init.d/private.rc ]; then
+	/etc/init.d/private.rc
+fi

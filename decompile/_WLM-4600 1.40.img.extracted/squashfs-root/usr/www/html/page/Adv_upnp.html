@@ -1,0 +1,43 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="UPnP001">UPnP Configuration</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="UPnP002">This page is used to configure UPnP. The system acts as a daemon when you enable it.</td>
+		</tr>
+		<tr>
+			<td style="height:10px"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="UPnP003">UPnP  : </td>
+			<td>
+				<input type="radio" id="RAD_EnUpnp" name="RAD_upnp" value="1" onclick="doUpnpActive()">
+				<label for="RAD_EnUpnp" id="UPnP004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisUpnp" name="RAD_upnp" value="0" onclick="doUpnpActive()">
+				<label for="RAD_DisUpnp" id="UPnP005">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="UPnP006">WAN Connection : </td>
+			<td>
+				<select id="SEL_WanInterface" name="SEL_WanInterface" size="1"></select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="UPnP007">LAN Connection : </td>
+			<td>
+				<select id="SEL_LanInterface" name="SEL_LanInterface" size="1"></select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="UPnP008" value="Save" onClick="uiSubmit()">
+				<input type="button" id="UPnP009" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

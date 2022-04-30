@@ -1,0 +1,4 @@
+#!/bin/sh
+
+###button Initializing Configuration
+insmod /lib/module/driver/btn.ko 

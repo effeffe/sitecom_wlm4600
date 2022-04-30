@@ -1,0 +1,201 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2" id="tb_qosrule">
+		<tr>
+			<td class="emphasize" colspan="3" id="QOSR001">Add QoS Classification Rules</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="QOSR002">Rule</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR003">Classify Type : </td>
+			<td>
+				<input type="radio" id="RAD_Upstream" name="RAD_Classify" value="UP" onClick="crtIOoption();onCtrlAction(this.value);" checked/>
+				<label for="RAD_Upstream" id="QOSR004">Upstream Flow Classify</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_Downstream" name="RAD_Classify" value="DOWN" onClick="crtIOoption();onCtrlAction(this.value);" />
+				<label for="RAD_Downstream" id="QOSR005">Downstream Flow Classify</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR006">Active : </td>
+			<td>
+				<input type="radio" id="RAD_EnRule" name="RAD_RuleActive" value="1" checked />
+				<label for="RAD_EnRule" id="QOSR007">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisRule" name="RAD_RuleActive" value="0" />
+				<label for="RAD_DisRule" id="QOSR008">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR009">Application : </td>
+			<td>
+				<select id="SEL_ApplIndex" size="1" onChange="onChgAPP(this.value)">
+					<option value="nomatch">Not Match</option>
+					<option value="igmp">IGMP</option>
+					<option value="sip">SIP</option>
+					<option value="h323">H.323</option>
+					<option value="mgcp">MGCP</option>
+					<option value="snmp">SNMP</option>
+					<option value="dns">DNS</option>
+					<option value="dhcp">DHCP</option>
+					<option value="rip">RIP</option>
+					<option value="rstp">RSTP</option>
+					<option value="rtcp">RTCP</option>
+					<option value="rtp">RTP</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR010">Physical Ports : </td>
+			<td width="440" height="39">
+				<select id="SEL_Interface"></select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR011">Destination MAC Address : </td>
+			<td>
+				<input type="text" id="INPUT_DestMac" maxlength="17" size="17">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR012">IP Address :  </td>
+			<td>
+				<input type="text" id="INPUT_DestIp" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR013">Subnet Mask :  </td>
+			<td>
+				<input type="text" id="INPUT_DestMask" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR014">Port Range : </td>
+			<td>
+				<input type="text" id="INPUT_DestPortStart" maxlength="5" size="5">
+				~
+				<input type="text" id="INPUT_DestPortEnd" maxlength="5" size="5">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR015">Source MAC Address : </td>
+			<td>
+				<input type="text" id="INPUT_SrcMac" maxlength="17" size="17">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR016">IP Address :  </td>
+			<td>
+				<input type="text" id="INPUT_SrcIp" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR017">Subnet Mask :  </td>
+			<td>
+				<input type="text" id="INPUT_SrcMask" maxlength="15" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR018">Port Range : </td>
+			<td>
+				<input type="text" id="INPUT_SrcPortStart" maxlength="5" size="5">
+				~
+				<input type="text" id="INPUT_SrcPortEnd" maxlength="5" size="5">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR019">Protocol : </td>
+			<td>
+				<select id="SEL_Protocol" size="1" onchange="SelProtocolChanged()">
+					<option value="-1">Not Match</option>
+					<option value="6">TCP</option>
+					<option value="17">UDP</option>
+					<option value="0">TCP/UDP</option>
+					<option value="1000">RTP</option>
+					<option value="1">ICMP</option>
+					<option value="2">IGMP</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR020">Vlan ID : </td>
+			<td>
+				<input type="text" id="INPUT_VlanID" size="15">
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR021">DSCP : </td>
+			<td><select id="SEL_DSCP" size="1" onchange=""></select></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR022">802.1p : </td>
+			<td>
+				<select id="SEL_802_1p" size="1">
+					<option value="-1" selected>Not Match</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="QOSR023">Actions</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR024">DSCP Remark : </td>
+			<td><select id="SEL_DSCPRemark" size="1" onchange=""></select></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR025">802.1p Remark : </td>
+			<td>
+				<select id="SEL_802Remark" size="1" onchange="onCtrl802App()">
+					<option value="-1" selected>Not Match</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+				</select>&nbsp;
+				<select id="SEL_802app" size="1" onChange="onChg802APP(this.value)">
+					<option value="nomatch" selected>Not Match</option>
+					<option value="keynet">Key Net Traffic(RIP, OSPF)</option>
+					<option value="voice">Voice</option>
+					<option value="video">Video</option>
+					<option value="igmp">IGMP</option>
+					<option value="keydata">Key Data</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="QOSR026">Queue # : </td>
+			<td>
+				<select id="SEL_Queue" size="1">
+					<option value="-1" selected>Unbound</option>
+					<option value="3">Highest</option>
+					<option value="4">High</option>
+					<option value="5">Medium</option>
+					<option value="6">Low</option>					
+				</select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="QOSR027" value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="QOSR028" value="Back" onClick="uiBack()">
+			</td>
+		</tr>
+	</table>
+</div>

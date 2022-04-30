@@ -1,0 +1,199 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="STA001">ADSL Router Status</td>
+		</tr>
+		<tr>
+			<td colspan="2" id="STA002">This page shows the current status and some basic settings of the device.</td>
+		</tr>
+		<tr>
+			<td class="highlight" colspan="3" id="STA003">System Info</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA004">Hardware Version : </td>
+			<td id="td_hardware"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA005">Software Version : </td>
+			<td id="td_software"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA006">Model Name : </td>
+			<td id="td_modelname"></td>
+		</tr><!--  end sys info  -->
+		<tr>
+			<td class="highlight" colspan="3" id="STA007">LAN Configuration</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA008">MAC Address : </td>
+			<td id="td_mac"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA009">IP Address : </td>
+			<td id="td_lanip">172.16.24.28</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA010">Subnet Mask : </td>
+			<td id="td_lanmask">255.255.254.0</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA011">DHCP Server : </td>
+			<td id="td_dhcpenable">Enable</td>
+		</tr><!--  end lan  -->
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="STA012">WAN Configuration</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA013">Virtual Circuit : </td>
+			<td>
+				<select id="SEL_WAN" size="1" onchange="ctrlWAN()"></select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="select_IPProtocol">
+		<tr>
+			<td class="background" style="width:25%; " id="STA038">IP Protocol: </td>
+			<td>
+				<select id="WAN_IPProtocol" size="1" onchange="ctrlWANIP()"></select>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="StatueIPv4">
+		<tr>
+			<td class="background" style="width:25%; " id="STA014">Status : </td>
+			<td id="td_wanstatus">Not Connected</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA015">Protocol : </td>
+			<td id="td_wanproto">PPPoE</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA016">IP Address : </td>
+			<td id="td_wanip">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA017">Subnet Mask :</td>
+			<td id="td_wanmask">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA018">Default Gateway : </td>
+			<td id="td_defgateway">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA019">DNS Server : </td>
+			<td id="td_dnsserver">N/A</td>
+		</tr><!--  end wan  -->
+	</table>
+	<table width="900px" border="0" cellspacing="2" id="StatueIPv6">
+		<tr>
+			<td class="background" style="width:25%; " id="STA039">Status :</td>
+			<td id="td_v6WanStatus">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA040">Protocol :</td>
+			<td id="td_v6WanProto">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA041">Address/PrefixLength :</td>
+			<td id="td_v6Address">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA043">GateWay :</td>
+			<td id="td_v6GateWay">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA044">Prefix Info :</td>
+			<td id="td_v6Prefix">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA045">DNS :</td>
+			<td id="td_v6DNS">N/A</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="STA020">Wireless Configuration</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA021">Wireless Connection : </td>
+			<td>
+				<select id="SEL_WLAN" size="1" onchange="ctrlWLAN()"></select>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA022">MAC Address : </td>
+			<td id="td_wlanmac">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA023">Status : </td>
+			<td id="td_wlanstatus">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA024">Network Name(SSID) : </td>
+			<td id="td_wlanssid">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA025">Visibility : </td>
+			<td id="td_wlanvisibility">N/A</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA026">Security Mode : </td>
+			<td id="td_wlansecmode">N/A</td>
+		</tr><!--  end wlan  -->
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="highlight" colspan="3" id="STA027">DSL</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA028">ADSL Firmware Version : </td>
+			<td id="td_adslversion" colspan="3"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA029">Operational Status : </td>
+			<td id="td_operstatus"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA030">ADSL Modulation : </td>
+			<td id="td_modulation"></td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA031">Annex Mode : </td>
+			<td id="td_annexmode"></td>
+		</tr>
+		<tr>
+			<td  style="width:25%; "></td>
+			<td  width="80" align="center" class="highlight" id="STA032">Downstream</td>
+			<td  width="80" align="center" class="highlight" id="STA033" >Upstream</td>
+			<td width="280">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA034">SNR Margin (dB) : </td>
+			<td id="td_snrdownstream"   width="80" align="center"></td>
+			<td id="td_snrupstream"  width="80" align="center"></td>
+			<td width="280">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA035">Attenuation (dB) :  </td>
+			<td id="td_attendownstream" align="center"  width="80"></td>
+			<td id="td_attenupstream" align="center" width="80"></td>
+			<td width="280">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA036">Data Rate: </td>
+			<td id="td_drdownstream" align="center"  width="80"></td>
+			<td id="td_drupstream" align="center" width="80"></td>
+			<td width="280">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="STA037">CRC Error: </td>
+			<td id="td_downCrcError" align="center"  width="80"></td>
+			<td id="td_upCrcError" align="center" width="80"></td>
+			<td width="280">&nbsp;</td>
+		</tr>
+		
+	</table>
+</div>

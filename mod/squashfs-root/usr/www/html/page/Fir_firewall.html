@@ -1,0 +1,39 @@
+﻿
+<div class="blockquote">
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="emphasize" colspan="3" id="FIRE001">Firewall</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="FIRE002">This page is used to configure the Firewall.</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FIRE003">Firewall : </td>
+			<td>
+				<input type="radio" id="RAD_FireWallEnable" name="RAD_FireWallEnable"  value="1"><label for="RAD_FireWallEnable" id="FIRE004">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_FireWallDisable" name="RAD_FireWallEnable" value="0" ><label for="RAD_FireWallDisable" id="FIRE005">Disable</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="background" style="width:25%; " id="FIRE006">SPI : </td>
+			<td>
+				<input type="radio" id="RAD_SpiEnable" name="RAD_SpiEnable" value="1"><label for="RAD_SpiEnable" id="FIRE007">Enable</label>&nbsp;&nbsp;
+				<input type="radio" id="RAD_SpiDisable" name="RAD_SpiEnable" value="0"><label for="RAD_SpiDisable" id="FIRE008">Disable</label>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td class="tabdata" id="FIRE009">(WARNING: If you enabled SPI, all traffic initiated from WAN will be blocked. Including DMZ, Virtual Server, and ACL WAN side.)</td>
+			</td>
+		</tr>
+	</table>
+	<table width="900px" border="0" cellspacing="2">
+		<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="FIRE010"  value="Save" onClick="uiSubmit()">&nbsp;
+				<input type="button" id="FIRE011" value="Cancel" onClick="uiPageRefresh()">
+			</td>
+		</tr>
+	</table>
+</div>

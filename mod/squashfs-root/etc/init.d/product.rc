@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Loading product modules"
+insmod /lib/module/driver/product.ko
+

@@ -1,0 +1,113 @@
+﻿
+<div class="blockquote">
+    <div>
+	<table width="900px" border="0" cellspacing="2">
+	    <tr>
+			<td class="emphasize" colspan="3" id="2WPS001">WPS Settings</td>
+		</tr>
+		<tr>
+			<td colspan="4" id="2WPS002">This page allows you to change WPS settings,and the WPS condition must be WPA-PSK or WPA2-PSK security mode , and the SSID should be broadcasted .</td>
+		</tr>
+	 </table>
+	 </div>
+  
+    <div id="SEL_SSID"> 
+      <table   width="900px" border="0" cellspacing="2">
+		 <tr >
+		    <td class="background" style="width:25%; " id="2WPS003">Wireless SSID : </td>
+		    <td>
+				<select id="SEL_VapList" onChange="OnVapListChange(this.value);">
+				</select>
+			</td>
+		</tr>
+	 </table>
+	 </div>
+	 <div id="Wpa_Wpa2">
+ <!-- </div>-->
+ <!-- <div >--><!--id="Wpa_Wpa2" -->
+      <table  width="900px" border="0" cellspacing="2">
+		 <tr >
+		    <td   class="background" style="width:25%; " id="2WPS004"> WPA Mode : </td>
+		    <td  id="SPAN_BeaconType"></td>
+		 </tr>
+	   </table>
+    </div>
+	<div > 
+	<table width="900px" border="0" cellspacing="2">
+	    <tr>
+			<td class="emphasize" colspan="3" id="2WPS005">WPS Config</td>
+		</tr>
+	</table>
+	</div>
+	<div > 
+	<table id="wps_enchk" width="900px" border="0" cellspacing="2">
+	    <tr >
+			<td class="background" style="width:25%; " id="2WPS006">Use WPS : </td>
+			<td>
+				<input type="radio" id="RAD_EnWps" name="RAD_EnWps" value="1" onClick="WPSDisable()">
+				<label for="RAD_EnWps"  id="2WPS007">Enable</label>&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="radio" id="RAD_DisWps" name="RAD_EnWps"  value="0" onClick="WPSDisable()">
+				<label for="RAD_DisWps" id="2WPS008">Disable</label>
+			</td>
+		</tr>
+	  </table>
+	    <!--<tr>
+			<td class="background" style="width:25%; " id="lang_WpsStatus">WPS Status : </td>
+			<td>
+				<span id="SPA_WpsStatus">Unconfigured</span>
+			</td>
+		</tr>-->
+	<table id="wps_enable" width="900px" border="0" cellspacing="2">
+		<tr >
+			<td class="background" style="width:25%; " id="2WPS009">Push Button : </td>
+			<td>
+				<input type="button" id="2WPS010" value="PBC" onClick="enabledPbc()" >
+			</td>
+		</tr >
+<!--		
+		<tr >
+		    <td class="background" style="width:25%; " id="2WPS011">Input PIN Number : </td>
+			<td>
+				<input type="text" id="TE_PinNum" > 
+				<input type="button" id="2WPS012" value="PIN" onClick="enabledPin()" >
+				
+			</td>
+		</tr>
+-->
+		<!--<tr>
+			<td class="background" style="width:25%; " id="lang_PinNum">Self-PIN Number : </td>
+			<td>
+				<span id="SPA_PinNum">12345678</span>
+				<input type="button" id="lang_GeneratePin" value="Generate" onClick="doGeneratePin()">
+			</td>
+		</tr>-->
+		<tr>
+			<td class="background" style="width:25%; " id="2WPS013">WPS Session Status : </td>
+			<td id="SPAN_WpsSessionSt"></td>
+		</tr> 
+		<tr>
+			<td  style="width:25%; ">&nbsp; </td>
+			<td id="WpsConnection" ></td>
+		</tr>
+		
+		<!--<tr>
+			<td colspan="2" align="right">
+				<input type="button" id="lang_StartWps" value="Start WPS" onClick="doStartWPS();">&nbsp;
+				<input type="button" id="lang_reset" value="Reset to OOB" onClick="doResetOOB();">
+			</td>
+		</tr>-->
+	</table>
+	
+	
+	<table  border="0" cellspacing="2" align="right">
+		<tr>
+			<td id= "BTN_Apply" colspan="2" >
+				<input type="button" id="2WPS014" value="Save" onClick="uiSubmit()">&nbsp;
+			</td>
+			<td id="BTN_Cancel" colspan="2" >
+				<input type="button" id="2WPS015" value="Cancel" onClick="WPSRefresh()">
+			</td>
+		</tr>
+	</table>
+	</div>
+</div>
