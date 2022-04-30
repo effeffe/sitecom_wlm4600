@@ -1,0 +1,18 @@
+
+. /lib/functions/leds.sh
+. /lib/functions/uci-defaults.sh
+
+board=$(board_name)
+
+board_config_update
+
+case $board in
+sitecom,wlm-4600)
+	ucidef_set_led_netdev "eth" "ETH" "green:eth" "eth0"
+	ucidef_set_led_netdev "wifi_led" "wifi" "green:wifi" "wlan0"
+	;;
+esac
+
+board_config_flush
+
+exit 0
